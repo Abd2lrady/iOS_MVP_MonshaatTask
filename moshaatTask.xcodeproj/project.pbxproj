@@ -9,25 +9,39 @@
 /* Begin PBXBuildFile section */
 		B499E5EB270D8DD3007E1BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E5EA270D8DD3007E1BC8 /* AppDelegate.swift */; };
 		B499E5ED270D8DD3007E1BC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E5EC270D8DD3007E1BC8 /* SceneDelegate.swift */; };
-		B499E5EF270D8DD3007E1BC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E5EE270D8DD3007E1BC8 /* ViewController.swift */; };
+		B499E5EF270D8DD3007E1BC8 /* ListScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E5EE270D8DD3007E1BC8 /* ListScreenVC.swift */; };
 		B499E5F4270D8DD4007E1BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B499E5F3270D8DD4007E1BC8 /* Assets.xcassets */; };
 		B499E5F7270D8DD4007E1BC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B499E5F5270D8DD4007E1BC8 /* LaunchScreen.storyboard */; };
 		B499E608270D8F2A007E1BC8 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = B499E607270D8F2A007E1BC8 /* swiftgen.yml */; };
 		B499E60A270D8FB1007E1BC8 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E609270D8FB1007E1BC8 /* Assets.swift */; };
-		B499E60D270D9069007E1BC8 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B499E60C270D9069007E1BC8 /* ViewController.xib */; };
+		B499E60D270D9069007E1BC8 /* ListScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B499E60C270D9069007E1BC8 /* ListScreenVC.xib */; };
+		B499E60F270D92A5007E1BC8 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E60E270D92A5007E1BC8 /* RouterProtocol.swift */; };
+		B499E611270D935D007E1BC8 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E610270D935D007E1BC8 /* CoordinatorProtocol.swift */; };
+		B499E613270D93C0007E1BC8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E612270D93C0007E1BC8 /* Router.swift */; };
+		B499E615270D9458007E1BC8 /* Router+RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E614270D9458007E1BC8 /* Router+RouterProtocol.swift */; };
+		B499E617270D9E62007E1BC8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E616270D9E62007E1BC8 /* AppCoordinator.swift */; };
+		B499E619270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E618270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift */; };
+		B499E61B270DA951007E1BC8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E61A270DA951007E1BC8 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B499E5E7270D8DD3007E1BC8 /* moshaatTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moshaatTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B499E5EA270D8DD3007E1BC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B499E5EC270D8DD3007E1BC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B499E5EE270D8DD3007E1BC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B499E5EE270D8DD3007E1BC8 /* ListScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenVC.swift; sourceTree = "<group>"; };
 		B499E5F3270D8DD4007E1BC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B499E5F6270D8DD4007E1BC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B499E5F8270D8DD4007E1BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B499E607270D8F2A007E1BC8 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		B499E609270D8FB1007E1BC8 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
-		B499E60C270D9069007E1BC8 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		B499E60C270D9069007E1BC8 /* ListScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListScreenVC.xib; sourceTree = "<group>"; };
+		B499E60E270D92A5007E1BC8 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		B499E610270D935D007E1BC8 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		B499E612270D93C0007E1BC8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B499E614270D9458007E1BC8 /* Router+RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+RouterProtocol.swift"; sourceTree = "<group>"; };
+		B499E616270D9E62007E1BC8 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B499E618270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+CoordinatorProtocol.swift"; sourceTree = "<group>"; };
+		B499E61A270DA951007E1BC8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +107,8 @@
 		B499E600270D8E05007E1BC8 /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				B499E616270D9E62007E1BC8 /* AppCoordinator.swift */,
+				B499E618270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
@@ -100,6 +116,8 @@
 		B499E602270D8E1A007E1BC8 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				B499E612270D93C0007E1BC8 /* Router.swift */,
+				B499E614270D9458007E1BC8 /* Router+RouterProtocol.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -107,6 +125,9 @@
 		B499E603270D8E22007E1BC8 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				B499E60E270D92A5007E1BC8 /* RouterProtocol.swift */,
+				B499E610270D935D007E1BC8 /* CoordinatorProtocol.swift */,
+				B499E61A270DA951007E1BC8 /* UIView+.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -114,8 +135,7 @@
 		B499E604270D8E68007E1BC8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B499E60C270D9069007E1BC8 /* ViewController.xib */,
-				B499E5EE270D8DD3007E1BC8 /* ViewController.swift */,
+				B499E61C270DAB7D007E1BC8 /* ListScreen */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -127,6 +147,15 @@
 				B499E609270D8FB1007E1BC8 /* Assets.swift */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		B499E61C270DAB7D007E1BC8 /* ListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B499E60C270D9069007E1BC8 /* ListScreenVC.xib */,
+				B499E5EE270D8DD3007E1BC8 /* ListScreenVC.swift */,
+			);
+			path = ListScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +219,7 @@
 			files = (
 				B499E5F7270D8DD4007E1BC8 /* LaunchScreen.storyboard in Resources */,
 				B499E5F4270D8DD4007E1BC8 /* Assets.xcassets in Resources */,
-				B499E60D270D9069007E1BC8 /* ViewController.xib in Resources */,
+				B499E60D270D9069007E1BC8 /* ListScreenVC.xib in Resources */,
 				B499E608270D8F2A007E1BC8 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,8 +270,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B499E5EF270D8DD3007E1BC8 /* ViewController.swift in Sources */,
+				B499E5EF270D8DD3007E1BC8 /* ListScreenVC.swift in Sources */,
 				B499E5EB270D8DD3007E1BC8 /* AppDelegate.swift in Sources */,
+				B499E611270D935D007E1BC8 /* CoordinatorProtocol.swift in Sources */,
+				B499E613270D93C0007E1BC8 /* Router.swift in Sources */,
+				B499E60F270D92A5007E1BC8 /* RouterProtocol.swift in Sources */,
+				B499E615270D9458007E1BC8 /* Router+RouterProtocol.swift in Sources */,
+				B499E617270D9E62007E1BC8 /* AppCoordinator.swift in Sources */,
+				B499E619270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift in Sources */,
+				B499E61B270DA951007E1BC8 /* UIView+.swift in Sources */,
 				B499E60A270D8FB1007E1BC8 /* Assets.swift in Sources */,
 				B499E5ED270D8DD3007E1BC8 /* SceneDelegate.swift in Sources */,
 			);
