@@ -1,0 +1,13 @@
+//
+//  Stage.xcconfig
+//  moshaatTask
+//
+//  Created by Ahmad Abdulrady
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = PROJECT_NAME
+APP_ICON = AppIcon-Stage
+APP_BUNDLE_IDENTIFIER = com.ibtikar.PROJECT_NAME.Stage
+ROOT_URL = smea-pc.ibtikar.sa

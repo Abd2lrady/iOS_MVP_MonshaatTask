@@ -22,6 +22,9 @@
 		B499E617270D9E62007E1BC8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E616270D9E62007E1BC8 /* AppCoordinator.swift */; };
 		B499E619270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E618270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift */; };
 		B499E61B270DA951007E1BC8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E61A270DA951007E1BC8 /* UIView+.swift */; };
+		B499E621270DAF49007E1BC8 /* ListScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E620270DAF49007E1BC8 /* ListScreenCoordinator.swift */; };
+		B499E623270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E622270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift */; };
+		B499E62F270DCB4A007E1BC8 /* EnviromentVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E62E270DCB4A007E1BC8 /* EnviromentVariables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,11 @@
 		B499E616270D9E62007E1BC8 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B499E618270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+CoordinatorProtocol.swift"; sourceTree = "<group>"; };
 		B499E61A270DA951007E1BC8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		B499E620270DAF49007E1BC8 /* ListScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenCoordinator.swift; sourceTree = "<group>"; };
+		B499E622270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListScreenCoordinator+CoordinatorProtocol.swift"; sourceTree = "<group>"; };
+		B499E62C270DBFEA007E1BC8 /* Stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
+		B499E62D270DC00C007E1BC8 /* Demo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Demo.xcconfig; sourceTree = "<group>"; };
+		B499E62E270DCB4A007E1BC8 /* EnviromentVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviromentVariables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +83,14 @@
 		B499E5E9270D8DD3007E1BC8 /* moshaatTask */ = {
 			isa = PBXGroup;
 			children = (
+				B499E62B270DBFBC007E1BC8 /* Configuration */,
 				B499E5FE270D8DE3007E1BC8 /* Core */,
 				B499E603270D8E22007E1BC8 /* Extentions */,
 				B499E5FF270D8DEE007E1BC8 /* Resources */,
 				B499E602270D8E1A007E1BC8 /* Router */,
 				B499E600270D8E05007E1BC8 /* AppCoordinator */,
 				B499E604270D8E68007E1BC8 /* Scenes */,
+				B499E624270DBB74007E1BC8 /* Model */,
 				B499E5F5270D8DD4007E1BC8 /* LaunchScreen.storyboard */,
 				B499E5F8270D8DD4007E1BC8 /* Info.plist */,
 			);
@@ -152,10 +162,53 @@
 		B499E61C270DAB7D007E1BC8 /* ListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B499E61E270DAF14007E1BC8 /* Coordinator */,
+				B499E61F270DAF1E007E1BC8 /* Presenter */,
+				B499E61D270DAEFB007E1BC8 /* View */,
+			);
+			path = ListScreen;
+			sourceTree = "<group>";
+		};
+		B499E61D270DAEFB007E1BC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				B499E60C270D9069007E1BC8 /* ListScreenVC.xib */,
 				B499E5EE270D8DD3007E1BC8 /* ListScreenVC.swift */,
 			);
-			path = ListScreen;
+			path = View;
+			sourceTree = "<group>";
+		};
+		B499E61E270DAF14007E1BC8 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B499E620270DAF49007E1BC8 /* ListScreenCoordinator.swift */,
+				B499E622270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B499E61F270DAF1E007E1BC8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B499E624270DBB74007E1BC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B499E62B270DBFBC007E1BC8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B499E62C270DBFEA007E1BC8 /* Stage.xcconfig */,
+				B499E62D270DC00C007E1BC8 /* Demo.xcconfig */,
+				B499E62E270DCB4A007E1BC8 /* EnviromentVariables.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +323,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B499E623270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift in Sources */,
 				B499E5EF270D8DD3007E1BC8 /* ListScreenVC.swift in Sources */,
 				B499E5EB270D8DD3007E1BC8 /* AppDelegate.swift in Sources */,
+				B499E621270DAF49007E1BC8 /* ListScreenCoordinator.swift in Sources */,
+				B499E62F270DCB4A007E1BC8 /* EnviromentVariables.swift in Sources */,
 				B499E611270D935D007E1BC8 /* CoordinatorProtocol.swift in Sources */,
 				B499E613270D93C0007E1BC8 /* Router.swift in Sources */,
 				B499E60F270D92A5007E1BC8 /* RouterProtocol.swift in Sources */,
@@ -298,7 +354,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B499E5F9270D8DD4007E1BC8 /* Debug */ = {
+		B499E627270DBF2E007E1BC8 /* Demo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -357,9 +413,30 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Demo;
 		};
-		B499E5FA270D8DD4007E1BC8 /* Release */ = {
+		B499E628270DBF2E007E1BC8 /* Demo */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B499E62D270DC00C007E1BC8 /* Demo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = moshaatTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Demo;
+		};
+		B499E629270DBF34007E1BC8 /* Stage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -393,11 +470,17 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -405,50 +488,35 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Release;
+			name = Stage;
 		};
-		B499E5FC270D8DD4007E1BC8 /* Debug */ = {
+		B499E62A270DBF34007E1BC8 /* Stage */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B499E62C270DBFEA007E1BC8 /* Stage.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = moshaatTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Abd2lrady.moshaatTask;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = Debug;
-		};
-		B499E5FD270D8DD4007E1BC8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = moshaatTask/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Abd2lrady.moshaatTask;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
+			name = Stage;
 		};
 /* End XCBuildConfiguration section */
 
@@ -456,20 +524,20 @@
 		B499E5E2270D8DD3007E1BC8 /* Build configuration list for PBXProject "moshaatTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B499E5F9270D8DD4007E1BC8 /* Debug */,
-				B499E5FA270D8DD4007E1BC8 /* Release */,
+				B499E629270DBF34007E1BC8 /* Stage */,
+				B499E627270DBF2E007E1BC8 /* Demo */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Stage;
 		};
 		B499E5FB270D8DD4007E1BC8 /* Build configuration list for PBXNativeTarget "moshaatTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B499E5FC270D8DD4007E1BC8 /* Debug */,
-				B499E5FD270D8DD4007E1BC8 /* Release */,
+				B499E62A270DBF34007E1BC8 /* Stage */,
+				B499E628270DBF2E007E1BC8 /* Demo */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Stage;
 		};
 /* End XCConfigurationList section */
 	};
