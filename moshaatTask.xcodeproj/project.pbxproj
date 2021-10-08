@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4347F652710DBF90089EBA9 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F642710DBF90089EBA9 /* ReactiveMoya */; };
+		B4347F672710DBF90089EBA9 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F662710DBF90089EBA9 /* CombineMoya */; };
+		B4347F692710DBF90089EBA9 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F682710DBF90089EBA9 /* RxMoya */; };
+		B4347F6B2710DBF90089EBA9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F6A2710DBF90089EBA9 /* Moya */; };
+		B4347F6E2710DC290089EBA9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F6D2710DC290089EBA9 /* Kingfisher */; };
+		B4347F712710DC380089EBA9 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F702710DC380089EBA9 /* Toast */; };
+		B4347F742710DCAF0089EBA9 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F732710DCAF0089EBA9 /* MBProgressHUD */; };
 		B499E5EB270D8DD3007E1BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E5EA270D8DD3007E1BC8 /* AppDelegate.swift */; };
 		B499E5ED270D8DD3007E1BC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E5EC270D8DD3007E1BC8 /* SceneDelegate.swift */; };
 		B499E5EF270D8DD3007E1BC8 /* ListScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E5EE270D8DD3007E1BC8 /* ListScreenVC.swift */; };
@@ -57,12 +64,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4347F712710DC380089EBA9 /* Toast in Frameworks */,
+				B4347F692710DBF90089EBA9 /* RxMoya in Frameworks */,
+				B4347F672710DBF90089EBA9 /* CombineMoya in Frameworks */,
+				B4347F742710DCAF0089EBA9 /* MBProgressHUD in Frameworks */,
+				B4347F6B2710DBF90089EBA9 /* Moya in Frameworks */,
+				B4347F652710DBF90089EBA9 /* ReactiveMoya in Frameworks */,
+				B4347F6E2710DC290089EBA9 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4347F602710DAA00089EBA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4347F612710DABC0089EBA9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B4347F622710DB020089EBA9 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B499E5F5270D8DD4007E1BC8 /* LaunchScreen.storyboard */,
+				B499E5F8270D8DD4007E1BC8 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		B499E5DE270D8DD3007E1BC8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,16 +120,15 @@
 		B499E5E9270D8DD3007E1BC8 /* moshaatTask */ = {
 			isa = PBXGroup;
 			children = (
+				B4347F622710DB020089EBA9 /* SupportFiles */,
 				B499E62B270DBFBC007E1BC8 /* Configuration */,
 				B499E5FE270D8DE3007E1BC8 /* Core */,
-				B499E603270D8E22007E1BC8 /* Extentions */,
 				B499E5FF270D8DEE007E1BC8 /* Resources */,
-				B499E602270D8E1A007E1BC8 /* Router */,
+				B499E603270D8E22007E1BC8 /* Extentions */,
 				B499E600270D8E05007E1BC8 /* AppCoordinator */,
+				B499E602270D8E1A007E1BC8 /* Router */,
+				B4347F602710DAA00089EBA9 /* Model */,
 				B499E604270D8E68007E1BC8 /* Scenes */,
-				B499E624270DBB74007E1BC8 /* Model */,
-				B499E5F5270D8DD4007E1BC8 /* LaunchScreen.storyboard */,
-				B499E5F8270D8DD4007E1BC8 /* Info.plist */,
 			);
 			path = moshaatTask;
 			sourceTree = "<group>";
@@ -163,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				B499E61E270DAF14007E1BC8 /* Coordinator */,
-				B499E61F270DAF1E007E1BC8 /* Presenter */,
+				B4347F612710DABC0089EBA9 /* Presenter */,
 				B499E61D270DAEFB007E1BC8 /* View */,
 			);
 			path = ListScreen;
@@ -185,20 +221,6 @@
 				B499E622270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		B499E61F270DAF1E007E1BC8 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		B499E624270DBB74007E1BC8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B499E62B270DBFBC007E1BC8 /* Configuration */ = {
@@ -229,6 +251,15 @@
 			dependencies = (
 			);
 			name = moshaatTask;
+			packageProductDependencies = (
+				B4347F642710DBF90089EBA9 /* ReactiveMoya */,
+				B4347F662710DBF90089EBA9 /* CombineMoya */,
+				B4347F682710DBF90089EBA9 /* RxMoya */,
+				B4347F6A2710DBF90089EBA9 /* Moya */,
+				B4347F6D2710DC290089EBA9 /* Kingfisher */,
+				B4347F702710DC380089EBA9 /* Toast */,
+				B4347F732710DCAF0089EBA9 /* MBProgressHUD */,
+			);
 			productName = moshaatTask;
 			productReference = B499E5E7270D8DD3007E1BC8 /* moshaatTask.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +287,12 @@
 				Base,
 			);
 			mainGroup = B499E5DE270D8DD3007E1BC8;
+			packageReferences = (
+				B4347F632710DBF90089EBA9 /* XCRemoteSwiftPackageReference "Moya" */,
+				B4347F6C2710DC290089EBA9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B4347F6F2710DC380089EBA9 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				B4347F722710DCAF0089EBA9 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+			);
 			productRefGroup = B499E5E8270D8DD3007E1BC8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -423,7 +460,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = moshaatTask/Info.plist;
+				INFOPLIST_FILE = moshaatTask/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,7 +542,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = moshaatTask/Info.plist;
+				INFOPLIST_FILE = moshaatTask/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,6 +577,79 @@
 			defaultConfigurationName = Stage;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B4347F632710DBF90089EBA9 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		B4347F6C2710DC290089EBA9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		B4347F6F2710DC380089EBA9 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		B4347F722710DCAF0089EBA9 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B4347F642710DBF90089EBA9 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4347F632710DBF90089EBA9 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		B4347F662710DBF90089EBA9 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4347F632710DBF90089EBA9 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		B4347F682710DBF90089EBA9 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4347F632710DBF90089EBA9 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		B4347F6A2710DBF90089EBA9 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4347F632710DBF90089EBA9 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		B4347F6D2710DC290089EBA9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4347F6C2710DC290089EBA9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		B4347F702710DC380089EBA9 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4347F6F2710DC380089EBA9 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		B4347F732710DCAF0089EBA9 /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4347F722710DCAF0089EBA9 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B499E5DF270D8DD3007E1BC8 /* Project object */;
 }

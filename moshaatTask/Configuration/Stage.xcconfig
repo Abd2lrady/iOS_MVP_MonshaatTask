@@ -7,7 +7,7 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-APP_NAME = PROJECT_NAME
+APP_NAME = moshaatTask
 APP_ICON = AppIcon-Stage
-APP_BUNDLE_IDENTIFIER = com.ibtikar.PROJECT_NAME.Stage
+APP_BUNDLE_IDENTIFIER = com.ibtikar.moshaatTask.Stage
 ROOT_URL = smea-pc.ibtikar.sa
