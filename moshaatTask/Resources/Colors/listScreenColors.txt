@@ -1,0 +1,5 @@
+
+headerBullet: #a6ddf9
+profileImgBorder: #dde3e8
+availabilityOnline: #5cb466
+availabilityBorder: #ffffff
