@@ -7,5 +7,7 @@
 import Foundation
 
 protocol ListScreenPresenterProtocol {
-    
+    func viewLoaded()
+    func loadMoreConsultants()
+    func refreshConsultantData()
 }

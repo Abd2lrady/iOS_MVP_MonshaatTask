@@ -7,5 +7,7 @@
 import Foundation
 
 protocol ListScreenViewProtocol {
-    
+    func consultantsLoaded()
+    func showActivityIndicator()
+    func hideActivityIndicator()
 }
