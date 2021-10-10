@@ -1,6 +1,34 @@
+
 xcassets:
   - inputs: moshaatTask/Resources/Assets
     outputs:
-      - templateName: swift5
-        output: moshaatTask/Resources/Assets/Assets.swift
+        templateName: swift5
+        output: moshaatTask/Resources/Generated/Assets.swift
+        params:
+            enumName: Assets
 
+colors:
+  - inputs: moshaatTask/Resources/Colors/listScreenColors.txt
+    outputs:
+        templateName: swift5
+        output: moshaatTask/Resources/Generated/Colors.swift
+        params:
+            enumName: Colors
+      
+fonts:
+  - inputs: moshaatTask/Resources/Fonts
+    outputs:
+        templateName: swift5
+        output: moshaatTask/Resources/Generated/Fonts.swift
+        params:
+            enumName: Fonts
+            
+strings:
+  - inputs: moshaatTask/Resources/Strings/Localizable.strings
+    outputs:
+        templateName: structured-swift5
+        output: moshaatTask/Resources/Generated/Strings.swift
+        params:
+            enumName: Strings
+            
+        

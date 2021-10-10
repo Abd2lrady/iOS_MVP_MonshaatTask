@@ -14,9 +14,9 @@ class ListScreenVC: UIViewController,
                     UICollectionViewDelegate,
                     UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var headerBGView: UIImageView!
-    @IBOutlet weak var headerLabelView: HeadLabel!
-    @IBOutlet weak var consultantsCV: UICollectionView!
+    @IBOutlet private weak var headerBGView: UIImageView!
+    @IBOutlet private weak var headerLabelView: HeadLabel!
+    @IBOutlet private weak var consultantsCV: UICollectionView!
 
     
     func collectionView(_ collectionView: UICollectionView,
@@ -35,6 +35,9 @@ class ListScreenVC: UIViewController,
                                                             for: indexPath) as? ConsultantCell
                         else {fatalError("sad cell")}
         cell.setNameLabel(with: Strings.ListScreen.title)
+        cell.setRate(with: 5)
+        cell.setSpecializationLabel(with: "sad")
+        cell.setAvailiability(with: "ls")
         return cell
     }
     
@@ -43,7 +46,7 @@ class ListScreenVC: UIViewController,
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        consultantsCV.backgroundColor = .clear
+        configConsultantCV()
         consultantsCV.dataSource = self
         consultantsCV.delegate = self
     }
@@ -67,4 +70,9 @@ class ListScreenVC: UIViewController,
         let backButton = UIBarButtonItem.barButtonWithImage(img: Assets.icBackArrow.image)
         navigationItem.rightBarButtonItem = backButton
     }
+    
+    func configConsultantCV() {
+        consultantsCV.backgroundColor = .clear
+    }
+    
 }

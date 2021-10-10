@@ -24,12 +24,21 @@ internal struct Colors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#5cb466"></span>
   /// Alpha: 100% <br/> (0x5cb466ff)
   internal static let availabilityOnline = Colors(rgbaValue: 0x5cb466ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#5cb466"></span>
+  /// Alpha: 100% <br/> (0x5cb466ff)
+  internal static let availabilityOnlineLabel = Colors(rgbaValue: 0x5cb466ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#a6ddf9"></span>
   /// Alpha: 100% <br/> (0xa6ddf9ff)
   internal static let headerBullet = Colors(rgbaValue: 0xa6ddf9ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#314d6c"></span>
+  /// Alpha: 100% <br/> (0x314d6cff)
+  internal static let nameLabel = Colors(rgbaValue: 0x314d6cff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#dde3e8"></span>
   /// Alpha: 100% <br/> (0xdde3e8ff)
   internal static let profileImgBorder = Colors(rgbaValue: 0xdde3e8ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#788995"></span>
+  /// Alpha: 100% <br/> (0x788995ff)
+  internal static let specializationLabel = Colors(rgbaValue: 0x788995ff)
 }
 // swiftlint:enable identifier_name line_length type_body_length
 
