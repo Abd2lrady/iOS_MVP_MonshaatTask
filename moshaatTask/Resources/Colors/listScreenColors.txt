@@ -4,6 +4,7 @@ profileImgBorder: #dde3e8
 availabilityOnline: #5cb466
 availabilityOffline:#788995
 availabilityBorder: #ffffff
+activityColor: #dde3e8
 
 nameLabel: #314d6c
 specializationLabel: #788995

@@ -18,6 +18,9 @@ internal struct Colors {
   internal let rgbaValue: UInt32
   internal var color: Color { return Color(named: self) }
 
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#dde3e8"></span>
+  /// Alpha: 100% <br/> (0xdde3e8ff)
+  internal static let activityColor = Colors(rgbaValue: 0xdde3e8ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
   /// Alpha: 100% <br/> (0xffffffff)
   internal static let availabilityBorder = Colors(rgbaValue: 0xffffffff)

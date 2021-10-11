@@ -12,6 +12,7 @@ extension ListScreenVC: ListScreenViewProtocol {
     
     func consultantsLoaded() {
         consultantCVAdapter.consultants = presenter.consultants
+        refreshControl.isRefreshing ? refreshControl.endRefreshing() : hideActivityIndicator()
         consultantCVAdapter.updateConsultantCV()
     }
     
@@ -25,6 +26,7 @@ extension ListScreenVC: ListScreenViewProtocol {
     }
     
     func showError(message: String) {
+        refreshControl.isRefreshing ? refreshControl.endRefreshing() : hideActivityIndicator()
         self.view.makeToast(message)
     }
     

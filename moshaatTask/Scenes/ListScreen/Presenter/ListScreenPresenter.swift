@@ -27,7 +27,6 @@ class ListScreenPresenter {
             }
             self.consultants = consultants
             self.view?.consultantsLoaded()
-            self.view?.hideActivityIndicator()
         }
     }
 
