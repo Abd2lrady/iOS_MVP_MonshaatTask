@@ -15,7 +15,6 @@ class NetworkMonitor {
         monitor = NWPathMonitor()
     }
     
-
     var isConnected: Bool {
         
         var status: Bool = false

@@ -21,6 +21,12 @@ internal struct Colors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
   /// Alpha: 100% <br/> (0xffffffff)
   internal static let availabilityBorder = Colors(rgbaValue: 0xffffffff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#788995"></span>
+  /// Alpha: 100% <br/> (0x788995ff)
+  internal static let availabilityOffline = Colors(rgbaValue: 0x788995ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#e13636"></span>
+  /// Alpha: 100% <br/> (0xe13636ff)
+  internal static let availabilityOfflineLabel = Colors(rgbaValue: 0xe13636ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#5cb466"></span>
   /// Alpha: 100% <br/> (0x5cb466ff)
   internal static let availabilityOnline = Colors(rgbaValue: 0x5cb466ff)

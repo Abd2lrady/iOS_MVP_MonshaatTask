@@ -6,8 +6,9 @@
 
 import Foundation
 
-protocol ListScreenPresenterProtocol {
+protocol ListScreenPresenterProtocol: AnyObject {
     func viewLoaded()
+    func getConsultantsList()
     func loadMoreConsultants()
     func refreshConsultantData()
 }

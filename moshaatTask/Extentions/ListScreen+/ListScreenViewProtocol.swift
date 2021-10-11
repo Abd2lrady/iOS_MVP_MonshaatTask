@@ -6,7 +6,7 @@
 
 import Foundation
 
-protocol ListScreenViewProtocol {
+protocol ListScreenViewProtocol: AnyObject {
     func consultantsLoaded()
     func showActivityIndicator()
     func hideActivityIndicator()

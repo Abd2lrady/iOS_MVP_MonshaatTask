@@ -47,8 +47,8 @@
 		B499E621270DAF49007E1BC8 /* ListScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E620270DAF49007E1BC8 /* ListScreenCoordinator.swift */; };
 		B499E623270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E622270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift */; };
 		B499E62F270DCB4A007E1BC8 /* EnviromentVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499E62E270DCB4A007E1BC8 /* EnviromentVariables.swift */; };
-		B4A5DA282712B879008BF561 /* ListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA272712B879008BF561 /* ListScreenView.swift */; };
-		B4A5DA2A2712B8AA008BF561 /* ListScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA292712B8AA008BF561 /* ListScreenPresenter.swift */; };
+		B4A5DA282712B879008BF561 /* ListScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA272712B879008BF561 /* ListScreenViewProtocol.swift */; };
+		B4A5DA2A2712B8AA008BF561 /* ListScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA292712B8AA008BF561 /* ListScreenPresenterProtocol.swift */; };
 		B4A5DA2C2712B8F9008BF561 /* ConsultantsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA2B2712B8F9008BF561 /* ConsultantsInteractor.swift */; };
 		B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */; };
 		B4A5DA332712C232008BF561 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = B4A5DA322712C232008BF561 /* Cosmos */; };
@@ -58,6 +58,18 @@
 		B4EB63522712CE7400CB7122 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB634A2712CE7400CB7122 /* NetworkError.swift */; };
 		B4EB63532712CE7400CB7122 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB634C2712CE7400CB7122 /* APIResponse.swift */; };
 		B4EB63542712CE7400CB7122 /* NetworkManger+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB634E2712CE7400CB7122 /* NetworkManger+Service.swift */; };
+		B4EB63562712ED7F00CB7122 /* ListScreen+ListScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63552712ED7F00CB7122 /* ListScreen+ListScreenViewProtocol.swift */; };
+		B4EB63592713013000CB7122 /* ConsultantCVAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63582713013000CB7122 /* ConsultantCVAdapter.swift */; };
+		B4EB635C271302C800CB7122 /* ConsultantCVAdapter+ConsultanatCVUICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB635B271302C800CB7122 /* ConsultantCVAdapter+ConsultanatCVUICollectionViewDataSource.swift */; };
+		B4EB635E2713044500CB7122 /* ListScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB635D2713044500CB7122 /* ListScreenPresenter.swift */; };
+		B4EB63602713055B00CB7122 /* ListScreenPresenter+ListScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB635F2713055B00CB7122 /* ListScreenPresenter+ListScreenPresenterProtocol.swift */; };
+		B4EB63632713104B00CB7122 /* ConsultantCVAdapter+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63622713104B00CB7122 /* ConsultantCVAdapter+UICollectionViewDelegate.swift */; };
+		B4EB6366271317C500CB7122 /* ConsultantsCVSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB6365271317C500CB7122 /* ConsultantsCVSections.swift */; };
+		B4EB636927131E0000CB7122 /* Consultant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB636827131E0000CB7122 /* Consultant.swift */; };
+		B4EB636C2713217900CB7122 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB636B2713217900CB7122 /* Pagination.swift */; };
+		B4EB63702713220600CB7122 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB636F2713220600CB7122 /* Subject.swift */; };
+		B4EB63742713236D00CB7122 /* SsoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63732713236D00CB7122 /* SsoUser.swift */; };
+		B4EB6376271323AC00CB7122 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB6375271323AC00CB7122 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,8 +110,8 @@
 		B499E62C270DBFEA007E1BC8 /* Stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
 		B499E62D270DC00C007E1BC8 /* Demo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Demo.xcconfig; sourceTree = "<group>"; };
 		B499E62E270DCB4A007E1BC8 /* EnviromentVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviromentVariables.swift; sourceTree = "<group>"; };
-		B4A5DA272712B879008BF561 /* ListScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenView.swift; sourceTree = "<group>"; };
-		B4A5DA292712B8AA008BF561 /* ListScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenPresenter.swift; sourceTree = "<group>"; };
+		B4A5DA272712B879008BF561 /* ListScreenViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenViewProtocol.swift; sourceTree = "<group>"; };
+		B4A5DA292712B8AA008BF561 /* ListScreenPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenPresenterProtocol.swift; sourceTree = "<group>"; };
 		B4A5DA2B2712B8F9008BF561 /* ConsultantsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantsInteractor.swift; sourceTree = "<group>"; };
 		B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantCellProtocol.swift; sourceTree = "<group>"; };
 		B4EB63472712CE7400CB7122 /* StaticHeaderPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHeaderPlugin.swift; sourceTree = "<group>"; };
@@ -108,6 +120,18 @@
 		B4EB634A2712CE7400CB7122 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B4EB634C2712CE7400CB7122 /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		B4EB634E2712CE7400CB7122 /* NetworkManger+Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkManger+Service.swift"; sourceTree = "<group>"; };
+		B4EB63552712ED7F00CB7122 /* ListScreen+ListScreenViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListScreen+ListScreenViewProtocol.swift"; sourceTree = "<group>"; };
+		B4EB63582713013000CB7122 /* ConsultantCVAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantCVAdapter.swift; sourceTree = "<group>"; };
+		B4EB635B271302C800CB7122 /* ConsultantCVAdapter+ConsultanatCVUICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsultantCVAdapter+ConsultanatCVUICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		B4EB635D2713044500CB7122 /* ListScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenPresenter.swift; sourceTree = "<group>"; };
+		B4EB635F2713055B00CB7122 /* ListScreenPresenter+ListScreenPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListScreenPresenter+ListScreenPresenterProtocol.swift"; sourceTree = "<group>"; };
+		B4EB63622713104B00CB7122 /* ConsultantCVAdapter+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsultantCVAdapter+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		B4EB6365271317C500CB7122 /* ConsultantsCVSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantsCVSections.swift; sourceTree = "<group>"; };
+		B4EB636827131E0000CB7122 /* Consultant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consultant.swift; sourceTree = "<group>"; };
+		B4EB636B2713217900CB7122 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		B4EB636F2713220600CB7122 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		B4EB63732713236D00CB7122 /* SsoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SsoUser.swift; sourceTree = "<group>"; };
+		B4EB6375271323AC00CB7122 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +156,7 @@
 		B4347F602710DAA00089EBA9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B4EB636A2713215400CB7122 /* Consultant */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,6 +164,8 @@
 		B4347F612710DABC0089EBA9 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				B4EB635D2713044500CB7122 /* ListScreenPresenter.swift */,
+				B4EB635F2713055B00CB7122 /* ListScreenPresenter+ListScreenPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -165,6 +192,7 @@
 			children = (
 				B499E60C270D9069007E1BC8 /* ListScreenVC.xib */,
 				B499E5EE270D8DD3007E1BC8 /* ListScreenVC.swift */,
+				B4EB63552712ED7F00CB7122 /* ListScreen+ListScreenViewProtocol.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -252,6 +280,7 @@
 				B499E600270D8E05007E1BC8 /* AppCoordinator */,
 				B499E602270D8E1A007E1BC8 /* Router */,
 				B4EB63452712CE7400CB7122 /* NetworkManager */,
+				B4EB63792713F6CF00CB7122 /* APITarget */,
 				B4848B8C2711865500C4A643 /* NetworkMonitor */,
 				B4347F602710DAA00089EBA9 /* Model */,
 				B499E604270D8E68007E1BC8 /* Scenes */,
@@ -331,6 +360,7 @@
 		B499E61C270DAB7D007E1BC8 /* ListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B4EB636127130C2600CB7122 /* ConsultantsCVDelegatesAdapter */,
 				B4A5DA252712B726008BF561 /* Interactor */,
 				B499E61E270DAF14007E1BC8 /* Coordinator */,
 				B4347F612710DABC0089EBA9 /* Presenter */,
@@ -342,6 +372,7 @@
 		B499E61D270DAEFB007E1BC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4EB63642713112800CB7122 /* LoadMoreView */,
 				B4848B902711C8C200C4A643 /* ConsultantCell */,
 				B4848B8F2711C8AE00C4A643 /* ViewController */,
 			);
@@ -378,8 +409,8 @@
 		B4A5DA262712B84C008BF561 /* ListScreen+ */ = {
 			isa = PBXGroup;
 			children = (
-				B4A5DA272712B879008BF561 /* ListScreenView.swift */,
-				B4A5DA292712B8AA008BF561 /* ListScreenPresenter.swift */,
+				B4A5DA272712B879008BF561 /* ListScreenViewProtocol.swift */,
+				B4A5DA292712B8AA008BF561 /* ListScreenPresenterProtocol.swift */,
 				B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */,
 			);
 			path = "ListScreen+";
@@ -420,6 +451,43 @@
 				B4EB634E2712CE7400CB7122 /* NetworkManger+Service.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B4EB636127130C2600CB7122 /* ConsultantsCVDelegatesAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				B4EB63582713013000CB7122 /* ConsultantCVAdapter.swift */,
+				B4EB63622713104B00CB7122 /* ConsultantCVAdapter+UICollectionViewDelegate.swift */,
+				B4EB635B271302C800CB7122 /* ConsultantCVAdapter+ConsultanatCVUICollectionViewDataSource.swift */,
+			);
+			path = ConsultantsCVDelegatesAdapter;
+			sourceTree = "<group>";
+		};
+		B4EB63642713112800CB7122 /* LoadMoreView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoadMoreView;
+			sourceTree = "<group>";
+		};
+		B4EB636A2713215400CB7122 /* Consultant */ = {
+			isa = PBXGroup;
+			children = (
+				B4EB6365271317C500CB7122 /* ConsultantsCVSections.swift */,
+				B4EB636827131E0000CB7122 /* Consultant.swift */,
+				B4EB636B2713217900CB7122 /* Pagination.swift */,
+				B4EB636F2713220600CB7122 /* Subject.swift */,
+				B4EB63732713236D00CB7122 /* SsoUser.swift */,
+				B4EB6375271323AC00CB7122 /* File.swift */,
+			);
+			path = Consultant;
+			sourceTree = "<group>";
+		};
+		B4EB63792713F6CF00CB7122 /* APITarget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APITarget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -564,28 +632,40 @@
 				B499E5EF270D8DD3007E1BC8 /* ListScreenVC.swift in Sources */,
 				B4A5DA2C2712B8F9008BF561 /* ConsultantsInteractor.swift in Sources */,
 				B499E5EB270D8DD3007E1BC8 /* AppDelegate.swift in Sources */,
+				B4EB636927131E0000CB7122 /* Consultant.swift in Sources */,
 				B4848B932711C92500C4A643 /* ConsultantCell.swift in Sources */,
 				B499E621270DAF49007E1BC8 /* ListScreenCoordinator.swift in Sources */,
 				B4848BC327121DC700C4A643 /* HeadLabel.swift in Sources */,
 				B4EB63522712CE7400CB7122 /* NetworkError.swift in Sources */,
+				B4EB635E2713044500CB7122 /* ListScreenPresenter.swift in Sources */,
 				B499E62F270DCB4A007E1BC8 /* EnviromentVariables.swift in Sources */,
 				B4848B8727117B6A00C4A643 /* UIViewController+.swift in Sources */,
+				B4EB636C2713217900CB7122 /* Pagination.swift in Sources */,
 				B499E611270D935D007E1BC8 /* CoordinatorProtocol.swift in Sources */,
 				B4848BB427120E3A00C4A643 /* Assets.swift in Sources */,
+				B4EB63742713236D00CB7122 /* SsoUser.swift in Sources */,
+				B4EB63592713013000CB7122 /* ConsultantCVAdapter.swift in Sources */,
+				B4EB63702713220600CB7122 /* Subject.swift in Sources */,
 				B499E613270D93C0007E1BC8 /* Router.swift in Sources */,
 				B4848B8E271186B800C4A643 /* NetworkMonitor.swift in Sources */,
 				B499E60F270D92A5007E1BC8 /* RouterProtocol.swift in Sources */,
 				B4848BBD27121A7600C4A643 /* Strings.swift in Sources */,
+				B4EB63562712ED7F00CB7122 /* ListScreen+ListScreenViewProtocol.swift in Sources */,
+				B4EB6376271323AC00CB7122 /* File.swift in Sources */,
+				B4EB63632713104B00CB7122 /* ConsultantCVAdapter+UICollectionViewDelegate.swift in Sources */,
 				B4EB63532712CE7400CB7122 /* APIResponse.swift in Sources */,
-				B4A5DA282712B879008BF561 /* ListScreenView.swift in Sources */,
-				B4A5DA2A2712B8AA008BF561 /* ListScreenPresenter.swift in Sources */,
+				B4A5DA282712B879008BF561 /* ListScreenViewProtocol.swift in Sources */,
+				B4A5DA2A2712B8AA008BF561 /* ListScreenPresenterProtocol.swift in Sources */,
 				B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */,
 				B4EB63542712CE7400CB7122 /* NetworkManger+Service.swift in Sources */,
 				B499E615270D9458007E1BC8 /* Router+RouterProtocol.swift in Sources */,
 				B4848B8B27117F6A00C4A643 /* UIBarButtonItem+.swift in Sources */,
+				B4EB63602713055B00CB7122 /* ListScreenPresenter+ListScreenPresenterProtocol.swift in Sources */,
 				B499E617270D9E62007E1BC8 /* AppCoordinator.swift in Sources */,
 				B499E619270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift in Sources */,
+				B4EB6366271317C500CB7122 /* ConsultantsCVSections.swift in Sources */,
 				B4EB63502712CE7400CB7122 /* NetworkManager.swift in Sources */,
+				B4EB635C271302C800CB7122 /* ConsultantCVAdapter+ConsultanatCVUICollectionViewDataSource.swift in Sources */,
 				B499E61B270DA951007E1BC8 /* UIView+.swift in Sources */,
 				B4EB63512712CE7400CB7122 /* NetworkDefaults.swift in Sources */,
 				B4848BB527120E3A00C4A643 /* Fonts.swift in Sources */,
