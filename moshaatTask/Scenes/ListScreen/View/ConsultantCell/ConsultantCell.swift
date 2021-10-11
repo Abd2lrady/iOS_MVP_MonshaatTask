@@ -6,6 +6,7 @@
 
 import UIKit
 import Cosmos
+import Kingfisher
 
 class ConsultantCell: UICollectionViewCell {
     @IBOutlet private weak var profileImg: UIImageView!
@@ -63,26 +64,38 @@ class ConsultantCell: UICollectionViewCell {
 
 extension ConsultantCell: ConsultantCellProtocol {
     
+    func setProfileImg(path: String) {
+        profileImg.kf.setImage(with: URL(string: path),
+                               placeholder: Assets.icAvatar.image,
+                               options: nil,
+                               completionHandler: nil)
+    }
+    
     func setNameLabel(with name: String) {
         nameLabel.text = name
-        let font = UIFont(font: Fonts._29LTAzer.regular, size: 12)
-        nameLabel.font = font
     }
     
     func setRate(with rate: Double) {
         rateLabel.text = String(rate)
-        rateView.rating = 3
+        rateView.rating = rate
     }
     
     func setSpecializationLabel(with specialization: [String]) {
-        let label = specialization.reduce(into: "") { label, speciality in
-            label = "\(speciality), "
+        var label = ""
+        let seprator = [", ", ""]
+        for (index, speciality) in specialization.enumerated() {
+            label += "\(speciality)"
+            label += seprator[index + 1 == specialization.count ? 1:0]
         }
+//        let label = specialization.reduce(into: "") { label, speciality in
+//            label = "\(speciality), "
+//        }
         specializationLabel.text = label
     }
     
-    func setAvailiability(with availability: String) {
+    func setAvailiability(with availability: String, color: UIColor) {
         availablilityLabel.text = availability
+        availablilityLabel.textColor = color
     }
     
     func setAvailbilityView(with color: UIColor) {

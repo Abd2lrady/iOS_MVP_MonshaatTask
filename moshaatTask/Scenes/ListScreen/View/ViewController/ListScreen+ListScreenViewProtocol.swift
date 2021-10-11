@@ -6,26 +6,26 @@
 
 import Foundation
 import MBProgressHUD
+import Toast
 
 extension ListScreenVC: ListScreenViewProtocol {
+    
     func consultantsLoaded() {
         consultantCVAdapter.consultants = presenter.consultants
         consultantCVAdapter.updateConsultantCV()
     }
     
     func showActivityIndicator() {
-        let loading = MBProgressHUD.showAdded(to: self.view, animated: true)
-        loading.contentColor = Colors.headerBullet.color
-        loading.bezelView.style = .solidColor
-
-        loading.bezelView.shapeAllCorners(with: 20)
-        loading.bezelView.clipsToBounds = true
-        loading.bezelView.backgroundColor = UIColor.lightGray
-        loading.label.text = "Loading..."
+        self.view.makeToastActivity(.center)
     }
     
     func hideActivityIndicator() {
-        MBProgressHUD.hide(for: self.view, animated: true)
+        self.view.hideToastActivity()
+//        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func showError(message: String) {
+        self.view.makeToast(message)
     }
     
 }

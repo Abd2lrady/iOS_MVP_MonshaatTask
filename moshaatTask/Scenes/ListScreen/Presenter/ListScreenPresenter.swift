@@ -16,15 +16,17 @@ class ListScreenPresenter {
     }
     
     func getConsultantsList() {
-        consultantInteractor.getConsultants { [weak self] consultants, error in
-            guard let self = self else {fatalError("presenter not found")}
-            guard let consultants = consultants else {
-                print(error?.localizedDescription)
-                fatalError("consultants empty, handle some errors")
-                }
+        guard !NetworkMonitor.shared.isConnected else { fatalError("no internet") }
+        consultantInteractor.getConsultants { [weak self] serverReponse, error in
+            guard let self = self else { fatalError("presenter not found") }
+            guard let consultants = serverReponse?.data else {
+//                print(error?.localizedDescription)
+//                fatalError("consultants empty, handle some errors")
+                self.view?.showError(message: error?.localizedDescription ?? "Error")
+                return
+            }
             self.consultants = consultants
             self.view?.consultantsLoaded()
-            
             self.view?.hideActivityIndicator()
         }
     }

@@ -18,7 +18,7 @@ extension ListScreenPresenter: ListScreenPresenterProtocol {
     }
     
     func refreshConsultantData() {
-         
+        view?.hideActivityIndicator()
     }
     
 }

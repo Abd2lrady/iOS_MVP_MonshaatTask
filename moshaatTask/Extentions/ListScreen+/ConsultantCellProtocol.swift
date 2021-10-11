@@ -14,7 +14,9 @@ protocol ConsultantCellProtocol {
     
     func setSpecializationLabel(with specialization: [String])
     
-    func setAvailiability(with availability: String)
+    func setAvailiability(with availability: String, color: UIColor)
     
     func setAvailbilityView(with color: UIColor)
+    
+    func setProfileImg(path: String)
 }

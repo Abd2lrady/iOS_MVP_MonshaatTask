@@ -21,9 +21,10 @@ extension ConsultantCVAdapter {
         self.configConsultantCell(cell: cell, consultant: consultant)
        
         return cell})
+        
     }
     
-    func setupDataSource() {
+    func configDataSource() {
         var snapShot = NSDiffableDataSourceSnapshot<ConsultantsCVSections, Consultant>()
         snapShot.appendSections([.main])
         snapShot.appendItems(consultants, toSection: .main)
@@ -39,6 +40,8 @@ extension ConsultantCVAdapter {
     
     func configConsultantCell(cell: ConsultantCellProtocol, consultant: Consultant) {
         
+        cell.setProfileImg(path: consultant.file?.path ?? "")
+        
         cell.setNameLabel(with: consultant.ssoUser?.fullName ?? "No name")
         
         cell.setRate(with: consultant.rating ?? 0)
@@ -46,13 +49,19 @@ extension ConsultantCVAdapter {
         cell.setSpecializationLabel(with: consultant.interests ?? [" "])
         
         if consultant.isOnline == true {
-            cell.setAvailiability(with: Strings.Consultant.isOnline)
+            cell.setAvailiability(with: Strings.Consultant.isOnline,
+                                  color: Colors.availabilityOnlineLabel.color)
+            
             cell.setAvailbilityView(with: Colors.availabilityOnline.color)
         } else if consultant.isAvailable == true {
-            cell.setAvailiability(with: Strings.Consultant.isAvailable)
+            cell.setAvailiability(with: Strings.Consultant.isAvailable,
+                                  color: Colors.availabilityOfflineLabel.color)
+            
             cell.setAvailbilityView(with: Colors.availabilityOffline.color)
         } else {
-            cell.setAvailiability(with: Strings.Consultant.notAvailable)
+            cell.setAvailiability(with: Strings.Consultant.notAvailable,
+                                  color: Colors.availabilityOfflineLabel.color)
+            
             cell.setAvailbilityView(with: Colors.availabilityOffline.color)
         }
         

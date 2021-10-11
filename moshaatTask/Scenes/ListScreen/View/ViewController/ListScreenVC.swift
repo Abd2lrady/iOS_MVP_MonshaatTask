@@ -10,12 +10,28 @@ import UIKit
 
 class ListScreenVC: UIViewController {
     
+    let toastActivityStyle: ToastStyle = {
+            var style = ToastStyle()
+            style.activityBackgroundColor = .clear
+            style.maxHeightPercentage = 0.6
+            style.displayShadow = true
+            ToastManager.shared.style = style
+            return style
+        }()
+    
+    var refreshControl = UIRefreshControl()
+    
     @IBOutlet private weak var headerBGView: UIImageView!
     @IBOutlet private weak var headerLabelView: HeadLabel!
     @IBOutlet private weak var consultantsCV: UICollectionView!
+    var scrollableView: UIScrollView {
+        return self.consultantsCV
+    }
     
-    lazy var presenter: ListScreenPresenter = ListScreenPresenter(with: self)
-    lazy var consultantCVAdapter = ConsultantCVAdapter(for: consultantsCV)
+    
+    
+    var presenter: ListScreenPresenter!
+    lazy var consultantCVAdapter = ConsultantCVAdapter(for: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,11 +66,15 @@ class ListScreenVC: UIViewController {
 
         consultantsCV.register(cellNib,
                                forCellWithReuseIdentifier: "ConsultantCell")
+        
+        consultantsCV.refreshControl = refreshControl
 
         consultantsCV.backgroundColor = .clear
         
+        consultantCVAdapter.configDataSource()
         consultantsCV.dataSource = consultantCVAdapter.consultantCVDataSource
-        consultantCVAdapter.setupDataSource()
+        
+        consultantsCV.delegate = consultantCVAdapter
     }
     
 }

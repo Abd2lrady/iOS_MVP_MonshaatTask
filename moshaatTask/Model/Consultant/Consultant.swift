@@ -6,12 +6,12 @@
 
 import Foundation
 
-//struct ServerReponse: Codable, Hashable {
-//    let status: Int?
-//    let success: Bool?
-//    let data: [Consultant]?
-//    let pagination: Pagination?
-//}
+ struct ServerReponse: Codable, Hashable {
+    let status: Int?
+    let success: Bool?
+    let data: [Consultant]?
+    let pagination: Pagination?
+ }
 
 struct Consultant: Codable, Hashable {
     let id: String?
@@ -26,10 +26,10 @@ struct Consultant: Codable, Hashable {
     enum CodingKeys: String, CodingKey {
         case id
         case rating
-        case aboutMe
-        case isAvailable
-        case isOnline
-        case ssoUser = "sso_User"
+        case aboutMe = "about_me"
+        case isAvailable = "is_available"
+        case isOnline = "is_online"
+        case ssoUser = "sso_user"
         case interests
         case file
     }
