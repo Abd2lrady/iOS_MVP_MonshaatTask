@@ -14,13 +14,14 @@ class ListScreenVC: UIViewController {
     @IBOutlet private weak var headerLabelView: HeadLabel!
     @IBOutlet private weak var consultantsCV: UICollectionView!
     
-    let presenter: ListScreenPresenterProtocol? = nil
+    lazy var presenter: ListScreenPresenter = ListScreenPresenter(with: self)
     lazy var consultantCVAdapter = ConsultantCVAdapter(for: consultantsCV)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        configConsultantCV()        
+        configConsultantCV()
+        presenter.viewLoaded()
     }
     
     override func viewDidLayoutSubviews() {
@@ -53,7 +54,7 @@ class ListScreenVC: UIViewController {
         consultantsCV.backgroundColor = .clear
         
         consultantsCV.dataSource = consultantCVAdapter.consultantCVDataSource
-        consultantCVAdapter.updateConsultantCV()
+        consultantCVAdapter.setupDataSource()
     }
     
 }

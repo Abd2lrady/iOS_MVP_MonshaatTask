@@ -70,6 +70,8 @@
 		B4EB63702713220600CB7122 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB636F2713220600CB7122 /* Subject.swift */; };
 		B4EB63742713236D00CB7122 /* SsoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63732713236D00CB7122 /* SsoUser.swift */; };
 		B4EB6376271323AC00CB7122 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB6375271323AC00CB7122 /* File.swift */; };
+		B4EB637B2713F7BC00CB7122 /* ConsultantsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB637A2713F7BC00CB7122 /* ConsultantsTarget.swift */; };
+		B4EB637D2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB637C2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +134,8 @@
 		B4EB636F2713220600CB7122 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		B4EB63732713236D00CB7122 /* SsoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SsoUser.swift; sourceTree = "<group>"; };
 		B4EB6375271323AC00CB7122 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		B4EB637A2713F7BC00CB7122 /* ConsultantsTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantsTarget.swift; sourceTree = "<group>"; };
+		B4EB637C2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsultantTraget+TargetType.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -457,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				B4EB63582713013000CB7122 /* ConsultantCVAdapter.swift */,
+				B4EB6365271317C500CB7122 /* ConsultantsCVSections.swift */,
 				B4EB63622713104B00CB7122 /* ConsultantCVAdapter+UICollectionViewDelegate.swift */,
 				B4EB635B271302C800CB7122 /* ConsultantCVAdapter+ConsultanatCVUICollectionViewDataSource.swift */,
 			);
@@ -473,7 +478,6 @@
 		B4EB636A2713215400CB7122 /* Consultant */ = {
 			isa = PBXGroup;
 			children = (
-				B4EB6365271317C500CB7122 /* ConsultantsCVSections.swift */,
 				B4EB636827131E0000CB7122 /* Consultant.swift */,
 				B4EB636B2713217900CB7122 /* Pagination.swift */,
 				B4EB636F2713220600CB7122 /* Subject.swift */,
@@ -486,6 +490,8 @@
 		B4EB63792713F6CF00CB7122 /* APITarget */ = {
 			isa = PBXGroup;
 			children = (
+				B4EB637A2713F7BC00CB7122 /* ConsultantsTarget.swift */,
+				B4EB637C2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift */,
 			);
 			path = APITarget;
 			sourceTree = "<group>";
@@ -632,6 +638,7 @@
 				B499E5EF270D8DD3007E1BC8 /* ListScreenVC.swift in Sources */,
 				B4A5DA2C2712B8F9008BF561 /* ConsultantsInteractor.swift in Sources */,
 				B499E5EB270D8DD3007E1BC8 /* AppDelegate.swift in Sources */,
+				B4EB637B2713F7BC00CB7122 /* ConsultantsTarget.swift in Sources */,
 				B4EB636927131E0000CB7122 /* Consultant.swift in Sources */,
 				B4848B932711C92500C4A643 /* ConsultantCell.swift in Sources */,
 				B499E621270DAF49007E1BC8 /* ListScreenCoordinator.swift in Sources */,
@@ -655,6 +662,7 @@
 				B4EB63632713104B00CB7122 /* ConsultantCVAdapter+UICollectionViewDelegate.swift in Sources */,
 				B4EB63532712CE7400CB7122 /* APIResponse.swift in Sources */,
 				B4A5DA282712B879008BF561 /* ListScreenViewProtocol.swift in Sources */,
+				B4EB637D2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift in Sources */,
 				B4A5DA2A2712B8AA008BF561 /* ListScreenPresenterProtocol.swift in Sources */,
 				B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */,
 				B4EB63542712CE7400CB7122 /* NetworkManger+Service.swift in Sources */,

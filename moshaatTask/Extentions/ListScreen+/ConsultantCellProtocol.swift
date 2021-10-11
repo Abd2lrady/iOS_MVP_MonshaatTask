@@ -4,7 +4,7 @@
 //
 //  Created by Ahmad Abdulrady
 
-import Foundation
+import UIKit
 
 protocol ConsultantCellProtocol {
     
@@ -12,10 +12,9 @@ protocol ConsultantCellProtocol {
     
     func setRate(with rate: Double)
     
-    func setSpecializationLabel(with specialization: String)
+    func setSpecializationLabel(with specialization: [String])
     
     func setAvailiability(with availability: String)
     
-    func setAvailbilityView(availability: Bool)
-
+    func setAvailbilityView(with color: UIColor)
 }

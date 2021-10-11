@@ -7,5 +7,5 @@
 import Foundation
 
 enum ConsultantsCVSections: Hashable {
-    case one
+    case main
 }

@@ -74,16 +74,19 @@ extension ConsultantCell: ConsultantCellProtocol {
         rateView.rating = 3
     }
     
-    func setSpecializationLabel(with specialization: String) {
-        specializationLabel.text = specialization
+    func setSpecializationLabel(with specialization: [String]) {
+        let label = specialization.reduce(into: "") { label, speciality in
+            label = "\(speciality), "
+        }
+        specializationLabel.text = label
     }
     
     func setAvailiability(with availability: String) {
         availablilityLabel.text = availability
     }
     
-    func setAvailbilityView(availability: Bool) {
-        
+    func setAvailbilityView(with color: UIColor) {
+        availabilityView.backgroundColor = color
     }
     
 }

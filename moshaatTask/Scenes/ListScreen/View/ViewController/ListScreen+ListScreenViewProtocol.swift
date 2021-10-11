@@ -9,7 +9,8 @@ import MBProgressHUD
 
 extension ListScreenVC: ListScreenViewProtocol {
     func consultantsLoaded() {
-        
+        consultantCVAdapter.consultants = presenter.consultants
+        consultantCVAdapter.updateConsultantCV()
     }
     
     func showActivityIndicator() {

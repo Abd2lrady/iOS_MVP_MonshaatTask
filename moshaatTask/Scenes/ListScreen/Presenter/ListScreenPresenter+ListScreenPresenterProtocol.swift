@@ -7,12 +7,10 @@
 import Foundation
 
 extension ListScreenPresenter: ListScreenPresenterProtocol {
-    func getConsultantsList() {
-         
-    }
     
     func viewLoaded() {
-         
+        view?.showActivityIndicator()
+        getConsultantsList()
     }
     
     func loadMoreConsultants() {

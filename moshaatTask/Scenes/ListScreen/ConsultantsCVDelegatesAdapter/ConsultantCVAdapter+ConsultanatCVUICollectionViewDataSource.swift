@@ -11,22 +11,51 @@ extension ConsultantCVAdapter {
     func createConsultantDataSource() -> UICollectionViewDiffableDataSource< ConsultantsCVSections,
                                                                               Consultant > {
         return UICollectionViewDiffableDataSource(collectionView: consultantCV,
-                                                  cellProvider: {(collectionView, indexPath, consultants)
+                                                  cellProvider: {(collectionView, indexPath, consultant)
                                                     -> UICollectionViewCell in
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ConsultantCell.reuseID,
                                                             for: indexPath) as? ConsultantCell
                                                         
         else { fatalError("can`t dequeue the cell with id \(ConsultantCell.reuseID)") }
-                                                        
-       return cell})
+        
+        self.configConsultantCell(cell: cell, consultant: consultant)
+       
+        return cell})
+    }
+    
+    func setupDataSource() {
+        var snapShot = NSDiffableDataSourceSnapshot<ConsultantsCVSections, Consultant>()
+        snapShot.appendSections([.main])
+        snapShot.appendItems(consultants, toSection: .main)
+        consultantCVDataSource.apply(snapShot)
     }
     
     func updateConsultantCV() {
         var currentSnapShot = consultantCVDataSource.snapshot()
         
-        currentSnapShot.appendSections([.one])
-        currentSnapShot.appendItems(consultants, toSection: .one)
+        currentSnapShot.appendItems(consultants, toSection: .main)
         consultantCVDataSource.apply(currentSnapShot)
+    }
+    
+    func configConsultantCell(cell: ConsultantCellProtocol, consultant: Consultant) {
+        
+        cell.setNameLabel(with: consultant.ssoUser?.fullName ?? "No name")
+        
+        cell.setRate(with: consultant.rating ?? 0)
+        
+        cell.setSpecializationLabel(with: consultant.interests ?? [" "])
+        
+        if consultant.isOnline == true {
+            cell.setAvailiability(with: Strings.Consultant.isOnline)
+            cell.setAvailbilityView(with: Colors.availabilityOnline.color)
+        } else if consultant.isAvailable == true {
+            cell.setAvailiability(with: Strings.Consultant.isAvailable)
+            cell.setAvailbilityView(with: Colors.availabilityOffline.color)
+        } else {
+            cell.setAvailiability(with: Strings.Consultant.notAvailable)
+            cell.setAvailbilityView(with: Colors.availabilityOffline.color)
+        }
+        
     }
     
 //    func collectionView(_ collectionView: UICollectionView,
