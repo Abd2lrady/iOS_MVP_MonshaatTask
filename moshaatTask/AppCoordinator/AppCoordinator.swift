@@ -13,6 +13,7 @@ class AppCoordinator {
     
     init(windowScene: UIWindowScene) {
         window = UIWindow(windowScene: windowScene)
+        NetworkMonitor.shared.isConnected
     }
     
 }

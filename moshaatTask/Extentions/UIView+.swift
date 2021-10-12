@@ -12,6 +12,7 @@ extension UIView {
         
         self.layer.cornerRadius = radius
         self.layer.maskedCorners = corners
+        self.layer.masksToBounds = true
         self.clipsToBounds = true
         
     }

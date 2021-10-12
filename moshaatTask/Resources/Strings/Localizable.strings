@@ -1,5 +1,10 @@
-"listScreen.title" = "استفسارات عامة";
 "noOtherResulrs" = "لا توجد نتائج اضافية";
+
+"listScreen.title" = "استفسارات عامة";
 "consultant.isOnline" = "متاح الآن";
 "consultant.isAvailable" = "متاح جداوله";
 "consultant.notAvailable" = "غير متاح جداوله";
+
+"noInternet.tryAgainButton" = "محاولة أخرى";
+"noInternet.noInternetLabel" = "لا يوجد اتصال بالانترنت";
+"noInternet.checkConnectionLabel" = "تحقق من اتصالك و حاول مرة اخرى";

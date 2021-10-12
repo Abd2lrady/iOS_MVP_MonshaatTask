@@ -16,6 +16,9 @@ class ListScreenVC: UIViewController {
     @IBOutlet private weak var headLabalTopSpaceConstrain: NSLayoutConstraint!
     @IBOutlet private weak var headBackgroundButtomSpaceConstrain: NSLayoutConstraint!
     
+    var retryActions: RetryActions?
+    var noInternet = NoInternet()
+    
     let toastActivityStyle: ToastStyle = {
             var style = ToastStyle()
             style.activityBackgroundColor = .clear
@@ -42,8 +45,9 @@ class ListScreenVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configConsultantCV()
-        refreshControl.addTarget(self, action: #selector(self.refresh), for: .valueChanged)
         presenter.viewLoaded()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -54,8 +58,6 @@ class ListScreenVC: UIViewController {
             
     func configHeaderUI() {
         headerLabelView.setHeaderTitle(with: Strings.ListScreen.title)
-        headerBGView.shapeSpecificCorners(with: 40,
-                                          corners: .layerMaxXMaxYCorner)
     }
     
     func configNavBar() {
@@ -86,12 +88,14 @@ class ListScreenVC: UIViewController {
         consultantsCV.delegate = consultantCVAdapter
     }
     
+    // MARK: Refreshing
     @objc
     func refresh() {
-        consultantCVAdapter.updateConsultantCV()
         presenter.refreshConsultantData()
+        consultantCVAdapter.updateConsultantCV()
     }
     
+    // MARK: Animation when scrolling
     func startScrolling() {
         self.headLabalTopSpaceConstrain.constant = self.view.safeAreaInsets.top
         self.headBackgroundButtomSpaceConstrain.constant = 8
@@ -101,6 +105,27 @@ class ListScreenVC: UIViewController {
                        initialSpringVelocity: 5,
                        options: .curveLinear) {
             self.view.layoutIfNeeded()
+        }
     }
+    
+    // MARK: NoInternet State
+    func showNoInternet() {
+        self.view.addSubview(noInternet)
+        noInternet.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+                                    noInternet.topAnchor.constraint(equalTo: headerBGView.bottomAnchor),
+                                    noInternet.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                                    noInternet.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                                    noInternet.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+                                    ])
+        noInternet.tryAgainButton.addTarget(self,
+                                            action: #selector(retryAction),
+                                            for: .touchUpInside)
+
     }
+    
+    func hideNoInternet() {
+        noInternet.removeFromSuperview()
+    }
+    
 }

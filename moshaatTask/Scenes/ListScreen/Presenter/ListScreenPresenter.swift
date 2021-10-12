@@ -20,13 +20,16 @@ class ListScreenPresenter {
     }
     
     func getConsultantsList(with page: Int) {
-        guard !NetworkMonitor.shared.isConnected else { fatalError("no internet") }
-        view?.showActivityIndicator()
+        guard NetworkMonitor.shared.isConnected else {
+            view?.showNoInternet()
+            return }
+        view?.hideNoInternet()
         consultantInteractor.getConsultants { [weak self] serverReponse, error in
             
             guard let consultantsResponse = serverReponse?.data,
                   let totalConsultants = serverReponse?.pagination?.total
             else {
+//                self?.view?.showNoInternet()
                 self?.view?.showError(message: error?.localizedDescription ?? "Error")
                 self?.view?.hideActivityIndicator()
                 return }
@@ -36,5 +39,5 @@ class ListScreenPresenter {
             self?.view?.consultantsLoaded()
         }
     }
-        
+            
 }

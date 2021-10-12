@@ -20,7 +20,6 @@ extension ConsultantCVAdapter: UICollectionViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         view?.startScrolling()
-
     }
    
 }

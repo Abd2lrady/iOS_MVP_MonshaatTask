@@ -42,12 +42,24 @@ internal struct Colors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#314d6c"></span>
   /// Alpha: 100% <br/> (0x314d6cff)
   internal static let nameLabel = Colors(rgbaValue: 0x314d6cff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#4a4a4a"></span>
+  /// Alpha: 100% <br/> (0x4a4a4aff)
+  internal static let noInternetLabel = Colors(rgbaValue: 0x4a4a4aff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f5f6fb"></span>
+  /// Alpha: 100% <br/> (0xf5f6fbff)
+  internal static let noInternetViewBg = Colors(rgbaValue: 0xf5f6fbff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#dde3e8"></span>
   /// Alpha: 100% <br/> (0xdde3e8ff)
   internal static let profileImgBorder = Colors(rgbaValue: 0xdde3e8ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#788995"></span>
   /// Alpha: 100% <br/> (0x788995ff)
   internal static let specializationLabel = Colors(rgbaValue: 0x788995ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#3084b2"></span>
+  /// Alpha: 100% <br/> (0x3084b2ff)
+  internal static let tryAgainButtonBg = Colors(rgbaValue: 0x3084b2ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
+  /// Alpha: 100% <br/> (0xffffffff)
+  internal static let tryAgainButtonTitle = Colors(rgbaValue: 0xffffffff)
 }
 // swiftlint:enable identifier_name line_length type_body_length
 

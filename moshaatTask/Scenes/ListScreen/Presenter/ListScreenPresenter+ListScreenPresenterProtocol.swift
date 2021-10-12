@@ -9,12 +9,14 @@ import Foundation
 extension ListScreenPresenter: ListScreenPresenterProtocol {
     
     func viewLoaded() {
+        view?.showActivityIndicator()
+        view?.retryActions = .viewLoaded
         page = 1
         getConsultantsList(with: page)
     }
     
     func loadMoreConsultants() {
-        
+        view?.retryActions = .loadMoreConsultants
         if consultants.count < totalConsultants {
             page += 1
             getConsultantsList(with: page)
@@ -25,8 +27,9 @@ extension ListScreenPresenter: ListScreenPresenterProtocol {
     }
     
     func refreshConsultantData() {
-        for pageIndx in 1 ..< page {
-            getConsultantsList(with: pageIndx)
+        view?.retryActions = .refreshConsultants
+        for pageIndx in 0 ..< page {
+            getConsultantsList(with: pageIndx + 1)
         }
         view?.consultantRefreshed()
     }

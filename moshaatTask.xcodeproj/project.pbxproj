@@ -25,7 +25,6 @@
 		B4848BA927120A1600C4A643 /* 29LT Azer-Regular.OTF in Resources */ = {isa = PBXBuildFile; fileRef = B4848BA627120A1600C4A643 /* 29LT Azer-Regular.OTF */; };
 		B4848BB427120E3A00C4A643 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848BB127120E3A00C4A643 /* Assets.swift */; };
 		B4848BB527120E3A00C4A643 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848BB227120E3A00C4A643 /* Fonts.swift */; };
-		B4848BB627120E3A00C4A643 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848BB327120E3A00C4A643 /* Colors.swift */; };
 		B4848BBD27121A7600C4A643 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848BBC27121A7600C4A643 /* Strings.swift */; };
 		B4848BBF27121A8200C4A643 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4848BBE27121A8200C4A643 /* Localizable.strings */; };
 		B4848BC327121DC700C4A643 /* HeadLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848BC127121DC700C4A643 /* HeadLabel.swift */; };
@@ -52,6 +51,8 @@
 		B4A5DA2C2712B8F9008BF561 /* ConsultantsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA2B2712B8F9008BF561 /* ConsultantsInteractor.swift */; };
 		B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */; };
 		B4A5DA332712C232008BF561 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = B4A5DA322712C232008BF561 /* Cosmos */; };
+		B4D3FCE22715D03800CF48F4 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B4D3FCE12715D03800CF48F4 /* Reachability */; };
+		B4D3FCE62715D37800CF48F4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3FCE52715D37800CF48F4 /* Reachability.swift */; };
 		B4EB634F2712CE7400CB7122 /* StaticHeaderPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63472712CE7400CB7122 /* StaticHeaderPlugin.swift */; };
 		B4EB63502712CE7400CB7122 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63482712CE7400CB7122 /* NetworkManager.swift */; };
 		B4EB63512712CE7400CB7122 /* NetworkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63492712CE7400CB7122 /* NetworkDefaults.swift */; };
@@ -74,6 +75,10 @@
 		B4EB637D2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB637C2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift */; };
 		B4EB637F2714433A00CB7122 /* ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB637E2714433A00CB7122 /* ViewDelegate.swift */; };
 		B4EB6381271443EE00CB7122 /* ListScreenVC+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB6380271443EE00CB7122 /* ListScreenVC+ViewDelegate.swift */; };
+		B4EB638327156FF200CB7122 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB638227156FF200CB7122 /* Colors.swift */; };
+		B4EB638A2715727B00CB7122 /* NoInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63882715727B00CB7122 /* NoInternet.swift */; };
+		B4EB638B2715727B00CB7122 /* NoInternet.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EB63892715727B00CB7122 /* NoInternet.xib */; };
+		B4EB638F2715B57400CB7122 /* ListScreenVC+RetryActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB638E2715B57400CB7122 /* ListScreenVC+RetryActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,7 +93,6 @@
 		B4848BA627120A1600C4A643 /* 29LT Azer-Regular.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "29LT Azer-Regular.OTF"; sourceTree = "<group>"; };
 		B4848BB127120E3A00C4A643 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		B4848BB227120E3A00C4A643 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		B4848BB327120E3A00C4A643 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B4848BBC27121A7600C4A643 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		B4848BBE27121A8200C4A643 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B4848BC127121DC700C4A643 /* HeadLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadLabel.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		B4A5DA292712B8AA008BF561 /* ListScreenPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenPresenterProtocol.swift; sourceTree = "<group>"; };
 		B4A5DA2B2712B8F9008BF561 /* ConsultantsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantsInteractor.swift; sourceTree = "<group>"; };
 		B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantCellProtocol.swift; sourceTree = "<group>"; };
+		B4D3FCE52715D37800CF48F4 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B4EB63472712CE7400CB7122 /* StaticHeaderPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHeaderPlugin.swift; sourceTree = "<group>"; };
 		B4EB63482712CE7400CB7122 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B4EB63492712CE7400CB7122 /* NetworkDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDefaults.swift; sourceTree = "<group>"; };
@@ -140,6 +145,10 @@
 		B4EB637C2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsultantTraget+TargetType.swift"; sourceTree = "<group>"; };
 		B4EB637E2714433A00CB7122 /* ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDelegate.swift; sourceTree = "<group>"; };
 		B4EB6380271443EE00CB7122 /* ListScreenVC+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListScreenVC+ViewDelegate.swift"; sourceTree = "<group>"; };
+		B4EB638227156FF200CB7122 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B4EB63882715727B00CB7122 /* NoInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternet.swift; sourceTree = "<group>"; };
+		B4EB63892715727B00CB7122 /* NoInternet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoInternet.xib; sourceTree = "<group>"; };
+		B4EB638E2715B57400CB7122 /* ListScreenVC+RetryActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListScreenVC+RetryActions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +160,7 @@
 				B4347F692710DBF90089EBA9 /* RxMoya in Frameworks */,
 				B4A5DA332712C232008BF561 /* Cosmos in Frameworks */,
 				B4347F672710DBF90089EBA9 /* CombineMoya in Frameworks */,
+				B4D3FCE22715D03800CF48F4 /* Reachability in Frameworks */,
 				B4347F742710DCAF0089EBA9 /* MBProgressHUD in Frameworks */,
 				B4347F6B2710DBF90089EBA9 /* Moya in Frameworks */,
 				B4347F652710DBF90089EBA9 /* ReactiveMoya in Frameworks */,
@@ -190,6 +200,7 @@
 		B4848B8C2711865500C4A643 /* NetworkMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				B4D3FCE52715D37800CF48F4 /* Reachability.swift */,
 				B4848B8D271186B800C4A643 /* NetworkMonitor.swift */,
 			);
 			path = NetworkMonitor;
@@ -200,6 +211,7 @@
 			children = (
 				B499E60C270D9069007E1BC8 /* ListScreenVC.xib */,
 				B499E5EE270D8DD3007E1BC8 /* ListScreenVC.swift */,
+				B4EB638E2715B57400CB7122 /* ListScreenVC+RetryActions.swift */,
 				B4EB63552712ED7F00CB7122 /* ListScreen+ListScreenViewProtocol.swift */,
 				B4EB6380271443EE00CB7122 /* ListScreenVC+ViewDelegate.swift */,
 			);
@@ -237,8 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				B4848BB127120E3A00C4A643 /* Assets.swift */,
-				B4848BB327120E3A00C4A643 /* Colors.swift */,
 				B4848BB227120E3A00C4A643 /* Fonts.swift */,
+				B4EB638227156FF200CB7122 /* Colors.swift */,
 				B4848BBC27121A7600C4A643 /* Strings.swift */,
 			);
 			path = Generated;
@@ -477,6 +489,8 @@
 		B4EB63642713112800CB7122 /* NoInternet */ = {
 			isa = PBXGroup;
 			children = (
+				B4EB63882715727B00CB7122 /* NoInternet.swift */,
+				B4EB63892715727B00CB7122 /* NoInternet.xib */,
 			);
 			path = NoInternet;
 			sourceTree = "<group>";
@@ -529,6 +543,7 @@
 				B4347F702710DC380089EBA9 /* Toast */,
 				B4347F732710DCAF0089EBA9 /* MBProgressHUD */,
 				B4A5DA322712C232008BF561 /* Cosmos */,
+				B4D3FCE12715D03800CF48F4 /* Reachability */,
 			);
 			productName = moshaatTask;
 			productReference = B499E5E7270D8DD3007E1BC8 /* moshaatTask.app */;
@@ -563,6 +578,7 @@
 				B4347F6F2710DC380089EBA9 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				B4347F722710DCAF0089EBA9 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
 				B4A5DA312712C232008BF561 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				B4D3FCE02715D03800CF48F4 /* XCRemoteSwiftPackageReference "Reachability" */,
 			);
 			productRefGroup = B499E5E8270D8DD3007E1BC8 /* Products */;
 			projectDirPath = "";
@@ -586,6 +602,7 @@
 				B4848BBF27121A8200C4A643 /* Localizable.strings in Resources */,
 				B499E60D270D9069007E1BC8 /* ListScreenVC.xib in Resources */,
 				B4848BA827120A1600C4A643 /* 29LT Azer-Medium.OTF in Resources */,
+				B4EB638B2715727B00CB7122 /* NoInternet.xib in Resources */,
 				B4848BC427121DC700C4A643 /* HeadLabel.xib in Resources */,
 				B499E608270D8F2A007E1BC8 /* swiftgen.yml in Resources */,
 				B4848BA927120A1600C4A643 /* 29LT Azer-Regular.OTF in Resources */,
@@ -640,7 +657,6 @@
 			files = (
 				B499E623270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift in Sources */,
 				B4EB634F2712CE7400CB7122 /* StaticHeaderPlugin.swift in Sources */,
-				B4848BB627120E3A00C4A643 /* Colors.swift in Sources */,
 				B4EB6381271443EE00CB7122 /* ListScreenVC+ViewDelegate.swift in Sources */,
 				B499E5EF270D8DD3007E1BC8 /* ListScreenVC.swift in Sources */,
 				B4A5DA2C2712B8F9008BF561 /* ConsultantsInteractor.swift in Sources */,
@@ -656,6 +672,7 @@
 				B4848B8727117B6A00C4A643 /* UIViewController+.swift in Sources */,
 				B4EB636C2713217900CB7122 /* Pagination.swift in Sources */,
 				B499E611270D935D007E1BC8 /* CoordinatorProtocol.swift in Sources */,
+				B4EB638A2715727B00CB7122 /* NoInternet.swift in Sources */,
 				B4848BB427120E3A00C4A643 /* Assets.swift in Sources */,
 				B4EB63742713236D00CB7122 /* SsoUser.swift in Sources */,
 				B4EB63592713013000CB7122 /* ConsultantCVAdapter.swift in Sources */,
@@ -664,6 +681,8 @@
 				B4848B8E271186B800C4A643 /* NetworkMonitor.swift in Sources */,
 				B499E60F270D92A5007E1BC8 /* RouterProtocol.swift in Sources */,
 				B4848BBD27121A7600C4A643 /* Strings.swift in Sources */,
+				B4EB638327156FF200CB7122 /* Colors.swift in Sources */,
+				B4EB638F2715B57400CB7122 /* ListScreenVC+RetryActions.swift in Sources */,
 				B4EB63562712ED7F00CB7122 /* ListScreen+ListScreenViewProtocol.swift in Sources */,
 				B4EB6376271323AC00CB7122 /* File.swift in Sources */,
 				B4EB63632713104B00CB7122 /* ConsultantCVAdapter+UICollectionViewDelegate.swift in Sources */,
@@ -673,6 +692,7 @@
 				B4EB637D2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift in Sources */,
 				B4A5DA2A2712B8AA008BF561 /* ListScreenPresenterProtocol.swift in Sources */,
 				B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */,
+				B4D3FCE62715D37800CF48F4 /* Reachability.swift in Sources */,
 				B4EB63542712CE7400CB7122 /* NetworkManger+Service.swift in Sources */,
 				B499E615270D9458007E1BC8 /* Router+RouterProtocol.swift in Sources */,
 				B4848B8B27117F6A00C4A643 /* UIBarButtonItem+.swift in Sources */,
@@ -931,6 +951,14 @@
 				minimumVersion = 23.0.0;
 			};
 		};
+		B4D3FCE02715D03800CF48F4 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -973,6 +1001,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B4A5DA312712C232008BF561 /* XCRemoteSwiftPackageReference "Cosmos" */;
 			productName = Cosmos;
+		};
+		B4D3FCE12715D03800CF48F4 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4D3FCE02715D03800CF48F4 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

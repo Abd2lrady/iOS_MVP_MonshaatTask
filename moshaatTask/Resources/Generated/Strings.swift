@@ -26,6 +26,15 @@ internal enum Strings {
     /// استفسارات عامة
     internal static let title = Strings.tr("Localizable", "listScreen.title")
   }
+
+  internal enum NoInternet {
+    /// تحقق من اتصالك و حاول مرة اخرى
+    internal static let checkConnectionLabel = Strings.tr("Localizable", "noInternet.checkConnectionLabel")
+    /// لا يوجد اتصال بالانترنت
+    internal static let noInternetLabel = Strings.tr("Localizable", "noInternet.noInternetLabel")
+    /// محاولة أخرى
+    internal static let tryAgainButton = Strings.tr("Localizable", "noInternet.tryAgainButton")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
