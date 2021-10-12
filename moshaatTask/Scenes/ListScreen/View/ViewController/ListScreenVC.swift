@@ -10,6 +10,12 @@ import UIKit
 
 class ListScreenVC: UIViewController {
     
+    @IBOutlet private weak var headerBGView: UIImageView!
+    @IBOutlet private weak var headerLabelView: HeadLabel!
+    @IBOutlet private weak var consultantsCV: UICollectionView!
+    @IBOutlet private weak var headLabalTopSpaceConstrain: NSLayoutConstraint!
+    @IBOutlet private weak var headBackgroundButtomSpaceConstrain: NSLayoutConstraint!
+    
     let toastActivityStyle: ToastStyle = {
             var style = ToastStyle()
             style.activityBackgroundColor = .clear
@@ -25,9 +31,6 @@ class ListScreenVC: UIViewController {
             return refresh
         }()
     
-    @IBOutlet private weak var headerBGView: UIImageView!
-    @IBOutlet private weak var headerLabelView: HeadLabel!
-    @IBOutlet private weak var consultantsCV: UICollectionView!
     var scrollableView: UIScrollView {
         return self.consultantsCV
     }
@@ -47,9 +50,8 @@ class ListScreenVC: UIViewController {
         super.viewDidLayoutSubviews()
         configHeaderUI()
         configNavBar()
-        
     }
-        
+            
     func configHeaderUI() {
         headerLabelView.setHeaderTitle(with: Strings.ListScreen.title)
         headerBGView.shapeSpecificCorners(with: 40,
@@ -90,4 +92,15 @@ class ListScreenVC: UIViewController {
         presenter.refreshConsultantData()
     }
     
+    func startScrolling() {
+        self.headLabalTopSpaceConstrain.constant = self.view.safeAreaInsets.top
+        self.headBackgroundButtomSpaceConstrain.constant = 5
+        UIView.animate(withDuration: 3,
+                       delay: 0,
+                       usingSpringWithDamping: 3,
+                       initialSpringVelocity: 5,
+                       options: .curveLinear) {
+            self.view.layoutIfNeeded()
+    }
+    }
 }

@@ -17,4 +17,10 @@ extension ConsultantCVAdapter: UICollectionViewDelegate {
             view?.loadMore()
         }
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view?.startScrolling()
+
+    }
+   
 }

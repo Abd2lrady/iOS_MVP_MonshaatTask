@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListScreenVC" customModule="moshaatTask" customModuleProvider="target">
             <connections>
                 <outlet property="consultantsCV" destination="Y1E-IV-Mfo" id="GG8-5l-vet"/>
+                <outlet property="headBackgroundButtomSpaceConstrain" destination="jca-Kl-wcA" id="TBO-sY-Z1j"/>
+                <outlet property="headLabalTopSpaceConstrain" destination="dq3-Pq-bDV" id="7xH-1d-f0a"/>
                 <outlet property="headerBGView" destination="rXK-8V-2Lz" id="DQK-er-pvx"/>
                 <outlet property="headerLabelView" destination="uAl-bO-Q6q" id="3gL-FV-L3r"/>
                 <outlet property="view" destination="iN0-l3-epB" id="iaW-dt-wbD"/>
@@ -31,7 +33,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Y1E-IV-Mfo">
-                    <rect key="frame" x="18" y="138" width="378" height="724"/>
+                    <rect key="frame" x="18" y="128" width="378" height="734"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GYs-D7-rAZ">
                         <size key="itemSize" width="160" height="200"/>
@@ -45,10 +47,10 @@
             <color key="backgroundColor" systemColor="systemTealColor"/>
             <constraints>
                 <constraint firstItem="Y1E-IV-Mfo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-18" id="CD2-LU-oIi"/>
-                <constraint firstItem="Y1E-IV-Mfo" firstAttribute="top" secondItem="uAl-bO-Q6q" secondAttribute="bottom" constant="18" id="GSl-9Y-Byq"/>
+                <constraint firstItem="Y1E-IV-Mfo" firstAttribute="top" secondItem="uAl-bO-Q6q" secondAttribute="bottom" constant="8" symbolic="YES" id="GSl-9Y-Byq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y1E-IV-Mfo" secondAttribute="bottom" id="Tds-8b-EGV"/>
                 <constraint firstItem="uAl-bO-Q6q" firstAttribute="trailing" secondItem="rXK-8V-2Lz" secondAttribute="trailing" id="dSo-8X-xiU"/>
-                <constraint firstItem="uAl-bO-Q6q" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="dq3-Pq-bDV"/>
+                <constraint firstItem="uAl-bO-Q6q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="94" id="dq3-Pq-bDV"/>
                 <constraint firstItem="rXK-8V-2Lz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gZl-96-FGa"/>
                 <constraint firstItem="rXK-8V-2Lz" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="i1d-5B-cNi"/>
                 <constraint firstItem="rXK-8V-2Lz" firstAttribute="bottom" secondItem="uAl-bO-Q6q" secondAttribute="bottom" constant="120" id="jca-Kl-wcA"/>
