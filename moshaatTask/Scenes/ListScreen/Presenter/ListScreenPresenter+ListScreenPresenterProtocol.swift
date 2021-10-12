@@ -9,17 +9,27 @@ import Foundation
 extension ListScreenPresenter: ListScreenPresenterProtocol {
     
     func viewLoaded() {
-        view?.showActivityIndicator()
-        getConsultantsList()
+        page = 1
+        getConsultantsList(with: page)
     }
     
     func loadMoreConsultants() {
-         
+        
+        if consultants.count < totalConsultants {
+            page += 1
+            getConsultantsList(with: page)
+            view?.moreConsultantsLoaded()
+        } else {
+            view?.noMoreConsultants()
+        }
     }
     
     func refreshConsultantData() {
-        getConsultantsList()
-        view?.hideActivityIndicator()
+        for pageIndx in 1 ..< page {
+            getConsultantsList(with: pageIndx)
+        }
+        view?.consultantRefreshed()
     }
-    
+
 }
+    

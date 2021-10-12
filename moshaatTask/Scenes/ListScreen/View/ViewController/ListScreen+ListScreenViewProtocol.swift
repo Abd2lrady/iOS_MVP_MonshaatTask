@@ -12,8 +12,25 @@ extension ListScreenVC: ListScreenViewProtocol {
     
     func consultantsLoaded() {
         consultantCVAdapter.consultants = presenter.consultants
-        refreshControl.isRefreshing ? refreshControl.endRefreshing() : hideActivityIndicator()
         consultantCVAdapter.updateConsultantCV()
+        self.hideActivityIndicator()
+    }
+    
+    func consultantRefreshed() {
+        if consultantCVAdapter.consultants.isEmpty {
+            consultantCVAdapter.consultants.append(contentsOf: presenter.consultants)
+        } else {
+            consultantCVAdapter.consultants = []
+            consultantCVAdapter.consultants.append(contentsOf: presenter.consultants)
+        }
+        consultantCVAdapter.updateConsultantCV()
+        self.hideActivityIndicator()
+    }
+    
+    func moreConsultantsLoaded() {
+        consultantCVAdapter.consultants.append(contentsOf: presenter.consultants)
+        consultantCVAdapter.updateConsultantCV()
+        self.hideActivityIndicator()
     }
     
     func showActivityIndicator() {
@@ -21,7 +38,7 @@ extension ListScreenVC: ListScreenViewProtocol {
     }
     
     func hideActivityIndicator() {
-        self.view.hideToastActivity()
+        refreshControl.isRefreshing ? refreshControl.endRefreshing() : view.hideToastActivity()
 //        MBProgressHUD.hide(for: self.view, animated: true)
     }
     
@@ -30,4 +47,8 @@ extension ListScreenVC: ListScreenViewProtocol {
         self.view.makeToast(message)
     }
     
+    func noMoreConsultants() {
+        print("no more consultants")
+        self.hideActivityIndicator()
+    }
 }

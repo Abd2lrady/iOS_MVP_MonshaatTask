@@ -7,27 +7,34 @@
 import Foundation
 
 class ListScreenPresenter {
+    
     weak var view: ListScreenViewProtocol?
-    var consultants = [Consultant]()
     let consultantInteractor = ConsultantsInteractor()
+    
+    var consultants = [Consultant]()
+    var totalConsultants = 0
+    var page = 1
     
     init(with view: ListScreenViewProtocol) {
         self.view = view
     }
     
-    func getConsultantsList() {
+    func getConsultantsList(with page: Int) {
         guard !NetworkMonitor.shared.isConnected else { fatalError("no internet") }
+        view?.showActivityIndicator()
         consultantInteractor.getConsultants { [weak self] serverReponse, error in
-            guard let self = self else { fatalError("presenter not found") }
-            guard let consultants = serverReponse?.data else {
-//                print(error?.localizedDescription)
-//                fatalError("consultants empty, handle some errors")
-                self.view?.showError(message: error?.localizedDescription ?? "Error")
-                return
-            }
-            self.consultants = consultants
-            self.view?.consultantsLoaded()
+            
+            guard let consultantsResponse = serverReponse?.data,
+                  let totalConsultants = serverReponse?.pagination?.total
+            else {
+                self?.view?.showError(message: error?.localizedDescription ?? "Error")
+                self?.view?.hideActivityIndicator()
+                return }
+            
+            self?.consultants = consultantsResponse
+            self?.totalConsultants = totalConsultants
+            self?.view?.consultantsLoaded()
         }
     }
-
+        
 }

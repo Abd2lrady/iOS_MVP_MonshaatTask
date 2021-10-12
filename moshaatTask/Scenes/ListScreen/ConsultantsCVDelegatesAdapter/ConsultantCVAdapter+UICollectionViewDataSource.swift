@@ -27,13 +27,13 @@ extension ConsultantCVAdapter {
     func configDataSource() {
         var snapShot = NSDiffableDataSourceSnapshot<ConsultantsCVSections, Consultant>()
         snapShot.appendSections([.main])
-        snapShot.appendItems(consultants, toSection: .main)
         consultantCVDataSource.apply(snapShot)
     }
     
     func updateConsultantCV() {
         var currentSnapShot = consultantCVDataSource.snapshot()
-        
+        currentSnapShot.deleteItems(consultants)
+//        currentSnapShot.deleteAllItems()
         currentSnapShot.appendItems(consultants, toSection: .main)
         consultantCVDataSource.apply(currentSnapShot)
     }

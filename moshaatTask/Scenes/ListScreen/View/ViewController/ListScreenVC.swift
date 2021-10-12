@@ -32,10 +32,8 @@ class ListScreenVC: UIViewController {
         return self.consultantsCV
     }
      
-    
-    
     var presenter: ListScreenPresenterProtocol!
-    lazy var consultantCVAdapter = ConsultantCVAdapter(for: self)
+    var consultantCVAdapter: ConsultantCVAdapter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +51,7 @@ class ListScreenVC: UIViewController {
     }
         
     func configHeaderUI() {
+        headerLabelView.setHeaderTitle(with: Strings.ListScreen.title)
         headerBGView.shapeSpecificCorners(with: 40,
                                           corners: .layerMaxXMaxYCorner)
     }
@@ -77,13 +76,17 @@ class ListScreenVC: UIViewController {
 
         consultantsCV.backgroundColor = .clear
         
+        self.consultantCVAdapter = ConsultantCVAdapter(for: self)
+        
         consultantCVAdapter.configDataSource()
         consultantsCV.dataSource = consultantCVAdapter.consultantCVDataSource
         
         consultantsCV.delegate = consultantCVAdapter
     }
     
-    @objc func refresh() {
+    @objc
+    func refresh() {
+        consultantCVAdapter.updateConsultantCV()
         presenter.refreshConsultantData()
     }
     

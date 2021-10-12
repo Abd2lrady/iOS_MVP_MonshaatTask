@@ -9,8 +9,7 @@ import UIKit
 extension ListScreenVC: ViewDelegate {
    
     func loadMore() {
-        presenter.loadMoreConsultants()
-        
         self.view.makeToastActivity(.bottom)
+        presenter.loadMoreConsultants()
     }
 }
