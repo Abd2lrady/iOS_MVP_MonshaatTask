@@ -352,6 +352,7 @@
 		B499E604270D8E68007E1BC8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B4EB63642713112800CB7122 /* NoInternet */,
 				B4848BC027121DC700C4A643 /* HeaderLabel */,
 				B499E61C270DAB7D007E1BC8 /* ListScreen */,
 			);
@@ -381,7 +382,6 @@
 		B499E61D270DAEFB007E1BC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B4EB63642713112800CB7122 /* NoInternet */,
 				B4848B902711C8C200C4A643 /* ConsultantCell */,
 				B4848B8F2711C8AE00C4A643 /* ViewController */,
 			);

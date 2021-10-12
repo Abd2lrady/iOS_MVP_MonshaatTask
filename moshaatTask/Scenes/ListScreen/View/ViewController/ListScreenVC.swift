@@ -94,10 +94,10 @@ class ListScreenVC: UIViewController {
     
     func startScrolling() {
         self.headLabalTopSpaceConstrain.constant = self.view.safeAreaInsets.top
-        self.headBackgroundButtomSpaceConstrain.constant = 5
+        self.headBackgroundButtomSpaceConstrain.constant = 8
         UIView.animate(withDuration: 3,
                        delay: 0,
-                       usingSpringWithDamping: 3,
+                       usingSpringWithDamping: 2,
                        initialSpringVelocity: 5,
                        options: .curveLinear) {
             self.view.layoutIfNeeded()
