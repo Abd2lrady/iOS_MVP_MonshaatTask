@@ -6,7 +6,7 @@
 
 import Foundation
 
-enum RetryActions {
+enum ListScreenActions {
     case viewLoaded
     case refreshConsultants
     case loadMoreConsultants
@@ -16,7 +16,7 @@ extension ListScreenVC {
 
     @objc
     func retryAction() {
-        switch retryActions {
+        switch listScreenActions {
         case .loadMoreConsultants:
             presenter.loadMoreConsultants()
         case .refreshConsultants:

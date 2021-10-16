@@ -30,12 +30,17 @@ extension ConsultantCVAdapter {
         consultantCVDataSource.apply(snapShot)
     }
     
-    func updateConsultantCV() {
+    func refreshConsultantsCV() {
         var currentSnapShot = consultantCVDataSource.snapshot()
-        currentSnapShot.deleteItems(consultants)
-//        currentSnapShot.deleteAllItems()
+//        currentSnapShot.deleteItems(consultants)
+        currentSnapShot.reloadItems(consultants)
+        consultantCVDataSource.apply(currentSnapShot, animatingDifferences: true)
+    }
+    
+    func addMoreToConsultantCV() {
+        var currentSnapShot = consultantCVDataSource.snapshot()
         currentSnapShot.appendItems(consultants, toSection: .main)
-        consultantCVDataSource.apply(currentSnapShot)
+        consultantCVDataSource.apply(currentSnapShot, animatingDifferences: true)
     }
     
     func configConsultantCell(cell: ConsultantCellProtocol, consultant: Consultant) {

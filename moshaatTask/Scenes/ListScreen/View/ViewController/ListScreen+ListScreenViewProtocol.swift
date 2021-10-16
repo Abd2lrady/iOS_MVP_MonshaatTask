@@ -10,26 +10,22 @@ import Toast
 extension ListScreenVC: ListScreenViewProtocol {
     
     func consultantsLoaded() {
-        consultantCVAdapter.consultants = presenter.consultants
-        consultantCVAdapter.updateConsultantCV()
-        self.hideActivityIndicator()
+        switch listScreenActions {
+        case .refreshConsultants:
+            consultantRefreshed()
+        default:
+            moreConsultantsLoaded()
+        }
     }
     
     func consultantRefreshed() {
-        if consultantCVAdapter.consultants.isEmpty {
-            consultantCVAdapter.consultants.append(contentsOf: presenter.consultants)
-        } else {
-            consultantCVAdapter.consultants = []
-            consultantCVAdapter.consultants.append(contentsOf: presenter.consultants)
-        }
-        consultantCVAdapter.updateConsultantCV()
-        self.hideActivityIndicator()
+        consultantCVAdapter.consultants.append(contentsOf: presenter.consultants)
+        consultantCVAdapter.refreshConsultantsCV()
     }
     
     func moreConsultantsLoaded() {
-        consultantCVAdapter.consultants.append(contentsOf: presenter.consultants)
-        consultantCVAdapter.updateConsultantCV()
-        self.hideActivityIndicator()
+        consultantCVAdapter.consultants = presenter.consultants
+        consultantCVAdapter.addMoreToConsultantCV()
     }
     
     func showActivityIndicator() {
@@ -47,7 +43,7 @@ extension ListScreenVC: ListScreenViewProtocol {
     }
     
     func noMoreConsultants() {
-        print("no more consultants")
+        view.makeToast(Strings.noOtherResulrs)
         self.hideActivityIndicator()
     }
     

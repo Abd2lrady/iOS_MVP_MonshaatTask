@@ -28,13 +28,6 @@ class NetworkMonitor {
         }
     }
 
-    
-    
-    
-    
-    
-    
-    
 //    private let monitor: NWPathMonitor
 //
 //    var conectionStatus: Bool = false

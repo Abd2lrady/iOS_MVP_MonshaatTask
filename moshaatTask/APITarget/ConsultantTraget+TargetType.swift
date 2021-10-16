@@ -27,7 +27,11 @@ extension ConsultantsTarget: TargetType {
     }
     
     var task: Task {
-        return .requestPlain
+        switch self {
+        case .getConsultants(let page):
+            return .requestParameters(parameters: ["page": page],
+                                      encoding: URLEncoding.default)
+        }
     }
     
     var headers: [String: String]? {

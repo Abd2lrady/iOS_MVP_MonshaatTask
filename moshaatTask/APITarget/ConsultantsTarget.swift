@@ -7,5 +7,5 @@
 import Foundation
 
 enum ConsultantsTarget {
-    case getConsultants
+    case getConsultants(page: Int)
 }

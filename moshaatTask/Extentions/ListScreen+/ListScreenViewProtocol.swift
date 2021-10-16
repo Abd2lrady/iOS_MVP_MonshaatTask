@@ -7,7 +7,7 @@
 import Foundation
 
 protocol ListScreenViewProtocol: AnyObject {
-    var  retryActions: RetryActions? { get set }
+    var  listScreenActions: ListScreenActions? { get set }
     func consultantsLoaded()
     func consultantRefreshed()
     func moreConsultantsLoaded()

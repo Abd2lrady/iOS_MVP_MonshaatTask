@@ -16,7 +16,7 @@ class ListScreenVC: UIViewController {
     @IBOutlet private weak var headLabalTopSpaceConstrain: NSLayoutConstraint!
     @IBOutlet private weak var headBackgroundButtomSpaceConstrain: NSLayoutConstraint!
     
-    var retryActions: RetryActions?
+    var listScreenActions: ListScreenActions?
     var noInternet = NoInternet()
     
     let toastActivityStyle: ToastStyle = {
@@ -91,8 +91,9 @@ class ListScreenVC: UIViewController {
     // MARK: Refreshing
     @objc
     func refresh() {
+        consultantCVAdapter.consultants = []
         presenter.refreshConsultantData()
-        consultantCVAdapter.updateConsultantCV()
+        consultantCVAdapter.refreshConsultantsCV()
     }
     
     // MARK: Animation when scrolling

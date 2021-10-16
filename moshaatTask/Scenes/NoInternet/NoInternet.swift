@@ -8,7 +8,6 @@ import UIKit
 
 class NoInternet: UIView {
     
-    @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var noInternetImg: UIImageView!
     @IBOutlet weak var tryAgainButton: UIButton! {
         didSet {
@@ -49,12 +48,12 @@ class NoInternet: UIView {
                               owner: self,
                               options: nil)?.first as? UIView
         else { fatalError("no internet view founded") }
-        self.addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([contentView.topAnchor.constraint(equalTo: self.topAnchor),
-                                     contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                                     contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-                                     contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor)])
+        self.addSubview(noInternetView)
+        noInternetView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([noInternetView.topAnchor.constraint(equalTo: self.topAnchor),
+                                     noInternetView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+                                     noInternetView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                                     noInternetView.trailingAnchor.constraint(equalTo: self.trailingAnchor)])
         self.clipsToBounds = true
         
     }
@@ -64,7 +63,7 @@ class NoInternet: UIView {
         
         let attributes: [NSAttributedString.Key: Any] =
                         [.font: UIFont(font: Fonts._29LTAzer.regular,
-                                       size: 17),
+                                       size: 17) ?? UIFont.systemFont(ofSize: 17),
                          .foregroundColor: Colors.tryAgainButtonTitle.color]
         
         let title = NSAttributedString(string: Strings.NoInternet.tryAgainButton,
@@ -75,7 +74,8 @@ class NoInternet: UIView {
         tryAgainButton.shapeAllCorners(with: tryAgainButton.bounds.height / 2)
     }
     
-    @objc func buttonAction() {
+    @objc
+    func buttonAction() {
         buttonActionFn?()
     }
     func addButtonAction(target: UIViewController, action: @escaping() -> Void) {

@@ -13,7 +13,7 @@ class ListScreenPresenter {
     
     var consultants = [Consultant]()
     var totalConsultants = 0
-    var page = 1
+    var currentPage = 1
     
     init(with view: ListScreenViewProtocol) {
         self.view = view
@@ -24,12 +24,11 @@ class ListScreenPresenter {
             view?.showNoInternet()
             return }
         view?.hideNoInternet()
-        consultantInteractor.getConsultants { [weak self] serverReponse, error in
+        consultantInteractor.getConsultants(page: currentPage) { [weak self] serverReponse, error in
             
             guard let consultantsResponse = serverReponse?.data,
                   let totalConsultants = serverReponse?.pagination?.total
             else {
-//                self?.view?.showNoInternet()
                 self?.view?.showError(message: error?.localizedDescription ?? "Error")
                 self?.view?.hideActivityIndicator()
                 return }
@@ -37,6 +36,7 @@ class ListScreenPresenter {
             self?.consultants = consultantsResponse
             self?.totalConsultants = totalConsultants
             self?.view?.consultantsLoaded()
+            self?.view?.hideActivityIndicator()
         }
     }
             

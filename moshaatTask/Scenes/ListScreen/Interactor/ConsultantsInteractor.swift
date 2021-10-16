@@ -10,9 +10,10 @@ class ConsultantsInteractor {
     var consultants = [Consultant]()
     let networkManager = NetworkManager()
     
-    func getConsultants(completionHander: @escaping (ServerReponse?, Error?) -> Void) {
+    func getConsultants(page: Int,
+                        completionHander: @escaping (ServerReponse?, Error?) -> Void) {
 
-        networkManager.request(target: ConsultantsTarget.getConsultants) { result, _ in
+        networkManager.request(target: ConsultantsTarget.getConsultants(page: page)) { result, _ in
             switch result {
             case.success(let response):
                 do {

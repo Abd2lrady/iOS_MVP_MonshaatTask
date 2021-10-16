@@ -39,6 +39,9 @@ internal struct Colors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#a6ddf9"></span>
   /// Alpha: 100% <br/> (0xa6ddf9ff)
   internal static let headerBullet = Colors(rgbaValue: 0xa6ddf9ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f5f6fb"></span>
+  /// Alpha: 100% <br/> (0xf5f6fbff)
+  internal static let listScreenBackground = Colors(rgbaValue: 0xf5f6fbff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#314d6c"></span>
   /// Alpha: 100% <br/> (0x314d6cff)
   internal static let nameLabel = Colors(rgbaValue: 0x314d6cff)
