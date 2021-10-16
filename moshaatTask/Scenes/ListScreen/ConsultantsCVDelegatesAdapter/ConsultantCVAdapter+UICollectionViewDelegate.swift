@@ -18,8 +18,9 @@ extension ConsultantCVAdapter: UICollectionViewDelegate {
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        view?.startScrolling()
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        let trans = scrollView.panGestureRecognizer.translation(in: scrollView.superview).y
+        view?.startScrolling(trans: trans)
     }
-   
+       
 }

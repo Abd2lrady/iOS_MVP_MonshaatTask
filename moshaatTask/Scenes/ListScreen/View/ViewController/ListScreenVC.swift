@@ -13,6 +13,13 @@ class ListScreenVC: UIViewController {
     @IBOutlet private weak var headerBGView: UIImageView!
     @IBOutlet private weak var headerLabelView: HeadLabel!
     @IBOutlet private weak var consultantsCV: UICollectionView!
+    @IBOutlet private weak var noMoreLabel: UILabel! {
+        didSet {
+            noMoreLabel.font = UIFont(font: Fonts._29LTAzer.medium, size: 20)
+            noMoreLabel.textColor = .lightGray
+            noMoreLabel.textAlignment = .center
+        }
+    }
     @IBOutlet private weak var headLabalTopSpaceConstrain: NSLayoutConstraint!
     @IBOutlet private weak var headBackgroundButtomSpaceConstrain: NSLayoutConstraint!
     
@@ -97,9 +104,17 @@ class ListScreenVC: UIViewController {
     }
     
     // MARK: Animation when scrolling
-    func startScrolling() {
-        self.headLabalTopSpaceConstrain.constant = self.view.safeAreaInsets.top
-        self.headBackgroundButtomSpaceConstrain.constant = 8
+    func startScrolling(trans: CGFloat) {
+        if trans < 0 {
+            self.headLabalTopSpaceConstrain.constant = self.view.safeAreaInsets.top
+            self.headBackgroundButtomSpaceConstrain.constant = 8
+            
+        } else {
+            // moving down
+            self.headLabalTopSpaceConstrain.constant = 94
+            self.headerBGView.bottomAnchor.constraint(equalTo: headerLabelView.bottomAnchor,
+                                                      constant: 120).isActive = true
+        }
         UIView.animate(withDuration: 3,
                        delay: 0,
                        usingSpringWithDamping: 2,
@@ -127,6 +142,11 @@ class ListScreenVC: UIViewController {
     
     func hideNoInternet() {
         noInternet.removeFromSuperview()
+    }
+
+    func noMoreConsultants() {
+        noMoreLabel.text = Strings.noOtherResulrs
+        self.hideActivityIndicator()
     }
     
 }

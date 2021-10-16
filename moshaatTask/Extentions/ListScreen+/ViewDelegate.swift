@@ -9,5 +9,5 @@ import UIKit
 protocol ViewDelegate: AnyObject {
     var scrollableView: UIScrollView { get }
     func loadMore()
-    func startScrolling()
+    func startScrolling(trans: CGFloat)
 }

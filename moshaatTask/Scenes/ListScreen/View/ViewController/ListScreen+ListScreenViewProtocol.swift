@@ -4,7 +4,7 @@
 //
 //  Created by Ahmad Abdulrady
 
-import Foundation
+import UIKit
 import Toast
 
 extension ListScreenVC: ListScreenViewProtocol {
@@ -40,11 +40,6 @@ extension ListScreenVC: ListScreenViewProtocol {
     func showError(message: String) {
         refreshControl.isRefreshing ? refreshControl.endRefreshing() : hideActivityIndicator()
         self.view.makeToast(message)
-    }
-    
-    func noMoreConsultants() {
-        view.makeToast(Strings.noOtherResulrs)
-        self.hideActivityIndicator()
     }
     
 }
