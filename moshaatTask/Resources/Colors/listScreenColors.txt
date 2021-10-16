@@ -1,0 +1,17 @@
+
+headerBullet: #a6ddf9
+profileImgBorder: #dde3e8
+availabilityOnline: #5cb466
+availabilityOffline:#788995
+availabilityBorder: #ffffff
+activityColor: #dde3e8
+
+nameLabel: #314d6c
+specializationLabel: #788995
+availabilityOnlineLabel: #5cb466
+availabilityOfflineLabel: #e13636
+
+tryAgainButtonTitle: #ffffff
+noInternetLabel: #4a4a4a
+tryAgainButtonBg: #3084b2
+noInternetViewBg: #f5f6fb

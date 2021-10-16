@@ -9,7 +9,10 @@ import Foundation
 extension ListScreenCoordinator: CoordinatorProtocol {
     
     func start() {
-        let listScreenVC = ListScreenVC()
-        router.push(view: listScreenVC, animated: true)
+        
+        let view = ListScreenVC()
+        let presenter = ListScreenPresenter(with: view)
+        view.presenter = presenter
+        router.push(view: view, animated: true)
     }
 }
