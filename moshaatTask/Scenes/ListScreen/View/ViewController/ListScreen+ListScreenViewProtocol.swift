@@ -19,6 +19,7 @@ extension ListScreenVC: ListScreenViewProtocol {
     }
     
     func consultantRefreshed() {
+//        consultantCVAdapter.consultantCV.reloadData()
         consultantCVAdapter.consultants.append(contentsOf: presenter.consultants)
         consultantCVAdapter.refreshConsultantsCV()
     }

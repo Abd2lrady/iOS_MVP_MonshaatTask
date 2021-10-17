@@ -27,7 +27,36 @@ extension ConsultantCVAdapter {
     func configDataSource() {
         var snapShot = NSDiffableDataSourceSnapshot<ConsultantsCVSections, Consultant>()
         snapShot.appendSections([.main])
+    
+//        consultantCVDataSource.supplementaryViewProvider = { [weak self]
+//            (collectionView: UICollectionView,
+//             kind: String,
+//             indexPath: IndexPath) -> UICollectionReusableView? in
+//            let footer = collectionView.dequeueReusableSupplementaryView(
+//                ofKind: UICollectionView.elementKindSectionFooter,
+//                withReuseIdentifier: NoMoreConsultantsCVFooterCell.reuseID,
+//                for: indexPath) as? NoMoreConsultantsCVFooterCell
+//            let section = self?.consultantCVDataSource.snapshot()
+//                .sectionIdentifiers[indexPath.section]
+//            footer?.noMoreLabel.text = ""
+//            return footer
+//        }
+        configFooter(with: Strings.noOtherResulrs)
         consultantCVDataSource.apply(snapShot)
+    }
+    
+    func configFooter(with label: String) {
+        consultantCVDataSource.supplementaryViewProvider = { [weak self]
+            (collectionView: UICollectionView,
+             kind: String,
+             indexPath: IndexPath) -> UICollectionReusableView? in
+            let footer = collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionFooter,
+                withReuseIdentifier: NoMoreConsultantsCVFooterCell.reuseID,
+                for: indexPath) as? NoMoreConsultantsCVFooterCell
+            footer?.noMoreLabel.text = label
+            return footer
+        }
     }
     
     func refreshConsultantsCV() {
@@ -69,7 +98,6 @@ extension ConsultantCVAdapter {
             
             cell.setAvailbilityView(with: Colors.availabilityOffline.color)
         }
-        
     }
     
 //    func collectionView(_ collectionView: UICollectionView,

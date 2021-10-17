@@ -37,7 +37,7 @@ class ConsultantCell: UICollectionViewCell {
         }
     }
     
-    static let reuseID = "ConsultantCell"
+    static let reuseID = "\(ConsultantCell.self)"
     
     override func awakeFromNib() {
         super.awakeFromNib()

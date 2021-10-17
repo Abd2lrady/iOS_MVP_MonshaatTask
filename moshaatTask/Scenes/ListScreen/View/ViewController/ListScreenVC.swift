@@ -13,13 +13,6 @@ class ListScreenVC: UIViewController {
     @IBOutlet private weak var headerBGView: UIImageView!
     @IBOutlet private weak var headerLabelView: HeadLabel!
     @IBOutlet private weak var consultantsCV: UICollectionView!
-    @IBOutlet private weak var noMoreLabel: UILabel! {
-        didSet {
-            noMoreLabel.font = UIFont(font: Fonts._29LTAzer.medium, size: 20)
-            noMoreLabel.textColor = .lightGray
-            noMoreLabel.textAlignment = .center
-        }
-    }
     @IBOutlet private weak var headLabalTopSpaceConstrain: NSLayoutConstraint!
     @IBOutlet private weak var headBackgroundButtomSpaceConstrain: NSLayoutConstraint!
     
@@ -77,12 +70,21 @@ class ListScreenVC: UIViewController {
     }
     
     func configConsultantCV() {
-        let cellNib = UINib(nibName: "ConsultantCell",
+        
+        let cellNib = UINib(nibName: String(describing: ConsultantCell.self),
                             bundle: Bundle.main)
+        
+        let footerNib = UINib(nibName: String(describing: NoMoreConsultantsCVFooterCell.self),
+                              bundle: Bundle.main)
 
         consultantsCV.register(cellNib,
-                               forCellWithReuseIdentifier: "ConsultantCell")
+                               forCellWithReuseIdentifier: ConsultantCell.reuseID)
         
+//        consultantsCV.register(footerNib,
+//                               forCellWithReuseIdentifier: NoMoreConsultantsCVFooterCell.reuseID)
+        consultantsCV.register(footerNib,
+                               forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                               withReuseIdentifier: NoMoreConsultantsCVFooterCell.reuseID)
         consultantsCV.refreshControl = refreshControl
 
         consultantsCV.backgroundColor = .clear
@@ -106,14 +108,17 @@ class ListScreenVC: UIViewController {
     // MARK: Animation when scrolling
     func startScrolling(trans: CGFloat) {
         if trans < 0 {
+            // moving up
             self.headLabalTopSpaceConstrain.constant = self.view.safeAreaInsets.top
             self.headBackgroundButtomSpaceConstrain.constant = 8
             
         } else {
             // moving down
             self.headLabalTopSpaceConstrain.constant = 94
-            self.headerBGView.bottomAnchor.constraint(equalTo: headerLabelView.bottomAnchor,
-                                                      constant: 120).isActive = true
+            self.headBackgroundButtomSpaceConstrain.constant = 120
+
+//            self.headerBGView.bottomAnchor.constraint(equalTo: headerLabelView.bottomAnchor,
+//                                                      constant: 120).isActive = true
         }
         UIView.animate(withDuration: 3,
                        delay: 0,
@@ -145,7 +150,7 @@ class ListScreenVC: UIViewController {
     }
 
     func noMoreConsultants() {
-        noMoreLabel.text = Strings.noOtherResulrs
+        consultantCVAdapter.noMoreConsultantsFooter()
         self.hideActivityIndicator()
     }
     

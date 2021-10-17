@@ -15,7 +15,6 @@
                 <outlet property="headLabalTopSpaceConstrain" destination="dq3-Pq-bDV" id="7xH-1d-f0a"/>
                 <outlet property="headerBGView" destination="rXK-8V-2Lz" id="DQK-er-pvx"/>
                 <outlet property="headerLabelView" destination="uAl-bO-Q6q" id="3gL-FV-L3r"/>
-                <outlet property="noMoreLabel" destination="h5E-2C-wET" id="3db-Jn-R91"/>
                 <outlet property="view" destination="iN0-l3-epB" id="iaW-dt-wbD"/>
             </connections>
         </placeholder>
@@ -25,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask" translatesAutoresizingMaskIntoConstraints="NO" id="rXK-8V-2Lz">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAl-bO-Q6q" customClass="HeadLabel" customModule="moshaatTask" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="94" width="414" height="26"/>
@@ -36,33 +35,25 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Y1E-IV-Mfo">
                     <rect key="frame" x="18" y="128" width="378" height="734"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GYs-D7-rAZ">
-                        <size key="itemSize" width="160" height="200"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I67-Np-6gO">
+                        <size key="itemSize" width="160" height="220"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5E-2C-wET" userLabel="NoMoreLabel">
-                    <rect key="frame" x="207" y="862" width="0.0" height="0.0"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.96078431372549022" green="0.96470588235294119" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="h5E-2C-wET" secondAttribute="bottom" id="B8c-qb-16J"/>
                 <constraint firstItem="Y1E-IV-Mfo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-18" id="CD2-LU-oIi"/>
-                <constraint firstItem="h5E-2C-wET" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Feg-H5-mrc"/>
-                <constraint firstItem="Y1E-IV-Mfo" firstAttribute="top" secondItem="uAl-bO-Q6q" secondAttribute="bottom" constant="8" symbolic="YES" id="GSl-9Y-Byq"/>
-                <constraint firstItem="Y1E-IV-Mfo" firstAttribute="bottom" secondItem="h5E-2C-wET" secondAttribute="top" id="Tds-8b-EGV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y1E-IV-Mfo" secondAttribute="bottom" id="Ea9-4C-ygP"/>
+                <constraint firstItem="Y1E-IV-Mfo" firstAttribute="top" secondItem="uAl-bO-Q6q" secondAttribute="bottom" constant="8" id="GSl-9Y-Byq"/>
                 <constraint firstItem="uAl-bO-Q6q" firstAttribute="trailing" secondItem="rXK-8V-2Lz" secondAttribute="trailing" id="dSo-8X-xiU"/>
                 <constraint firstItem="uAl-bO-Q6q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="94" id="dq3-Pq-bDV"/>
                 <constraint firstItem="rXK-8V-2Lz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gZl-96-FGa"/>
                 <constraint firstItem="rXK-8V-2Lz" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="i1d-5B-cNi"/>
-                <constraint firstItem="rXK-8V-2Lz" firstAttribute="bottom" secondItem="uAl-bO-Q6q" secondAttribute="bottom" constant="120" id="jca-Kl-wcA"/>
+                <constraint firstItem="rXK-8V-2Lz" firstAttribute="bottom" secondItem="uAl-bO-Q6q" secondAttribute="bottom" constant="100" id="jca-Kl-wcA"/>
                 <constraint firstItem="Y1E-IV-Mfo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="18" id="mSB-g6-x9d"/>
                 <constraint firstItem="uAl-bO-Q6q" firstAttribute="leading" secondItem="rXK-8V-2Lz" secondAttribute="leading" id="tH1-g8-Ca4"/>
                 <constraint firstItem="rXK-8V-2Lz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zDg-Hf-alH"/>

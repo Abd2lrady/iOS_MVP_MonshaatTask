@@ -6,7 +6,8 @@
 
 import UIKit
 
-extension ConsultantCVAdapter: UICollectionViewDelegate {
+extension ConsultantCVAdapter: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         
         let dragOffestY = scrollView.contentOffset.y
@@ -22,5 +23,14 @@ extension ConsultantCVAdapter: UICollectionViewDelegate {
         let trans = scrollView.panGestureRecognizer.translation(in: scrollView.superview).y
         view?.startScrolling(trans: trans)
     }
-       
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForFooterInSection section: Int) -> CGSize {
+         if showFooter {
+            return CGSize(width: 220, height: 75)
+         } else {
+            return CGSize(width: 220 , height: 0)
+         }
+    }
 }

@@ -11,7 +11,7 @@ class ConsultantCVAdapter: NSObject {
     var consultants = [Consultant]()
     
     weak var view: ViewDelegate?
-    
+    var showFooter = false
     lazy var consultantCV: UICollectionView = {
         guard let collectionView = view?.scrollableView as? UICollectionView
         else { fatalError("no scrollableView") }
@@ -28,4 +28,9 @@ class ConsultantCVAdapter: NSObject {
         return consultants[indexPath.row]
     }
     
+    func noMoreConsultantsFooter() {
+        let snap = consultantCVDataSource.snapshot()
+        showFooter = true
+        consultantCVDataSource.apply(snap)
+    }
 }
