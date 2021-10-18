@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileScreenVC" customModule="moshaatTask" customModuleProvider="target">
             <connections>
+                <outlet property="headerCardView" destination="hCx-g7-dE5" id="QbO-Rp-17k"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,19 +25,32 @@
                         <constraint firstAttribute="height" constant="240" id="QfB-ir-H6h"/>
                     </constraints>
                 </imageView>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCx-g7-dE5" customClass="HeaderCardView" customModule="moshaatTask" customModuleProvider="target">
+                    <rect key="frame" x="15" y="91" width="384" height="175"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="175" id="fg3-9P-65h"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemTealColor"/>
             <constraints>
                 <constraint firstItem="MFI-rq-kJy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fzc-VT-1Lf"/>
                 <constraint firstItem="MFI-rq-kJy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="W1I-P7-C5m"/>
+                <constraint firstItem="hCx-g7-dE5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-15" id="bEH-qj-PMy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MFI-rq-kJy" secondAttribute="trailing" id="xGx-BR-VPp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="hCx-g7-dE5" secondAttribute="leading" constant="-15" id="ypI-4Y-NMI"/>
+                <constraint firstItem="hCx-g7-dE5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="91" id="zax-zj-gxM"/>
             </constraints>
-            <point key="canvasLocation" x="46" y="51"/>
+            <point key="canvasLocation" x="44.927536231884062" y="50.892857142857139"/>
         </view>
     </objects>
     <resources>
         <image name="Mask" width="375" height="225"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

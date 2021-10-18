@@ -25,6 +25,9 @@
 		B4643558271D55BA00393F35 /* ProfileScreenVC+ProfileScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4643551271D55BA00393F35 /* ProfileScreenVC+ProfileScreenViewProtocol.swift */; };
 		B4643559271D55BA00393F35 /* ProfileScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4643552271D55BA00393F35 /* ProfileScreenVC.xib */; };
 		B464355A271D55BA00393F35 /* ProfileScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4643553271D55BA00393F35 /* ProfileScreenVC.swift */; };
+		B464355C271D599900393F35 /* HeaderCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464355B271D599900393F35 /* HeaderCardView.xib */; };
+		B4643561271D7F7E00393F35 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4643560271D7F7E00393F35 /* CustomButtonView.swift */; };
+		B4643563271D7F9200393F35 /* CustomButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4643562271D7F9200393F35 /* CustomButtonView.xib */; };
 		B4848B8727117B6A00C4A643 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848B8627117B6A00C4A643 /* UIViewController+.swift */; };
 		B4848B8B27117F6A00C4A643 /* UIBarButtonItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848B8A27117F6A00C4A643 /* UIBarButtonItem+.swift */; };
 		B4848B8E271186B800C4A643 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848B8D271186B800C4A643 /* NetworkMonitor.swift */; };
@@ -104,6 +107,9 @@
 		B4643551271D55BA00393F35 /* ProfileScreenVC+ProfileScreenViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProfileScreenVC+ProfileScreenViewProtocol.swift"; sourceTree = "<group>"; };
 		B4643552271D55BA00393F35 /* ProfileScreenVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileScreenVC.xib; sourceTree = "<group>"; };
 		B4643553271D55BA00393F35 /* ProfileScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreenVC.swift; sourceTree = "<group>"; };
+		B464355B271D599900393F35 /* HeaderCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCardView.xib; sourceTree = "<group>"; };
+		B4643560271D7F7E00393F35 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		B4643562271D7F9200393F35 /* CustomButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButtonView.xib; sourceTree = "<group>"; };
 		B4848B8627117B6A00C4A643 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		B4848B8A27117F6A00C4A643 /* UIBarButtonItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+.swift"; sourceTree = "<group>"; };
 		B4848B8D271186B800C4A643 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
@@ -230,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				B4643546271D55A800393F35 /* HeaderCardView.swift */,
+				B464355B271D599900393F35 /* HeaderCardView.xib */,
 			);
 			path = HeaderCardView;
 			sourceTree = "<group>";
@@ -265,6 +272,7 @@
 		B464354F271D55BA00393F35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4643564271D90BD00393F35 /* SessionCell */,
 				B4643550271D55BA00393F35 /* ViewController */,
 			);
 			path = View;
@@ -278,6 +286,22 @@
 				B4643553271D55BA00393F35 /* ProfileScreenVC.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B464355D271D76AB00393F35 /* CustomButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				B4643560271D7F7E00393F35 /* CustomButtonView.swift */,
+				B4643562271D7F9200393F35 /* CustomButtonView.xib */,
+			);
+			path = CustomButtonView;
+			sourceTree = "<group>";
+		};
+		B4643564271D90BD00393F35 /* SessionCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SessionCell;
 			sourceTree = "<group>";
 		};
 		B4848B8C2711865500C4A643 /* NetworkMonitor */ = {
@@ -450,6 +474,7 @@
 		B499E604270D8E68007E1BC8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B464355D271D76AB00393F35 /* CustomButtonView */,
 				B4EB63642713112800CB7122 /* NoInternet */,
 				B4643545271D55A800393F35 /* HeaderCardView */,
 				B4848BC027121DC700C4A643 /* HeaderLabel */,
@@ -686,6 +711,8 @@
 				B4848BA727120A1600C4A643 /* 29LT Azer-Bold.OTF in Resources */,
 				B4643559271D55BA00393F35 /* ProfileScreenVC.xib in Resources */,
 				B4848BBF27121A8200C4A643 /* Localizable.strings in Resources */,
+				B4643563271D7F9200393F35 /* CustomButtonView.xib in Resources */,
+				B464355C271D599900393F35 /* HeaderCardView.xib in Resources */,
 				B499E60D270D9069007E1BC8 /* ListScreenVC.xib in Resources */,
 				B4848BA827120A1600C4A643 /* 29LT Azer-Medium.OTF in Resources */,
 				B4EB638B2715727B00CB7122 /* NoInternet.xib in Resources */,
@@ -789,6 +816,7 @@
 				B4D3FCE62715D37800CF48F4 /* Reachability.swift in Sources */,
 				B4EB63542712CE7400CB7122 /* NetworkManger+Service.swift in Sources */,
 				B499E615270D9458007E1BC8 /* Router+RouterProtocol.swift in Sources */,
+				B4643561271D7F7E00393F35 /* CustomButtonView.swift in Sources */,
 				B4848B8B27117F6A00C4A643 /* UIBarButtonItem+.swift in Sources */,
 				B4EB63602713055B00CB7122 /* ListScreenPresenter+ListScreenPresenterProtocol.swift in Sources */,
 				B499E617270D9E62007E1BC8 /* AppCoordinator.swift in Sources */,

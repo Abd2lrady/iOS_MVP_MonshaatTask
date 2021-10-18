@@ -32,6 +32,10 @@ internal enum Assets {
   internal static let icStarActive = ImageAsset(name: "ic_star-active")
   internal static let navigationBarIcBackArrow = ImageAsset(name: "navigation-bar_ic_back-arrow")
   internal static let icNoInternet = ImageAsset(name: "ic_no-internet")
+  internal static let icAdd = ImageAsset(name: "ic_add")
+  internal static let icChat = ImageAsset(name: "ic_chat")
+  internal static let icDots = ImageAsset(name: "ic_dots")
+  internal static let icNotification = ImageAsset(name: "ic_notification")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

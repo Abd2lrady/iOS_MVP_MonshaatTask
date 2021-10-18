@@ -54,6 +54,24 @@ internal struct Colors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#dde3e8"></span>
   /// Alpha: 100% <br/> (0xdde3e8ff)
   internal static let profileImgBorder = Colors(rgbaValue: 0xdde3e8ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#717781"></span>
+  /// Alpha: 100% <br/> (0x717781ff)
+  internal static let profileInterestLabel = Colors(rgbaValue: 0x717781ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#314d6c"></span>
+  /// Alpha: 100% <br/> (0x314d6cff)
+  internal static let profileNameLabel = Colors(rgbaValue: 0x314d6cff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#007498"></span>
+  /// Alpha: 100% <br/> (0x007498ff)
+  internal static let profileRateLabel = Colors(rgbaValue: 0x007498ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f5f6fb"></span>
+  /// Alpha: 100% <br/> (0xf5f6fbff)
+  internal static let profileScreenBackground = Colors(rgbaValue: 0xf5f6fbff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#3084b2"></span>
+  /// Alpha: 100% <br/> (0x3084b2ff)
+  internal static let profileSendMsgButton = Colors(rgbaValue: 0x3084b2ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#314d6c"></span>
+  /// Alpha: 100% <br/> (0x314d6cff)
+  internal static let profileSpecialityLabel = Colors(rgbaValue: 0x314d6cff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#788995"></span>
   /// Alpha: 100% <br/> (0x788995ff)
   internal static let specializationLabel = Colors(rgbaValue: 0x788995ff)

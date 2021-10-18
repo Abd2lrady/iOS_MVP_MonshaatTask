@@ -35,6 +35,13 @@ internal enum Strings {
     /// محاولة أخرى
     internal static let tryAgainButton = Strings.tr("Localizable", "noInternet.tryAgainButton")
   }
+
+  internal enum ProfileScreen {
+    internal enum SendMsgButton {
+      /// ارسال رسالة
+      internal static let title = Strings.tr("Localizable", "profileScreen.SendMsgButton.title")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

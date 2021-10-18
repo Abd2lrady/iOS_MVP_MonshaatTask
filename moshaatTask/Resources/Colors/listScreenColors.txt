@@ -1,12 +1,14 @@
 
 listScreenBackground: #f5f6fb
+profileScreenBackground: #f5f6fb
+
 headerBullet: #a6ddf9
+
 profileImgBorder: #dde3e8
 availabilityOnline: #5cb466
 availabilityOffline:#788995
 availabilityBorder: #ffffff
 activityColor: #dde3e8
-
 nameLabel: #314d6c
 specializationLabel: #788995
 availabilityOnlineLabel: #5cb466
@@ -16,3 +18,12 @@ tryAgainButtonTitle: #ffffff
 noInternetLabel: #4a4a4a
 tryAgainButtonBg: #3084b2
 noInternetViewBg: #f5f6fb
+
+profileNameLabel: #314d6c
+profileRateLabel: #007498
+profileInterestLabel: #717781
+profileSpecialityLabel: #314d6c
+profileSendMsgButton: #3084b2
+
+
+

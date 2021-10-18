@@ -8,6 +8,7 @@ import UIKit
 
 class ProfileScreenVC: UIViewController {
     
+    @IBOutlet weak var headerCardView: HeaderCardView!
     var presenter: ProfileScreenPresenterProtocol!
 
     override func viewDidLoad() {
@@ -17,7 +18,10 @@ class ProfileScreenVC: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        view.backgroundColor = Colors.profileScreenBackground.color
         configNavBar()
+        
+        headerCardView.shapeAllCorners(with: 25)
     }
     
     func configNavBar() {
