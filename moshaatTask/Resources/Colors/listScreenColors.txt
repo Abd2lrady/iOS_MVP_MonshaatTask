@@ -1,6 +1,6 @@
 
 listScreenBackground: #f5f6fb
-profileScreenBackground: #f5f6fb
+profileScreenBackground: ##f3f4fa
 
 headerBullet: #a6ddf9
 
@@ -24,6 +24,10 @@ profileRateLabel: #007498
 profileInterestLabel: #717781
 profileSpecialityLabel: #314d6c
 profileSendMsgButton: #3084b2
+profileSessionsListRequestSession: #5cb466
+profileSessionsListUpdate: #717781
+profileSessionsListSession: #314d6c
+
 
 
 

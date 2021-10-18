@@ -10,3 +10,6 @@
 "noInternet.checkConnectionLabel" = "تحقق من اتصالك و حاول مرة اخرى";
 
 "profileScreen.SendMsgButton.title" = "ارسال رسالة";
+"profileScreen.sessionsList.sessions" = "الجلسات";
+"profileScreen.sessionsList.update" = "تحدث البيانات بداية كل شهر ميلادى";
+"profileScreen.sessionsList.sessionRequest" = "طلب موعد";

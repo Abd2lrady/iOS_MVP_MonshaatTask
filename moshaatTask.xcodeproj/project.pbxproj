@@ -28,6 +28,10 @@
 		B464355C271D599900393F35 /* HeaderCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464355B271D599900393F35 /* HeaderCardView.xib */; };
 		B4643561271D7F7E00393F35 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4643560271D7F7E00393F35 /* CustomButtonView.swift */; };
 		B4643563271D7F9200393F35 /* CustomButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4643562271D7F9200393F35 /* CustomButtonView.xib */; };
+		B4643567271D926B00393F35 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4643565271D926B00393F35 /* SessionCell.swift */; };
+		B4643568271D926B00393F35 /* SessionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4643566271D926B00393F35 /* SessionCell.xib */; };
+		B464356F271D9BB700393F35 /* SessionsListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464356D271D9BB700393F35 /* SessionsListHeader.swift */; };
+		B4643570271D9BB700393F35 /* SessionsListHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464356E271D9BB700393F35 /* SessionsListHeader.xib */; };
 		B4848B8727117B6A00C4A643 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848B8627117B6A00C4A643 /* UIViewController+.swift */; };
 		B4848B8B27117F6A00C4A643 /* UIBarButtonItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848B8A27117F6A00C4A643 /* UIBarButtonItem+.swift */; };
 		B4848B8E271186B800C4A643 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848B8D271186B800C4A643 /* NetworkMonitor.swift */; };
@@ -110,6 +114,10 @@
 		B464355B271D599900393F35 /* HeaderCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCardView.xib; sourceTree = "<group>"; };
 		B4643560271D7F7E00393F35 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		B4643562271D7F9200393F35 /* CustomButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButtonView.xib; sourceTree = "<group>"; };
+		B4643565271D926B00393F35 /* SessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
+		B4643566271D926B00393F35 /* SessionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionCell.xib; sourceTree = "<group>"; };
+		B464356D271D9BB700393F35 /* SessionsListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsListHeader.swift; sourceTree = "<group>"; };
+		B464356E271D9BB700393F35 /* SessionsListHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionsListHeader.xib; sourceTree = "<group>"; };
 		B4848B8627117B6A00C4A643 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		B4848B8A27117F6A00C4A643 /* UIBarButtonItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+.swift"; sourceTree = "<group>"; };
 		B4848B8D271186B800C4A643 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
@@ -244,6 +252,7 @@
 		B4643548271D55BA00393F35 /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B4643571271D9BF800393F35 /* SessionsListTVDelegatesAdapter */,
 				B4643549271D55BA00393F35 /* Coordinator */,
 				B464354C271D55BA00393F35 /* Presenter */,
 				B464354F271D55BA00393F35 /* View */,
@@ -272,7 +281,7 @@
 		B464354F271D55BA00393F35 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B4643564271D90BD00393F35 /* SessionCell */,
+				B4643564271D90BD00393F35 /* SessionsList */,
 				B4643550271D55BA00393F35 /* ViewController */,
 			);
 			path = View;
@@ -297,11 +306,38 @@
 			path = CustomButtonView;
 			sourceTree = "<group>";
 		};
-		B4643564271D90BD00393F35 /* SessionCell */ = {
+		B4643564271D90BD00393F35 /* SessionsList */ = {
+			isa = PBXGroup;
+			children = (
+				B4643569271D9B1800393F35 /* Header */,
+				B464356A271D9B4500393F35 /* Cell */,
+			);
+			path = SessionsList;
+			sourceTree = "<group>";
+		};
+		B4643569271D9B1800393F35 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				B464356D271D9BB700393F35 /* SessionsListHeader.swift */,
+				B464356E271D9BB700393F35 /* SessionsListHeader.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		B464356A271D9B4500393F35 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B4643565271D926B00393F35 /* SessionCell.swift */,
+				B4643566271D926B00393F35 /* SessionCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B4643571271D9BF800393F35 /* SessionsListTVDelegatesAdapter */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = SessionCell;
+			path = SessionsListTVDelegatesAdapter;
 			sourceTree = "<group>";
 		};
 		B4848B8C2711865500C4A643 /* NetworkMonitor */ = {
@@ -706,10 +742,12 @@
 				B4848B942711C92500C4A643 /* ConsultantCell.xib in Resources */,
 				B499E5F7270D8DD4007E1BC8 /* LaunchScreen.storyboard in Resources */,
 				B4848B9C2711ED3D00C4A643 /* listScreenColors.txt in Resources */,
+				B4643570271D9BB700393F35 /* SessionsListHeader.xib in Resources */,
 				B499E5F4270D8DD4007E1BC8 /* Assets.xcassets in Resources */,
 				B45DEDC2271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib in Resources */,
 				B4848BA727120A1600C4A643 /* 29LT Azer-Bold.OTF in Resources */,
 				B4643559271D55BA00393F35 /* ProfileScreenVC.xib in Resources */,
+				B4643568271D926B00393F35 /* SessionCell.xib in Resources */,
 				B4848BBF27121A8200C4A643 /* Localizable.strings in Resources */,
 				B4643563271D7F9200393F35 /* CustomButtonView.xib in Resources */,
 				B464355C271D599900393F35 /* HeaderCardView.xib in Resources */,
@@ -809,11 +847,13 @@
 				B4EB63532712CE7400CB7122 /* APIResponse.swift in Sources */,
 				B4EB637F2714433A00CB7122 /* ViewDelegate.swift in Sources */,
 				B4A5DA282712B879008BF561 /* ListScreenViewProtocol.swift in Sources */,
+				B4643567271D926B00393F35 /* SessionCell.swift in Sources */,
 				B4EB637D2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift in Sources */,
 				B4643558271D55BA00393F35 /* ProfileScreenVC+ProfileScreenViewProtocol.swift in Sources */,
 				B4A5DA2A2712B8AA008BF561 /* ListScreenPresenterProtocol.swift in Sources */,
 				B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */,
 				B4D3FCE62715D37800CF48F4 /* Reachability.swift in Sources */,
+				B464356F271D9BB700393F35 /* SessionsListHeader.swift in Sources */,
 				B4EB63542712CE7400CB7122 /* NetworkManger+Service.swift in Sources */,
 				B499E615270D9458007E1BC8 /* Router+RouterProtocol.swift in Sources */,
 				B4643561271D7F7E00393F35 /* CustomButtonView.swift in Sources */,
