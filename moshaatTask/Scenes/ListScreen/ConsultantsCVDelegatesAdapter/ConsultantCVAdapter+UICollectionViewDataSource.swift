@@ -46,10 +46,8 @@ extension ConsultantCVAdapter {
     }
     
     func configFooter(with label: String) {
-        consultantCVDataSource.supplementaryViewProvider = { [weak self]
-            (collectionView: UICollectionView,
-             kind: String,
-             indexPath: IndexPath) -> UICollectionReusableView? in
+        consultantCVDataSource
+            .supplementaryViewProvider = { (collectionView, _, indexPath) -> UICollectionReusableView? in
             let footer = collectionView.dequeueReusableSupplementaryView(
                 ofKind: UICollectionView.elementKindSectionFooter,
                 withReuseIdentifier: NoMoreConsultantsCVFooterCell.reuseID,
@@ -60,6 +58,7 @@ extension ConsultantCVAdapter {
     }
     
     func refreshConsultantsCV() {
+        showFooter = false
         var currentSnapShot = consultantCVDataSource.snapshot()
 //        currentSnapShot.deleteItems(consultants)
         currentSnapShot.reloadItems(consultants)

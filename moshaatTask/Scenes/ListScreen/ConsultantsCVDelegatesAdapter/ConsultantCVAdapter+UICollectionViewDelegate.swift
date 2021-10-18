@@ -30,7 +30,7 @@ extension ConsultantCVAdapter: UICollectionViewDelegate, UICollectionViewDelegat
          if showFooter {
             return CGSize(width: 220, height: 75)
          } else {
-            return CGSize(width: 220 , height: 0)
+            return CGSize(width: 220, height: 0)
          }
     }
 }

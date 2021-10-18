@@ -13,7 +13,6 @@
 		B4347F6B2710DBF90089EBA9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F6A2710DBF90089EBA9 /* Moya */; };
 		B4347F6E2710DC290089EBA9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F6D2710DC290089EBA9 /* Kingfisher */; };
 		B4347F712710DC380089EBA9 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F702710DC380089EBA9 /* Toast */; };
-		B4347F742710DCAF0089EBA9 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F732710DCAF0089EBA9 /* MBProgressHUD */; };
 		B45DEDC1271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45DEDBF271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift */; };
 		B45DEDC2271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45DEDC0271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib */; };
 		B4848B8727117B6A00C4A643 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848B8627117B6A00C4A643 /* UIViewController+.swift */; };
@@ -53,7 +52,6 @@
 		B4A5DA2C2712B8F9008BF561 /* ConsultantsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA2B2712B8F9008BF561 /* ConsultantsInteractor.swift */; };
 		B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */; };
 		B4A5DA332712C232008BF561 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = B4A5DA322712C232008BF561 /* Cosmos */; };
-		B4D3FCE22715D03800CF48F4 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B4D3FCE12715D03800CF48F4 /* Reachability */; };
 		B4D3FCE62715D37800CF48F4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3FCE52715D37800CF48F4 /* Reachability.swift */; };
 		B4EB634F2712CE7400CB7122 /* StaticHeaderPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63472712CE7400CB7122 /* StaticHeaderPlugin.swift */; };
 		B4EB63502712CE7400CB7122 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63482712CE7400CB7122 /* NetworkManager.swift */; };
@@ -164,8 +162,6 @@
 				B4347F692710DBF90089EBA9 /* RxMoya in Frameworks */,
 				B4A5DA332712C232008BF561 /* Cosmos in Frameworks */,
 				B4347F672710DBF90089EBA9 /* CombineMoya in Frameworks */,
-				B4D3FCE22715D03800CF48F4 /* Reachability in Frameworks */,
-				B4347F742710DCAF0089EBA9 /* MBProgressHUD in Frameworks */,
 				B4347F6B2710DBF90089EBA9 /* Moya in Frameworks */,
 				B4347F652710DBF90089EBA9 /* ReactiveMoya in Frameworks */,
 				B4347F6E2710DC290089EBA9 /* Kingfisher in Frameworks */,
@@ -547,9 +543,7 @@
 				B4347F6A2710DBF90089EBA9 /* Moya */,
 				B4347F6D2710DC290089EBA9 /* Kingfisher */,
 				B4347F702710DC380089EBA9 /* Toast */,
-				B4347F732710DCAF0089EBA9 /* MBProgressHUD */,
 				B4A5DA322712C232008BF561 /* Cosmos */,
-				B4D3FCE12715D03800CF48F4 /* Reachability */,
 			);
 			productName = moshaatTask;
 			productReference = B499E5E7270D8DD3007E1BC8 /* moshaatTask.app */;
@@ -582,9 +576,7 @@
 				B4347F632710DBF90089EBA9 /* XCRemoteSwiftPackageReference "Moya" */,
 				B4347F6C2710DC290089EBA9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B4347F6F2710DC380089EBA9 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
-				B4347F722710DCAF0089EBA9 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
 				B4A5DA312712C232008BF561 /* XCRemoteSwiftPackageReference "Cosmos" */,
-				B4D3FCE02715D03800CF48F4 /* XCRemoteSwiftPackageReference "Reachability" */,
 			);
 			productRefGroup = B499E5E8270D8DD3007E1BC8 /* Products */;
 			projectDirPath = "";
@@ -943,28 +935,12 @@
 				minimumVersion = 5.0.1;
 			};
 		};
-		B4347F722710DCAF0089EBA9 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jdg/MBProgressHUD.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
-			};
-		};
 		B4A5DA312712C232008BF561 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 23.0.0;
-			};
-		};
-		B4D3FCE02715D03800CF48F4 /* XCRemoteSwiftPackageReference "Reachability" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1000,20 +976,10 @@
 			package = B4347F6F2710DC380089EBA9 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
 		};
-		B4347F732710DCAF0089EBA9 /* MBProgressHUD */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B4347F722710DCAF0089EBA9 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
-			productName = MBProgressHUD;
-		};
 		B4A5DA322712C232008BF561 /* Cosmos */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B4A5DA312712C232008BF561 /* XCRemoteSwiftPackageReference "Cosmos" */;
 			productName = Cosmos;
-		};
-		B4D3FCE12715D03800CF48F4 /* Reachability */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B4D3FCE02715D03800CF48F4 /* XCRemoteSwiftPackageReference "Reachability" */;
-			productName = Reachability;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
