@@ -9,9 +9,9 @@ import UIKit
 
 class NoMoreConsultantsCVFooterCell: UICollectionReusableView {
     static let reuseID = "\(NoMoreConsultantsCVFooterCell.self)"
-    @IBOutlet weak var noMoreLabel: UILabel! {
+    @IBOutlet private weak var _noMoreLabel: UILabel! {
         didSet {
-            noMoreLabel.font = UIFont(font: Fonts._29LTAzer.medium, size: 20)
+            noMoreLabel.font = Fonts._29LTAzer.medium.font(size: 20)
             noMoreLabel.textColor = .black
             noMoreLabel.textAlignment = .center
         }
@@ -20,6 +20,14 @@ class NoMoreConsultantsCVFooterCell: UICollectionReusableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    var noMoreLabel: UILabel {
+        get {
+            return _noMoreLabel
+        } set {
+            _noMoreLabel = newValue
+        }
     }
 
 }

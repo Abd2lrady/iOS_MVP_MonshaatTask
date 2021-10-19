@@ -15,7 +15,7 @@ enum ListScreenActions {
 extension ListScreenVC {
 
     @objc
-    func retryAction() {
+    func listScreenAction() {
         switch listScreenActions {
         case .loadMoreConsultants:
             presenter.loadMoreConsultants()

@@ -1,6 +1,6 @@
 
 listScreenBackground: #f5f6fb
-profileScreenBackground: ##f3f4fa
+profileScreenBackground: #f3f4fa
 
 headerBullet: #a6ddf9
 
@@ -19,15 +19,17 @@ noInternetLabel: #4a4a4a
 tryAgainButtonBg: #3084b2
 noInternetViewBg: #f5f6fb
 
-profileNameLabel: #314d6c
-profileRateLabel: #007498
-profileInterestLabel: #717781
-profileSpecialityLabel: #314d6c
-profileSendMsgButton: #3084b2
-profileSessionsListRequestSession: #5cb466
-profileSessionsListUpdate: #717781
-profileSessionsListSession: #314d6c
-
-
+profileScreenNameLabel: #314d6c
+profileScreenRateLabel: #007498
+profileScreenInterestLabel: #717781
+profileScreenSpecialityLabel: #314d6c
+profileScreenSendMsgButton: #3084b2
+profileScreenListRequestSession: #5cb466
+profileScreenListUpdate: #717781
+profileScreenListSession: #314d6c
+profileScreenBookButton: #3084b2
+profileScreenBookButtonLabel: #ffffff
+profileScreenAppoinment: #dde3e8
+profileScreenSessionDate: #314d6c
 
 

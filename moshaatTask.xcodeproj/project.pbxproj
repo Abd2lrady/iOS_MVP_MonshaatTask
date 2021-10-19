@@ -69,6 +69,8 @@
 		B4A5DA2C2712B8F9008BF561 /* ConsultantsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA2B2712B8F9008BF561 /* ConsultantsInteractor.swift */; };
 		B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */; };
 		B4A5DA332712C232008BF561 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = B4A5DA322712C232008BF561 /* Cosmos */; };
+		B4C8D586271EB9630017E5AB /* SessionAppointmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8D584271EB9630017E5AB /* SessionAppointmentCell.swift */; };
+		B4C8D587271EB9630017E5AB /* SessionAppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C8D585271EB9630017E5AB /* SessionAppointmentCell.xib */; };
 		B4D3FCE62715D37800CF48F4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3FCE52715D37800CF48F4 /* Reachability.swift */; };
 		B4EB634F2712CE7400CB7122 /* StaticHeaderPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63472712CE7400CB7122 /* StaticHeaderPlugin.swift */; };
 		B4EB63502712CE7400CB7122 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63482712CE7400CB7122 /* NetworkManager.swift */; };
@@ -158,6 +160,8 @@
 		B4A5DA292712B8AA008BF561 /* ListScreenPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenPresenterProtocol.swift; sourceTree = "<group>"; };
 		B4A5DA2B2712B8F9008BF561 /* ConsultantsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantsInteractor.swift; sourceTree = "<group>"; };
 		B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantCellProtocol.swift; sourceTree = "<group>"; };
+		B4C8D584271EB9630017E5AB /* SessionAppointmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionAppointmentCell.swift; sourceTree = "<group>"; };
+		B4C8D585271EB9630017E5AB /* SessionAppointmentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionAppointmentCell.xib; sourceTree = "<group>"; };
 		B4D3FCE52715D37800CF48F4 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B4EB63472712CE7400CB7122 /* StaticHeaderPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHeaderPlugin.swift; sourceTree = "<group>"; };
 		B4EB63482712CE7400CB7122 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 		B4347F602710DAA00089EBA9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B49CA60D271EACAE0044F945 /* Session */,
 				B4EB636A2713215400CB7122 /* Consultant */,
 			);
 			path = Model;
@@ -327,6 +332,7 @@
 		B464356A271D9B4500393F35 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B4C8D583271EB81E0017E5AB /* AppoinmentCell */,
 				B4643565271D926B00393F35 /* SessionCell.swift */,
 				B4643566271D926B00393F35 /* SessionCell.xib */,
 			);
@@ -568,6 +574,13 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		B49CA60D271EACAE0044F945 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		B4A5DA252712B726008BF561 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -585,6 +598,15 @@
 				B4EB637E2714433A00CB7122 /* ViewDelegate.swift */,
 			);
 			path = "ListScreen+";
+			sourceTree = "<group>";
+		};
+		B4C8D583271EB81E0017E5AB /* AppoinmentCell */ = {
+			isa = PBXGroup;
+			children = (
+				B4C8D584271EB9630017E5AB /* SessionAppointmentCell.swift */,
+				B4C8D585271EB9630017E5AB /* SessionAppointmentCell.xib */,
+			);
+			path = AppoinmentCell;
 			sourceTree = "<group>";
 		};
 		B4EB63452712CE7400CB7122 /* NetworkManager */ = {
@@ -750,6 +772,7 @@
 				B4643568271D926B00393F35 /* SessionCell.xib in Resources */,
 				B4848BBF27121A8200C4A643 /* Localizable.strings in Resources */,
 				B4643563271D7F9200393F35 /* CustomButtonView.xib in Resources */,
+				B4C8D587271EB9630017E5AB /* SessionAppointmentCell.xib in Resources */,
 				B464355C271D599900393F35 /* HeaderCardView.xib in Resources */,
 				B499E60D270D9069007E1BC8 /* ListScreenVC.xib in Resources */,
 				B4848BA827120A1600C4A643 /* 29LT Azer-Medium.OTF in Resources */,
@@ -850,6 +873,7 @@
 				B4643567271D926B00393F35 /* SessionCell.swift in Sources */,
 				B4EB637D2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift in Sources */,
 				B4643558271D55BA00393F35 /* ProfileScreenVC+ProfileScreenViewProtocol.swift in Sources */,
+				B4C8D586271EB9630017E5AB /* SessionAppointmentCell.swift in Sources */,
 				B4A5DA2A2712B8AA008BF561 /* ListScreenPresenterProtocol.swift in Sources */,
 				B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */,
 				B4D3FCE62715D37800CF48F4 /* Reachability.swift in Sources */,

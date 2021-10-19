@@ -9,15 +9,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NoMoreConsultantsCVFooterCell" id="gTV-IL-0wX" customClass="NoMoreConsultantsCVFooterCell" customModule="moshaatTask" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="316" height="84"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SessionAppointmentCell" id="gTV-IL-0wX" customClass="SessionAppointmentCell" customModule="moshaatTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="215" height="79"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="316" height="84"/>
+                <rect key="frame" x="0.0" y="0.0" width="215" height="79"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51K-hI-KPY" userLabel="NomoreLabel">
-                        <rect key="frame" x="137" y="31.5" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2s-rd-rSV">
+                        <rect key="frame" x="107" y="29" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -25,15 +26,11 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <constraints>
-                <constraint firstItem="51K-hI-KPY" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="WaC-99-w48"/>
-                <constraint firstItem="51K-hI-KPY" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="yRw-Ol-pPz"/>
-            </constraints>
-            <size key="customSize" width="316" height="84"/>
+            <size key="customSize" width="215" height="79"/>
             <connections>
-                <outlet property="_noMoreLabel" destination="51K-hI-KPY" id="iqJ-lb-PXd"/>
+                <outlet property="appoinmentLabel" destination="H2s-rd-rSV" id="WGF-sc-1VW"/>
             </connections>
-            <point key="canvasLocation" x="128.98550724637681" y="60.9375"/>
+            <point key="canvasLocation" x="170.28985507246378" y="59.263392857142854"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -8,20 +8,20 @@ import UIKit
 
 class ProfileScreenVC: UIViewController {
     
-    @IBOutlet weak var headerCardView: HeaderCardView!
+    @IBOutlet private weak var headerCardView: HeaderCardView!
     var presenter: ProfileScreenPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         view.backgroundColor = Colors.profileScreenBackground.color
         configNavBar()
         
-        headerCardView.shapeAllCorners(with: 25)
+        headerCardView.shapeAllCorners(with: 12)
     }
     
     func configNavBar() {
@@ -31,4 +31,5 @@ class ProfileScreenVC: UIViewController {
         let rightItem = UIBarButtonItem.barButtonWithImage(img: Assets.icSearch.image)
         self.navigationItem.leftBarButtonItem = rightItem
     }
+    
 }

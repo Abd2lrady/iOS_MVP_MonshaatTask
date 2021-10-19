@@ -9,7 +9,7 @@ import UIKit
 class NoInternet: UIView {
     
     @IBOutlet private weak var noInternetImg: UIImageView!
-    @IBOutlet weak var tryAgainButton: UIButton! {
+    @IBOutlet private weak var _tryAgainButton: UIButton! {
         didSet {
             configTryAgainButtonUI()
         }
@@ -17,19 +17,18 @@ class NoInternet: UIView {
     }
     @IBOutlet private weak var noInternetLabel: UILabel! {
         didSet {
-            noInternetLabel.font = UIFont(font: Fonts._29LTAzer.medium, size: 31)
+            noInternetLabel.font = Fonts._29LTAzer.medium.font(size: 31)
             noInternetLabel.textColor = Colors.noInternetLabel.color
             noInternetLabel.text = Strings.NoInternet.noInternetLabel
         }
     }
     @IBOutlet private weak var checkTryAgainLabel: UILabel! {
         didSet {
-            checkTryAgainLabel.font = UIFont(font: Fonts._29LTAzer.regular, size: 18)
+            checkTryAgainLabel.font = Fonts._29LTAzer.regular.font(size: 18)
             checkTryAgainLabel.textColor = Colors.noInternetLabel.color
             checkTryAgainLabel.text = Strings.NoInternet.checkConnectionLabel
         }
     }
- private   var buttonActionFn: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,9 +61,8 @@ class NoInternet: UIView {
         tryAgainButton.backgroundColor = Colors.tryAgainButtonBg.color
         
         let attributes: [NSAttributedString.Key: Any] =
-                        [.font: UIFont(font: Fonts._29LTAzer.regular,
-                                       size: 17) ?? UIFont.systemFont(ofSize: 17),
-                         .foregroundColor: Colors.tryAgainButtonTitle.color]
+            [.font: Fonts._29LTAzer.regular.font(size: 17),
+             .foregroundColor: Colors.tryAgainButtonTitle.color]
         
         let title = NSAttributedString(string: Strings.NoInternet.tryAgainButton,
                                        attributes: attributes)
@@ -74,13 +72,12 @@ class NoInternet: UIView {
         tryAgainButton.shapeAllCorners(with: tryAgainButton.bounds.height / 2)
     }
     
-    @objc
-    func buttonAction() {
-        buttonActionFn?()
-    }
-    func addButtonAction(target: UIViewController, action: @escaping() -> Void) {
-        buttonActionFn = action
-        tryAgainButton.addTarget(target, action: #selector(buttonAction), for: .touchUpInside)
+    var tryAgainButton: UIButton {
+        get {
+            return _tryAgainButton
+        } set {
+            _tryAgainButton = newValue
+        }
     }
     
 }

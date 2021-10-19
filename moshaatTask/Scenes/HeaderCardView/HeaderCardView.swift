@@ -12,27 +12,27 @@ class HeaderCardView: UIView {
     @IBOutlet private weak var profileImg: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel! {
         didSet {
-            nameLabel.font = UIFont(font: Fonts._29LTAzer.bold, size: 18)
-            nameLabel.textColor = Colors.profileNameLabel.color
+            nameLabel.font = Fonts._29LTAzer.bold.font(size: 18)
+            nameLabel.textColor = Colors.profileScreenNameLabel.color
         }
     }
     @IBOutlet private weak var ratingView: CosmosView!
     @IBOutlet private weak var ratingLabel: UILabel! {
         didSet {
-            ratingLabel.font = UIFont(font: Fonts._29LTAzer.medium, size: 15)
-            ratingLabel.textColor = Colors.profileRateLabel.color
+            ratingLabel.font = Fonts._29LTAzer.medium.font(size: 15)
+            ratingLabel.textColor = Colors.profileScreenRateLabel.color
         }
     }
     @IBOutlet private weak var interestLabel: UILabel! {
         didSet {
-            interestLabel.font = UIFont(font: Fonts._29LTAzer.medium, size: 23)
-            interestLabel.textColor = Colors.profileInterestLabel.color
+            interestLabel.font = Fonts._29LTAzer.medium.font(size: 23)
+            interestLabel.textColor = Colors.profileScreenInterestLabel.color
         }
     }
     @IBOutlet private weak var specialityLabel: UILabel! {
         didSet {
-            specialityLabel.font = UIFont(font: Fonts._29LTAzer.medium, size: 14)
-            specialityLabel.textColor = Colors.profileSpecialityLabel.color
+            specialityLabel.font = Fonts._29LTAzer.medium.font(size: 14)
+            specialityLabel.textColor = Colors.profileScreenSpecialityLabel.color
         }
     }
     @IBOutlet private weak var sendMsgButton: UIButton!
@@ -99,12 +99,11 @@ class HeaderCardView: UIView {
         view.isUserInteractionEnabled = false
         view.img = Assets.icChat.image
         view.titleLabel.text = Strings.ProfileScreen.SendMsgButton.title
-            view.titleLabel.font = UIFont(font: Fonts._29LTAzer.medium,
-                                          size: 13)
-        view.titleLabel.textColor = Colors.profileSendMsgButton.color
+        view.titleLabel.font = Fonts._29LTAzer.medium.font(size: 13)
+        view.titleLabel.textColor = Colors.profileScreenSendMsgButton.color
 
         sendMsgButton.shapeAllCorners(with: sendMsgButton.bounds.height / 2)
-        sendMsgButton.setBorders(with: 2, color: Colors.profileSendMsgButton.color)
+        sendMsgButton.setBorders(with: 2, color: Colors.profileScreenSendMsgButton.color)
     }
     
 }

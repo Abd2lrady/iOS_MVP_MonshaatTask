@@ -140,7 +140,7 @@ class ListScreenVC: UIViewController {
                                     noInternet.trailingAnchor.constraint(equalTo: view.trailingAnchor)
                                     ])
         noInternet.tryAgainButton.addTarget(self,
-                                            action: #selector(retryAction),
+                                            action: #selector(listScreenAction),
                                             for: .touchUpInside)
 
     }

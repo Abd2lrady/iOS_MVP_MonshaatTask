@@ -41,6 +41,16 @@ internal enum Strings {
       /// ارسال رسالة
       internal static let title = Strings.tr("Localizable", "profileScreen.SendMsgButton.title")
     }
+    internal enum SessionsList {
+      /// أحجز
+      internal static let book = Strings.tr("Localizable", "profileScreen.sessionsList.book")
+      /// طلب موعد
+      internal static let sessionRequest = Strings.tr("Localizable", "profileScreen.sessionsList.sessionRequest")
+      /// الجلسات
+      internal static let sessions = Strings.tr("Localizable", "profileScreen.sessionsList.sessions")
+      /// تحدث البيانات بداية كل شهر ميلادى
+      internal static let update = Strings.tr("Localizable", "profileScreen.sessionsList.update")
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

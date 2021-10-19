@@ -23,7 +23,7 @@ class CustomButtonView: UIView {
     private func commonInit() {
         let nib = UINib(nibName: "\(CustomButtonView.self)", bundle: .main)
         guard let view = nib.instantiate(withOwner: self).first as? UIView
-        else { fatalError("no such nib \(CustomButtonView.self)")}
+        else { fatalError("no such nib \(CustomButtonView.self)") }
         self.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([view.topAnchor.constraint(equalTo: self.topAnchor),

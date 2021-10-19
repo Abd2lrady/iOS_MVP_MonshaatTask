@@ -13,26 +13,26 @@ class ConsultantCell: UICollectionViewCell {
     @IBOutlet private weak var availabilityView: UIView!
     @IBOutlet private weak var nameLabel: UILabel! {
         didSet {
-            nameLabel.font = UIFont(font: Fonts._29LTAzer.medium, size: 20)
+            nameLabel.font = Fonts._29LTAzer.medium.font(size: 20)
             nameLabel.textColor = Colors.specializationLabel.color
         }
     }
     @IBOutlet private weak var rateView: CosmosView!
     @IBOutlet private weak var rateLabel: UILabel! {
         didSet {
-            rateLabel.font = UIFont(font: Fonts._29LTAzer.regular, size: 12)
+            rateLabel.font = Fonts._29LTAzer.regular.font(size: 12)
             rateLabel.textColor = Colors.specializationLabel.color
         }
     }
     @IBOutlet private weak var specializationLabel: UILabel! {
         didSet {
-            specializationLabel.font = UIFont(font: Fonts._29LTAzer.regular, size: 14)
+            specializationLabel.font = Fonts._29LTAzer.regular.font(size: 14)
             specializationLabel.textColor = Colors.nameLabel.color
         }
     }
     @IBOutlet private weak var availablilityLabel: UILabel! {
         didSet {
-            availablilityLabel.font = UIFont(font: Fonts._29LTAzer.medium, size: 16)
+            availablilityLabel.font = Fonts._29LTAzer.medium.font(size: 16)
             availablilityLabel.textColor = Colors.availabilityOnlineLabel.color
         }
     }
@@ -49,7 +49,7 @@ class ConsultantCell: UICollectionViewCell {
     }
     
     private func configCellUI() {
-        contentView.shapeAllCorners(with: 30)
+        contentView.shapeAllCorners(with: 20)
         contentView.clipsToBounds = true
         
         profileImg.shapeAllCorners(with: 10)

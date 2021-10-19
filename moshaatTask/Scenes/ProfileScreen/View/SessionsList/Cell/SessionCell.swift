@@ -9,16 +9,43 @@ import UIKit
 class SessionCell: UITableViewCell {
     static let reuseID = "\(SessionCell.self)"
     
-    @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var bookButton: UIButton!
-    @IBOutlet weak var addtionalSessionsLabel: UILabel! {
-        addtionalSessionsLabel.isHidden = true
-    }
-    @IBOutlet weak var sessionsCV: UICollectionView! {
+    @IBOutlet private weak var backView: UIView! {
         didSet {
-            sessionsCV.isScrollEnabled = false
-            sessionsCV.backgroundColor = .clear
+            backView.shapeAllCorners(with: 16)
+        }
+    }
+    @IBOutlet private weak var dateLabel: UILabel! {
+        didSet {
+            dateLabel.font = Fonts._29LTAzer.medium.font(size: 19)
+            dateLabel.textColor = Colors.profileScreenSessionDate.color
+        }
+    }
+    @IBOutlet private weak var bookButton: UIButton! {
+        didSet {
+            bookButton.backgroundColor = Colors.profileScreenBookButton.color
+            let attributes: [NSAttributedString.Key: Any] =
+                [.font: Fonts._29LTAzer.medium.font(size: 16),
+                 .foregroundColor: Colors.profileScreenBookButtonLabel.color]
+            let title = NSAttributedString(string: Strings.ProfileScreen.SessionsList.book,
+                                           attributes: attributes)
+            bookButton.setAttributedTitle(title, for: .normal)
+        }
+    }
+    @IBOutlet private weak var addtionalSessionsLabel: UILabel! {
+        didSet {
+            addtionalSessionsLabel.isHidden = true
+            addtionalSessionsLabel.font = Fonts._29LTAzer.medium.font(size: 16)
+            addtionalSessionsLabel.textColor = Colors.profileScreenBookButton.color
+        }
+    }
+    @IBOutlet private weak var _appoinmentCV: UICollectionView! {
+        didSet {
+            appoinmentCV.isScrollEnabled = false
+            appoinmentCV.backgroundColor = .clear
+            let cellNib = UINib(nibName: "\(SessionAppointmentCell.self)",
+                                bundle: .main)
+            appoinmentCV.register(cellNib,
+                                  forCellWithReuseIdentifier: SessionAppointmentCell.reuseID)
         }
     }
     
@@ -33,4 +60,20 @@ class SessionCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setDate(with label: String) {
+        dateLabel.text = label
+    }
+    
+    func setAddtionalAppoinments(with label: String) {
+        addtionalSessionsLabel.isHidden = false
+        addtionalSessionsLabel.text = label
+    }
+    
+    var appoinmentCV: UICollectionView {
+        get {
+            return _appoinmentCV
+        } set {
+            _appoinmentCV = newValue
+        }
+    }
 }
