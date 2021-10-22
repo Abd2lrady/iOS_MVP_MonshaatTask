@@ -35,14 +35,17 @@ class HeaderCardView: UIView {
             specialityLabel.textColor = Colors.profileScreenSpecialityLabel.color
         }
     }
-    @IBOutlet private weak var sendMsgButton: UIButton!
+    @IBOutlet private weak var sendMsgButton: UIButton! {
+        didSet {
+            configSendMsgButtonUI()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-        configSendMsgButtonUI()
     }
     override init(frame: CGRect) {
         super.init(frame: frame)

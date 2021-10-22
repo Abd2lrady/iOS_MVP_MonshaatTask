@@ -32,13 +32,32 @@
                         <constraint firstAttribute="height" constant="175" id="fg3-9P-65h"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIu-w5-3YP" customClass="CustomSegmentedView" customModule="moshaatTask" customModuleProvider="target">
+                    <rect key="frame" x="50" y="278" width="349" height="36"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="yAh-ph-z6b"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="titles" value="ahmed,hassan,nader,mahmoud"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="unselectedColor">
+                            <color key="value" systemColor="systemGray2Color"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                            <color key="value" systemColor="systemGreenColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemTealColor"/>
             <constraints>
                 <constraint firstItem="MFI-rq-kJy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fzc-VT-1Lf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dIu-w5-3YP" secondAttribute="trailing" constant="15" id="JAs-2L-Xm3"/>
+                <constraint firstItem="dIu-w5-3YP" firstAttribute="top" secondItem="hCx-g7-dE5" secondAttribute="bottom" constant="12" id="JLg-Ev-h9p"/>
                 <constraint firstItem="MFI-rq-kJy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="W1I-P7-C5m"/>
                 <constraint firstItem="hCx-g7-dE5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-15" id="bEH-qj-PMy"/>
+                <constraint firstItem="dIu-w5-3YP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="oxq-us-8MB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MFI-rq-kJy" secondAttribute="trailing" id="xGx-BR-VPp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="hCx-g7-dE5" secondAttribute="leading" constant="-15" id="ypI-4Y-NMI"/>
                 <constraint firstItem="hCx-g7-dE5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="91" id="zax-zj-gxM"/>
@@ -50,6 +69,12 @@
         <image name="Mask" width="375" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

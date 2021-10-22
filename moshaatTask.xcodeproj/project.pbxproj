@@ -71,6 +71,7 @@
 		B4A5DA332712C232008BF561 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = B4A5DA322712C232008BF561 /* Cosmos */; };
 		B4C8D586271EB9630017E5AB /* SessionAppointmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8D584271EB9630017E5AB /* SessionAppointmentCell.swift */; };
 		B4C8D587271EB9630017E5AB /* SessionAppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C8D585271EB9630017E5AB /* SessionAppointmentCell.xib */; };
+		B4C8D58A272336EE0017E5AB /* CustomSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8D589272336EE0017E5AB /* CustomSegmentedView.swift */; };
 		B4D3FCE62715D37800CF48F4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3FCE52715D37800CF48F4 /* Reachability.swift */; };
 		B4EB634F2712CE7400CB7122 /* StaticHeaderPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63472712CE7400CB7122 /* StaticHeaderPlugin.swift */; };
 		B4EB63502712CE7400CB7122 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EB63482712CE7400CB7122 /* NetworkManager.swift */; };
@@ -162,6 +163,7 @@
 		B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantCellProtocol.swift; sourceTree = "<group>"; };
 		B4C8D584271EB9630017E5AB /* SessionAppointmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionAppointmentCell.swift; sourceTree = "<group>"; };
 		B4C8D585271EB9630017E5AB /* SessionAppointmentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionAppointmentCell.xib; sourceTree = "<group>"; };
+		B4C8D589272336EE0017E5AB /* CustomSegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedView.swift; sourceTree = "<group>"; };
 		B4D3FCE52715D37800CF48F4 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B4EB63472712CE7400CB7122 /* StaticHeaderPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHeaderPlugin.swift; sourceTree = "<group>"; };
 		B4EB63482712CE7400CB7122 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 		B499E604270D8E68007E1BC8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B4C8D588272336C90017E5AB /* CustomSegementedView */,
 				B464355D271D76AB00393F35 /* CustomButtonView */,
 				B4EB63642713112800CB7122 /* NoInternet */,
 				B4643545271D55A800393F35 /* HeaderCardView */,
@@ -607,6 +610,14 @@
 				B4C8D585271EB9630017E5AB /* SessionAppointmentCell.xib */,
 			);
 			path = AppoinmentCell;
+			sourceTree = "<group>";
+		};
+		B4C8D588272336C90017E5AB /* CustomSegementedView */ = {
+			isa = PBXGroup;
+			children = (
+				B4C8D589272336EE0017E5AB /* CustomSegmentedView.swift */,
+			);
+			path = CustomSegementedView;
 			sourceTree = "<group>";
 		};
 		B4EB63452712CE7400CB7122 /* NetworkManager */ = {
@@ -829,6 +840,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C8D58A272336EE0017E5AB /* CustomSegmentedView.swift in Sources */,
 				B499E623270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift in Sources */,
 				B4EB634F2712CE7400CB7122 /* StaticHeaderPlugin.swift in Sources */,
 				B4EB6381271443EE00CB7122 /* ListScreenVC+ViewDelegate.swift in Sources */,

@@ -2,8 +2,7 @@
 //  SessionAppointmentCell.swift
 //  moshaatTask
 //
-//  Created by Ahmad Abdulrady on 19/10/2021.
-//
+//  Created by Ahmad Abdulrady 
 
 import UIKit
 

@@ -86,6 +86,12 @@ internal struct Colors {
   internal static let profileScreenRateLabel = Colors(rgbaValue: 0x007498ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#3084b2"></span>
   /// Alpha: 100% <br/> (0x3084b2ff)
+  internal static let profileScreenSegmentSelected = Colors(rgbaValue: 0x3084b2ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#9498a1"></span>
+  /// Alpha: 100% <br/> (0x9498a1ff)
+  internal static let profileScreenSegmentUnselected = Colors(rgbaValue: 0x9498a1ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#3084b2"></span>
+  /// Alpha: 100% <br/> (0x3084b2ff)
   internal static let profileScreenSendMsgButton = Colors(rgbaValue: 0x3084b2ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#314d6c"></span>
   /// Alpha: 100% <br/> (0x314d6cff)
