@@ -9,6 +9,12 @@ import UIKit
 class ProfileScreenVC: UIViewController {
     
     @IBOutlet private weak var headerCardView: HeaderCardView!
+    @IBOutlet weak var segemetedView: CustomSegmentedView!
+    @IBOutlet weak var consultantInfoTV: UITableView! {
+        didSet {
+            consultantInfoTV.backgroundColor = .clear
+        }
+    }
     var presenter: ProfileScreenPresenterProtocol!
 
     override func viewDidLoad() {
