@@ -6,7 +6,8 @@
 
 import UIKit
 
-class CustomSegmentedView: UIView {
+class CustomSegmentedView: UIControl {
+    var selectedSegment = 2
     var buttons = [UIButton]()
     var underline = UIView()
     var titles: String!
@@ -68,13 +69,13 @@ class CustomSegmentedView: UIView {
     
     @objc
     func buttonTapped(button: UIButton) {
-        
-        for btn in buttons {
+        buttons.forEach { btn in
             let title = btn.attributedTitle(for: .normal)?.string
             var attributes: [NSAttributedString.Key: Any] =
                 [.foregroundColor: Colors.profileScreenSegmentUnselected.color,
                  .font: Fonts._29LTAzer.medium.font(size: 18)]
             if btn == button {
+                self.selectedSegment = buttons.firstIndex(of: btn) ?? 2
                 UIView.animate(withDuration: 0.5) {
                     self.underline.frame.origin.x = btn.frame.origin.x
                 }
@@ -83,6 +84,7 @@ class CustomSegmentedView: UIView {
             let atrributedTitle = NSAttributedString(string: title ??  "", attributes: attributes)
             btn.setAttributedTitle(atrributedTitle, for: .normal)
         }
+        sendActions(for: .valueChanged)
     }
     
     override func draw(_ rect: CGRect) {

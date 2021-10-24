@@ -13,6 +13,11 @@
 		B4347F6B2710DBF90089EBA9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F6A2710DBF90089EBA9 /* Moya */; };
 		B4347F6E2710DC290089EBA9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F6D2710DC290089EBA9 /* Kingfisher */; };
 		B4347F712710DC380089EBA9 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F702710DC380089EBA9 /* Toast */; };
+		B43AB07C27256B390073A827 /* SessionListDelegateAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB07B27256B390073A827 /* SessionListDelegateAdapter.swift */; };
+		B43AB07E27256B7B0073A827 /* SessionListDelegateAdapter+UITVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB07D27256B7B0073A827 /* SessionListDelegateAdapter+UITVDataSource.swift */; };
+		B43AB08027256B940073A827 /* SessionListDelegateAdapter+UITVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB07F27256B940073A827 /* SessionListDelegateAdapter+UITVDelegate.swift */; };
+		B43AB08227256CDA0073A827 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB08127256CDA0073A827 /* Session.swift */; };
+		B43AB0842725742F0073A827 /* ProfileScreenVC+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB0832725742F0073A827 /* ProfileScreenVC+ViewDelegate.swift */; };
 		B45DEDC1271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45DEDBF271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift */; };
 		B45DEDC2271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45DEDC0271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib */; };
 		B4643543271D553000393F35 /* ProfileScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4643541271D553000393F35 /* ProfileScreenPresenterProtocol.swift */; };
@@ -102,6 +107,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B43AB07B27256B390073A827 /* SessionListDelegateAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListDelegateAdapter.swift; sourceTree = "<group>"; };
+		B43AB07D27256B7B0073A827 /* SessionListDelegateAdapter+UITVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionListDelegateAdapter+UITVDataSource.swift"; sourceTree = "<group>"; };
+		B43AB07F27256B940073A827 /* SessionListDelegateAdapter+UITVDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionListDelegateAdapter+UITVDelegate.swift"; sourceTree = "<group>"; };
+		B43AB08127256CDA0073A827 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		B43AB0832725742F0073A827 /* ProfileScreenVC+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileScreenVC+ViewDelegate.swift"; sourceTree = "<group>"; };
 		B45DEDBF271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMoreConsultantsCVFooterCell.swift; sourceTree = "<group>"; };
 		B45DEDC0271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoMoreConsultantsCVFooterCell.xib; sourceTree = "<group>"; };
 		B4643541271D553000393F35 /* ProfileScreenPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreenPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -238,6 +248,32 @@
 			path = SupportFiles;
 			sourceTree = "<group>";
 		};
+		B43AB07827256AE20073A827 /* DelgatesAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				B43AB07A27256B0F0073A827 /* AboutDelegateAdapter */,
+				B43AB07927256AFA0073A827 /* SessionListDelgateAdapter */,
+			);
+			path = DelgatesAdapters;
+			sourceTree = "<group>";
+		};
+		B43AB07927256AFA0073A827 /* SessionListDelgateAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				B43AB07B27256B390073A827 /* SessionListDelegateAdapter.swift */,
+				B43AB07D27256B7B0073A827 /* SessionListDelegateAdapter+UITVDataSource.swift */,
+				B43AB07F27256B940073A827 /* SessionListDelegateAdapter+UITVDelegate.swift */,
+			);
+			path = SessionListDelgateAdapter;
+			sourceTree = "<group>";
+		};
+		B43AB07A27256B0F0073A827 /* AboutDelegateAdapter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AboutDelegateAdapter;
+			sourceTree = "<group>";
+		};
 		B4643540271D553000393F35 /* ProfileScreen+ */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,7 +295,7 @@
 		B4643548271D55BA00393F35 /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
-				B4643571271D9BF800393F35 /* SessionsListTVDelegatesAdapter */,
+				B43AB07827256AE20073A827 /* DelgatesAdapters */,
 				B4643549271D55BA00393F35 /* Coordinator */,
 				B464354C271D55BA00393F35 /* Presenter */,
 				B464354F271D55BA00393F35 /* View */,
@@ -300,6 +336,7 @@
 				B4643551271D55BA00393F35 /* ProfileScreenVC+ProfileScreenViewProtocol.swift */,
 				B4643552271D55BA00393F35 /* ProfileScreenVC.xib */,
 				B4643553271D55BA00393F35 /* ProfileScreenVC.swift */,
+				B43AB0832725742F0073A827 /* ProfileScreenVC+ViewDelegate.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -339,13 +376,6 @@
 				B4643566271D926B00393F35 /* SessionCell.xib */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		B4643571271D9BF800393F35 /* SessionsListTVDelegatesAdapter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SessionsListTVDelegatesAdapter;
 			sourceTree = "<group>";
 		};
 		B4848B8C2711865500C4A643 /* NetworkMonitor */ = {
@@ -580,6 +610,7 @@
 		B49CA60D271EACAE0044F945 /* Session */ = {
 			isa = PBXGroup;
 			children = (
+				B43AB08127256CDA0073A827 /* Session.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -840,6 +871,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43AB08227256CDA0073A827 /* Session.swift in Sources */,
 				B4C8D58A272336EE0017E5AB /* CustomSegmentedView.swift in Sources */,
 				B499E623270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift in Sources */,
 				B4EB634F2712CE7400CB7122 /* StaticHeaderPlugin.swift in Sources */,
@@ -856,6 +888,7 @@
 				B4643555271D55BA00393F35 /* ProfileScreenCoordinator+CoordinatorProtocol.swift in Sources */,
 				B4EB63522712CE7400CB7122 /* NetworkError.swift in Sources */,
 				B4EB635E2713044500CB7122 /* ListScreenPresenter.swift in Sources */,
+				B43AB0842725742F0073A827 /* ProfileScreenVC+ViewDelegate.swift in Sources */,
 				B499E62F270DCB4A007E1BC8 /* EnviromentVariables.swift in Sources */,
 				B4643556271D55BA00393F35 /* ProfileScreenPresenter+ProfileScreenPresenterProtocol.swift in Sources */,
 				B4848B8727117B6A00C4A643 /* UIViewController+.swift in Sources */,
@@ -871,6 +904,7 @@
 				B499E613270D93C0007E1BC8 /* Router.swift in Sources */,
 				B4848B8E271186B800C4A643 /* NetworkMonitor.swift in Sources */,
 				B499E60F270D92A5007E1BC8 /* RouterProtocol.swift in Sources */,
+				B43AB08027256B940073A827 /* SessionListDelegateAdapter+UITVDelegate.swift in Sources */,
 				B4848BBD27121A7600C4A643 /* Strings.swift in Sources */,
 				B4643557271D55BA00393F35 /* ProfileScreenPresenter.swift in Sources */,
 				B4643544271D553000393F35 /* ProfileScreenViewProtocol.swift in Sources */,
@@ -880,6 +914,7 @@
 				B4EB6376271323AC00CB7122 /* File.swift in Sources */,
 				B4EB63632713104B00CB7122 /* ConsultantCVAdapter+UICollectionViewDelegate.swift in Sources */,
 				B4EB63532712CE7400CB7122 /* APIResponse.swift in Sources */,
+				B43AB07E27256B7B0073A827 /* SessionListDelegateAdapter+UITVDataSource.swift in Sources */,
 				B4EB637F2714433A00CB7122 /* ViewDelegate.swift in Sources */,
 				B4A5DA282712B879008BF561 /* ListScreenViewProtocol.swift in Sources */,
 				B4643567271D926B00393F35 /* SessionCell.swift in Sources */,
@@ -898,6 +933,7 @@
 				B499E617270D9E62007E1BC8 /* AppCoordinator.swift in Sources */,
 				B499E619270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift in Sources */,
 				B4EB6366271317C500CB7122 /* ConsultantsCVSections.swift in Sources */,
+				B43AB07C27256B390073A827 /* SessionListDelegateAdapter.swift in Sources */,
 				B4EB63502712CE7400CB7122 /* NetworkManager.swift in Sources */,
 				B4EB635C271302C800CB7122 /* ConsultantCVAdapter+UICollectionViewDataSource.swift in Sources */,
 				B499E61B270DA951007E1BC8 /* UIView+.swift in Sources */,

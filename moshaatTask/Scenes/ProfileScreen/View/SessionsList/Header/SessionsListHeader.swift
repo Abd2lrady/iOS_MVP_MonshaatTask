@@ -44,8 +44,6 @@ class SessionsListHeader: UIView {
         // Initialization code
     }
 
-    
-    
     private func configRequestSesstionButtonUI() {
         let view = CustomButtonView(frame: requestSessionButton.bounds)
         requestSessionButton.addSubview(view)

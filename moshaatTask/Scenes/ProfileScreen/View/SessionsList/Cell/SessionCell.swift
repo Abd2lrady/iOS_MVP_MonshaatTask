@@ -29,6 +29,7 @@ class SessionCell: UITableViewCell {
             let title = NSAttributedString(string: Strings.ProfileScreen.SessionsList.book,
                                            attributes: attributes)
             bookButton.setAttributedTitle(title, for: .normal)
+            bookButton.shapeAllCorners(with: bookButton.bounds.height / 2)
         }
     }
     @IBOutlet private weak var addtionalSessionsLabel: UILabel! {
