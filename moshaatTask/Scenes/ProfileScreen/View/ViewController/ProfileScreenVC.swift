@@ -9,12 +9,17 @@ import UIKit
 class ProfileScreenVC: UIViewController {
     
     @IBOutlet private weak var headerCardView: HeaderCardView!
-    @IBOutlet weak var segemetedView: CustomSegmentedView!
+    @IBOutlet weak var segemetedView: CustomSegmentedView!{
+        didSet {
+            segemetedView.titles = Strings.ProfileScreen.SessionsListHeader.tags
+        }
+    }
     @IBOutlet weak var consultantInfoTV: UITableView! {
         didSet {
             consultantInfoTV.backgroundColor = .clear
         }
     }
+    @IBOutlet weak var sessionListHeaderHeight: NSLayoutConstraint!
     var presenter: ProfileScreenPresenterProtocol!
 
     override func viewDidLoad() {
@@ -26,7 +31,6 @@ class ProfileScreenVC: UIViewController {
         super.viewDidLayoutSubviews()
         view.backgroundColor = Colors.profileScreenBackground.color
         configNavBar()
-        
         headerCardView.shapeAllCorners(with: 12)
     }
     

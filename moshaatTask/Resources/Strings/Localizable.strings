@@ -14,3 +14,4 @@
 "profileScreen.sessionsList.update" = "تحدث البيانات بداية كل شهر ميلادى";
 "profileScreen.sessionsList.sessionRequest" = "طلب موعد";
 "profileScreen.sessionsList.book" = "أحجز";
+"profileScreen.sessionsListHeader.tags"= "التقييم,معلومات عامة,جدول الجلسات";

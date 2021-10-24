@@ -9,32 +9,24 @@ import UIKit
 class CustomSegmentedView: UIView {
     var buttons = [UIButton]()
     var underline = UIView()
-    @IBInspectable var titles: String = "" {
-        didSet {
-            clearView()
-            configButtons()
-        }
-    }
+    var titles: String!
     
     func configButtons() {
         let titleArr = titles.components(separatedBy: ",")
         titleArr.forEach { title in
-            let button = UIButton(type: .custom)
+            let button = UIButton(type: .system)
             let attributes: [NSAttributedString.Key: Any] =
                 [.foregroundColor: Colors.profileScreenSegmentUnselected.color,
                  .font: Fonts._29LTAzer.medium.font(size: 18)]
             
-            let attributedTitle = NSMutableAttributedString(string: title, attributes: attributes)
-            button.setAttributedTitle(attributedTitle, for: .normal)
+            let attributedTitle = NSAttributedString(string: title,
+                                                     attributes: attributes)
+            button.setAttributedTitle(attributedTitle,
+                                      for: .normal)
+            button.addTarget(self,
+                             action: #selector(buttonTapped(button:)),
+                             for: .touchUpInside)
             buttons.append(button)
-        }
-        stackButtons()
-    }
-    
-    func clearView() {
-        buttons.removeAll()
-        subviews.forEach { view in
-            view.removeFromSuperview()
         }
     }
 
@@ -50,21 +42,58 @@ class CustomSegmentedView: UIView {
                                      stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
                                      stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor)])
         }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        configUnderlineView()
-    }
-    
+        
     func configUnderlineView() {
-        let width = self.bounds.width / CGFloat(buttons.count)
+        let width = self.frame.width / CGFloat(buttons.count)
         let size = CGSize(width: width, height: 2)
-        let xPos = self.bounds.origin.x
+        let xPos = self.frame.origin.x + width * CGFloat(2)
         let origin = CGPoint(x: xPos,
                              y: self.bounds.height - 2)
         underline = UIView(frame: .init(origin: origin, size: size))
         underline.backgroundColor = Colors.profileScreenSegmentSelected.color
+        
+        let btn = buttons.last
+        let title = btn?.attributedTitle(for: .normal)?.string ?? ""
+        let attributes: [NSAttributedString.Key: Any] =
+            [.foregroundColor: Colors.profileScreenSegmentSelected.color,
+             .font: Fonts._29LTAzer.medium.font(size: 18)]
+        
+        let attributedTitle = NSAttributedString(string: title,
+                                                 attributes: attributes)
+        btn?.setAttributedTitle(attributedTitle,
+                                for: .normal)
         self.addSubview(underline)
-//        underline.frame.origin.x = self.bounds.origin.x + (width * CGFloat(2))
+        underline.clipsToBounds = true
     }
+    
+    @objc
+    func buttonTapped(button: UIButton) {
+        
+        for btn in buttons {
+            let title = btn.attributedTitle(for: .normal)?.string
+            var attributes: [NSAttributedString.Key: Any] =
+                [.foregroundColor: Colors.profileScreenSegmentUnselected.color,
+                 .font: Fonts._29LTAzer.medium.font(size: 18)]
+            if btn == button {
+                UIView.animate(withDuration: 0.5) {
+                    self.underline.frame.origin.x = btn.frame.origin.x
+                }
+                attributes[.foregroundColor] = Colors.profileScreenSegmentSelected.color
+            }
+            let atrributedTitle = NSAttributedString(string: title ??  "", attributes: attributes)
+            btn.setAttributedTitle(atrributedTitle, for: .normal)
+        }
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        configView()
+    }
+    
+    private func configView() {
+        configButtons()
+        stackButtons()
+        configUnderlineView()
+    }
+    
 }

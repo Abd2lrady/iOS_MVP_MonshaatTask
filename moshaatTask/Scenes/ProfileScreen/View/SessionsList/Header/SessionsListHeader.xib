@@ -3,69 +3,66 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="KGk-i7-Jjw" customClass="SessionsListHeader" customModule="moshaatTask" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="374" height="121"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="374" height="121"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zTW-XT-aCy">
-                        <rect key="frame" x="158" y="32.5" width="216" height="56"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkm-1F-duB" userLabel="SessionsLabel">
-                                <rect key="frame" x="0.0" y="0.0" width="216" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5C-p8-weI" userLabel="UpdateLabel">
-                                <rect key="frame" x="0.0" y="35.5" width="216" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </stackView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfR-K1-XWt">
-                        <rect key="frame" x="111" y="40.5" width="40" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="40" id="Y1w-yH-4Wh"/>
-                            <constraint firstAttribute="height" constant="40" id="dSc-kJ-VwP"/>
-                        </constraints>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A49-ZJ-3cB">
-                        <rect key="frame" x="0.0" y="40.5" width="102" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="Pag-eC-eOE"/>
-                            <constraint firstAttribute="width" constant="102" id="s6X-qb-8Zd"/>
-                        </constraints>
-                    </button>
-                </subviews>
-                <constraints>
-                    <constraint firstItem="zTW-XT-aCy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1gd-po-ILD"/>
-                    <constraint firstItem="A49-ZJ-3cB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="U2Y-NV-qFV"/>
-                    <constraint firstItem="HfR-K1-XWt" firstAttribute="leading" secondItem="A49-ZJ-3cB" secondAttribute="trailing" constant="9" id="Wkn-EF-jvd"/>
-                    <constraint firstItem="HfR-K1-XWt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="c7v-JU-lK8"/>
-                    <constraint firstItem="A49-ZJ-3cB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kgd-Od-8yS"/>
-                    <constraint firstItem="zTW-XT-aCy" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="kqH-T7-vbn"/>
-                    <constraint firstItem="zTW-XT-aCy" firstAttribute="leading" secondItem="HfR-K1-XWt" secondAttribute="trailing" constant="7" id="qPT-GA-Npw"/>
-                </constraints>
-            </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SessionsListHeader" customModule="moshaatTask" customModuleProvider="target">
             <connections>
-                <outlet property="notificationButton" destination="HfR-K1-XWt" id="Whw-jO-1D1"/>
-                <outlet property="requestSessionButton" destination="A49-ZJ-3cB" id="QBk-8E-6Eo"/>
-                <outlet property="sessionsLabel" destination="pkm-1F-duB" id="rj1-6C-Diw"/>
-                <outlet property="updateLabel" destination="e5C-p8-weI" id="BeJ-bI-kyt"/>
+                <outlet property="notificationButton" destination="Geu-0I-F6Q" id="Glq-c2-gLe"/>
+                <outlet property="requestSessionButton" destination="czP-sc-mbI" id="bh5-Hc-o3h"/>
+                <outlet property="sessionsLabel" destination="8cf-yx-VWa" id="Yot-br-9PL"/>
+                <outlet property="updateLabel" destination="NCp-IA-UdU" id="0DC-vP-fyr"/>
             </connections>
-            <point key="canvasLocation" x="89.855072463768124" y="76.674107142857139"/>
-        </tableViewCell>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="284"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kH2-g4-vF4">
+                    <rect key="frame" x="160" y="114" width="271" height="56"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cf-yx-VWa" userLabel="SessionsLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="271" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCp-IA-UdU" userLabel="UpdateLabel">
+                            <rect key="frame" x="0.0" y="35.5" width="271" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czP-sc-mbI" userLabel="BookButton">
+                    <rect key="frame" x="0.0" y="122" width="102" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="IOu-Mz-Erf"/>
+                        <constraint firstAttribute="width" constant="102" id="sEU-Ge-ni0"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Geu-0I-F6Q" userLabel="NotificationsButton">
+                    <rect key="frame" x="111" y="122" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="3iW-iu-fkF"/>
+                        <constraint firstAttribute="width" constant="40" id="MOd-NQ-LeT"/>
+                    </constraints>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="czP-sc-mbI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1uJ-tm-kwL"/>
+                <constraint firstItem="Geu-0I-F6Q" firstAttribute="leading" secondItem="czP-sc-mbI" secondAttribute="trailing" constant="9" id="Aqg-Cz-5fu"/>
+                <constraint firstItem="kH2-g4-vF4" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="BED-MX-QBk"/>
+                <constraint firstItem="czP-sc-mbI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="M6j-Jx-IIa"/>
+                <constraint firstItem="kH2-g4-vF4" firstAttribute="leading" secondItem="Geu-0I-F6Q" secondAttribute="trailing" constant="9" id="ac5-rV-Fbx"/>
+                <constraint firstItem="Geu-0I-F6Q" firstAttribute="leading" secondItem="czP-sc-mbI" secondAttribute="trailing" constant="9" id="s5d-20-tv7"/>
+                <constraint firstItem="kH2-g4-vF4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tRI-nK-1kW"/>
+                <constraint firstItem="Geu-0I-F6Q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="w23-f9-M9e"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-47.10144927536232" y="-155.35714285714286"/>
+        </view>
     </objects>
 </document>

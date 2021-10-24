@@ -29,6 +29,7 @@ profileScreenListUpdate: #717781
 profileScreenListSession: #314d6c
 profileScreenBookButton: #3084b2
 profileScreenBookButtonLabel: #ffffff
+profileScreenNotificationButtonLabel: #ffffff
 profileScreenAppoinment: #dde3e8
 profileScreenSessionDate: #314d6c
 profileScreenSegmentUnselected: #9498a1

@@ -51,6 +51,10 @@ internal enum Strings {
       /// تحدث البيانات بداية كل شهر ميلادى
       internal static let update = Strings.tr("Localizable", "profileScreen.sessionsList.update")
     }
+    internal enum SessionsListHeader {
+      /// التقييم,معلومات عامة,جدول الجلسات
+      internal static let tags = Strings.tr("Localizable", "profileScreen.sessionsListHeader.tags")
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
