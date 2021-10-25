@@ -7,5 +7,7 @@
 import Foundation
 
 protocol ProfileScreenPresenterProtocol {
-    
+    var sessions: [Session] { get set }
+    func viewLoaded()
+    func refreshProfileData()
 }

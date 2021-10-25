@@ -11,7 +11,4 @@ extension ProfileScreenVC: ViewDelegate {
     func loadMore() {
         
     }
-    
-    
-    
 }

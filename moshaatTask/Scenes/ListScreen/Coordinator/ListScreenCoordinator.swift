@@ -15,8 +15,8 @@ class ListScreenCoordinator {
         self.router = router
     }
     
-    func startProfileScreen() {
-        let profileScreenCoordinator = ProfileScreenCoordinator(router: router)
+    func startProfileScreen(id: String) {
+        let profileScreenCoordinator = ProfileScreenCoordinator(router: router, id: id)
         self.childCoordinators.append(profileScreenCoordinator)
         profileScreenCoordinator.start()
     }

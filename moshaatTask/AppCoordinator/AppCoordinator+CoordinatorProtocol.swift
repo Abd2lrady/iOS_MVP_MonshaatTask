@@ -15,8 +15,8 @@ extension AppCoordinator: CoordinatorProtocol {
 //        let listScreenCoordinator = ListScreenCoordinator(router: router)
 //        self.childCoordinators.append(listScreenCoordinator)
 //        listScreenCoordinator.start()
-        
-        let profileScreenCoordinator = ProfileScreenCoordinator(router: router)
+        let profileScreenCoordinator = ProfileScreenCoordinator(router: router,
+                                                                id: "93f4d920-0720-4a84-8f84-fed97dfa49f2")
         self.childCoordinators.append(profileScreenCoordinator)
         profileScreenCoordinator.start()
         

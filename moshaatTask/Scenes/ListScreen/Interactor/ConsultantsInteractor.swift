@@ -11,13 +11,13 @@ class ConsultantsInteractor {
     let networkManager = NetworkManager()
     
     func getConsultants(page: Int,
-                        completionHander: @escaping (ServerReponse?, Error?) -> Void) {
+                        completionHander: @escaping (ServerReponse<Consultant>?, Error?) -> Void) {
 
         networkManager.request(target: ConsultantsTarget.getConsultants(page: page)) { result, _ in
             switch result {
             case.success(let response):
                 do {
-                    let serverResponse = try JSONDecoder().decode(ServerReponse.self, from: response)
+                    let serverResponse = try JSONDecoder().decode(ServerReponse<Consultant>.self, from: response)
                     completionHander(serverResponse, nil)
 //                    print(serverResponse.data)
                 } catch(let error) {

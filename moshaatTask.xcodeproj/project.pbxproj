@@ -18,6 +18,15 @@
 		B43AB08027256B940073A827 /* SessionListDelegateAdapter+UITVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB07F27256B940073A827 /* SessionListDelegateAdapter+UITVDelegate.swift */; };
 		B43AB08227256CDA0073A827 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB08127256CDA0073A827 /* Session.swift */; };
 		B43AB0842725742F0073A827 /* ProfileScreenVC+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB0832725742F0073A827 /* ProfileScreenVC+ViewDelegate.swift */; };
+		B43AB08627258E580073A827 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB08527258E580073A827 /* Schedule.swift */; };
+		B43AB08827258F090073A827 /* Office.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB08727258F090073A827 /* Office.swift */; };
+		B43AB08A27258F4C0073A827 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB08927258F4C0073A827 /* Center.swift */; };
+		B43AB08E272590BE0073A827 /* SessionsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB08D272590BE0073A827 /* SessionsTarget.swift */; };
+		B43AB090272590F00073A827 /* SessionTarget+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB08F272590F00073A827 /* SessionTarget+TargetType.swift */; };
+		B43AB093272594010073A827 /* SessionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB092272594010073A827 /* SessionsInteractor.swift */; };
+		B43AB0952725A7510073A827 /* InfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB0942725A7510073A827 /* InfoInteractor.swift */; };
+		B43AB0982726AA990073A827 /* AppointmentDelegateAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB0972726AA990073A827 /* AppointmentDelegateAdapter.swift */; };
+		B43AB09A2726ACAF0073A827 /* AppointmentDelegateAdapter+AppooinmentCVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB0992726ACAF0073A827 /* AppointmentDelegateAdapter+AppooinmentCVDataSource.swift */; };
 		B45DEDC1271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45DEDBF271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift */; };
 		B45DEDC2271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45DEDC0271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib */; };
 		B4643543271D553000393F35 /* ProfileScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4643541271D553000393F35 /* ProfileScreenPresenterProtocol.swift */; };
@@ -112,6 +121,15 @@
 		B43AB07F27256B940073A827 /* SessionListDelegateAdapter+UITVDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionListDelegateAdapter+UITVDelegate.swift"; sourceTree = "<group>"; };
 		B43AB08127256CDA0073A827 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B43AB0832725742F0073A827 /* ProfileScreenVC+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileScreenVC+ViewDelegate.swift"; sourceTree = "<group>"; };
+		B43AB08527258E580073A827 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		B43AB08727258F090073A827 /* Office.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office.swift; sourceTree = "<group>"; };
+		B43AB08927258F4C0073A827 /* Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
+		B43AB08D272590BE0073A827 /* SessionsTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsTarget.swift; sourceTree = "<group>"; };
+		B43AB08F272590F00073A827 /* SessionTarget+TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionTarget+TargetType.swift"; sourceTree = "<group>"; };
+		B43AB092272594010073A827 /* SessionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsInteractor.swift; sourceTree = "<group>"; };
+		B43AB0942725A7510073A827 /* InfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoInteractor.swift; sourceTree = "<group>"; };
+		B43AB0972726AA990073A827 /* AppointmentDelegateAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDelegateAdapter.swift; sourceTree = "<group>"; };
+		B43AB0992726ACAF0073A827 /* AppointmentDelegateAdapter+AppooinmentCVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentDelegateAdapter+AppooinmentCVDataSource.swift"; sourceTree = "<group>"; };
 		B45DEDBF271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMoreConsultantsCVFooterCell.swift; sourceTree = "<group>"; };
 		B45DEDC0271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoMoreConsultantsCVFooterCell.xib; sourceTree = "<group>"; };
 		B4643541271D553000393F35 /* ProfileScreenPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreenPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -253,6 +271,7 @@
 			children = (
 				B43AB07A27256B0F0073A827 /* AboutDelegateAdapter */,
 				B43AB07927256AFA0073A827 /* SessionListDelgateAdapter */,
+				B43AB0962726AA780073A827 /* AppointmentDelegateAdapter */,
 			);
 			path = DelgatesAdapters;
 			sourceTree = "<group>";
@@ -272,6 +291,42 @@
 			children = (
 			);
 			path = AboutDelegateAdapter;
+			sourceTree = "<group>";
+		};
+		B43AB08B272590560073A827 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				B43AB08D272590BE0073A827 /* SessionsTarget.swift */,
+				B43AB08F272590F00073A827 /* SessionTarget+TargetType.swift */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
+		B43AB08C2725906B0073A827 /* Consultants */ = {
+			isa = PBXGroup;
+			children = (
+				B4EB637A2713F7BC00CB7122 /* ConsultantsTarget.swift */,
+				B4EB637C2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift */,
+			);
+			path = Consultants;
+			sourceTree = "<group>";
+		};
+		B43AB091272593E80073A827 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B43AB092272594010073A827 /* SessionsInteractor.swift */,
+				B43AB0942725A7510073A827 /* InfoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B43AB0962726AA780073A827 /* AppointmentDelegateAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				B43AB0972726AA990073A827 /* AppointmentDelegateAdapter.swift */,
+				B43AB0992726ACAF0073A827 /* AppointmentDelegateAdapter+AppooinmentCVDataSource.swift */,
+			);
+			path = AppointmentDelegateAdapter;
 			sourceTree = "<group>";
 		};
 		B4643540271D553000393F35 /* ProfileScreen+ */ = {
@@ -295,6 +350,7 @@
 		B4643548271D55BA00393F35 /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B43AB091272593E80073A827 /* Interactor */,
 				B43AB07827256AE20073A827 /* DelgatesAdapters */,
 				B4643549271D55BA00393F35 /* Coordinator */,
 				B464354C271D55BA00393F35 /* Presenter */,
@@ -611,6 +667,9 @@
 			isa = PBXGroup;
 			children = (
 				B43AB08127256CDA0073A827 /* Session.swift */,
+				B43AB08527258E580073A827 /* Schedule.swift */,
+				B43AB08727258F090073A827 /* Office.swift */,
+				B43AB08927258F4C0073A827 /* Center.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -723,8 +782,8 @@
 		B4EB63792713F6CF00CB7122 /* APITarget */ = {
 			isa = PBXGroup;
 			children = (
-				B4EB637A2713F7BC00CB7122 /* ConsultantsTarget.swift */,
-				B4EB637C2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift */,
+				B43AB08B272590560073A827 /* Sessions */,
+				B43AB08C2725906B0073A827 /* Consultants */,
 			);
 			path = APITarget;
 			sourceTree = "<group>";
@@ -874,6 +933,8 @@
 				B43AB08227256CDA0073A827 /* Session.swift in Sources */,
 				B4C8D58A272336EE0017E5AB /* CustomSegmentedView.swift in Sources */,
 				B499E623270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift in Sources */,
+				B43AB08E272590BE0073A827 /* SessionsTarget.swift in Sources */,
+				B43AB08827258F090073A827 /* Office.swift in Sources */,
 				B4EB634F2712CE7400CB7122 /* StaticHeaderPlugin.swift in Sources */,
 				B4EB6381271443EE00CB7122 /* ListScreenVC+ViewDelegate.swift in Sources */,
 				B499E5EF270D8DD3007E1BC8 /* ListScreenVC.swift in Sources */,
@@ -890,6 +951,7 @@
 				B4EB635E2713044500CB7122 /* ListScreenPresenter.swift in Sources */,
 				B43AB0842725742F0073A827 /* ProfileScreenVC+ViewDelegate.swift in Sources */,
 				B499E62F270DCB4A007E1BC8 /* EnviromentVariables.swift in Sources */,
+				B43AB0982726AA990073A827 /* AppointmentDelegateAdapter.swift in Sources */,
 				B4643556271D55BA00393F35 /* ProfileScreenPresenter+ProfileScreenPresenterProtocol.swift in Sources */,
 				B4848B8727117B6A00C4A643 /* UIViewController+.swift in Sources */,
 				B4EB636C2713217900CB7122 /* Pagination.swift in Sources */,
@@ -901,12 +963,14 @@
 				B4643547271D55A800393F35 /* HeaderCardView.swift in Sources */,
 				B4643554271D55BA00393F35 /* ProfileScreenCoordinator.swift in Sources */,
 				B4EB63702713220600CB7122 /* Subject.swift in Sources */,
+				B43AB08627258E580073A827 /* Schedule.swift in Sources */,
 				B499E613270D93C0007E1BC8 /* Router.swift in Sources */,
 				B4848B8E271186B800C4A643 /* NetworkMonitor.swift in Sources */,
 				B499E60F270D92A5007E1BC8 /* RouterProtocol.swift in Sources */,
 				B43AB08027256B940073A827 /* SessionListDelegateAdapter+UITVDelegate.swift in Sources */,
 				B4848BBD27121A7600C4A643 /* Strings.swift in Sources */,
 				B4643557271D55BA00393F35 /* ProfileScreenPresenter.swift in Sources */,
+				B43AB08A27258F4C0073A827 /* Center.swift in Sources */,
 				B4643544271D553000393F35 /* ProfileScreenViewProtocol.swift in Sources */,
 				B4EB638327156FF200CB7122 /* Colors.swift in Sources */,
 				B4EB638F2715B57400CB7122 /* ListScreenVC+RetryActions.swift in Sources */,
@@ -921,18 +985,22 @@
 				B4EB637D2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift in Sources */,
 				B4643558271D55BA00393F35 /* ProfileScreenVC+ProfileScreenViewProtocol.swift in Sources */,
 				B4C8D586271EB9630017E5AB /* SessionAppointmentCell.swift in Sources */,
+				B43AB09A2726ACAF0073A827 /* AppointmentDelegateAdapter+AppooinmentCVDataSource.swift in Sources */,
+				B43AB0952725A7510073A827 /* InfoInteractor.swift in Sources */,
 				B4A5DA2A2712B8AA008BF561 /* ListScreenPresenterProtocol.swift in Sources */,
 				B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */,
 				B4D3FCE62715D37800CF48F4 /* Reachability.swift in Sources */,
 				B464356F271D9BB700393F35 /* SessionsListHeader.swift in Sources */,
 				B4EB63542712CE7400CB7122 /* NetworkManger+Service.swift in Sources */,
 				B499E615270D9458007E1BC8 /* Router+RouterProtocol.swift in Sources */,
+				B43AB090272590F00073A827 /* SessionTarget+TargetType.swift in Sources */,
 				B4643561271D7F7E00393F35 /* CustomButtonView.swift in Sources */,
 				B4848B8B27117F6A00C4A643 /* UIBarButtonItem+.swift in Sources */,
 				B4EB63602713055B00CB7122 /* ListScreenPresenter+ListScreenPresenterProtocol.swift in Sources */,
 				B499E617270D9E62007E1BC8 /* AppCoordinator.swift in Sources */,
 				B499E619270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift in Sources */,
 				B4EB6366271317C500CB7122 /* ConsultantsCVSections.swift in Sources */,
+				B43AB093272594010073A827 /* SessionsInteractor.swift in Sources */,
 				B43AB07C27256B390073A827 /* SessionListDelegateAdapter.swift in Sources */,
 				B4EB63502712CE7400CB7122 /* NetworkManager.swift in Sources */,
 				B4EB635C271302C800CB7122 /* ConsultantCVAdapter+UICollectionViewDataSource.swift in Sources */,

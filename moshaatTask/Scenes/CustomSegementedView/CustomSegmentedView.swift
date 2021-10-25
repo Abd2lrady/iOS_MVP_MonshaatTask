@@ -47,7 +47,7 @@ class CustomSegmentedView: UIControl {
     func configUnderlineView() {
         let width = self.frame.width / CGFloat(buttons.count)
         let size = CGSize(width: width, height: 2)
-        let xPos = self.frame.origin.x + width * CGFloat(2)
+        let xPos = width * CGFloat(2)
         let origin = CGPoint(x: xPos,
                              y: self.bounds.height - 2)
         underline = UIView(frame: .init(origin: origin, size: size))
@@ -81,7 +81,7 @@ class CustomSegmentedView: UIControl {
                 }
                 attributes[.foregroundColor] = Colors.profileScreenSegmentSelected.color
             }
-            let atrributedTitle = NSAttributedString(string: title ??  "", attributes: attributes)
+            let atrributedTitle = NSAttributedString(string: title ?? "", attributes: attributes)
             btn.setAttributedTitle(atrributedTitle, for: .normal)
         }
         sendActions(for: .valueChanged)

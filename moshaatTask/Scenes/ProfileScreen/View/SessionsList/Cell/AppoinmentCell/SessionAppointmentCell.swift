@@ -13,6 +13,8 @@ class SessionAppointmentCell: UICollectionViewCell {
         didSet {
             appoinmentLabel.shapeAllCorners(with: appoinmentLabel.bounds.height / 2)
             appoinmentLabel.setBorders(with: 1, color: Colors.profileScreenBookButton.color)
+            appoinmentLabel.font = Fonts._29LTAzer.regular.font(size: 11)
+            appoinmentLabel.textColor = .black
         }
     }
     

@@ -8,7 +8,7 @@ import UIKit
 
 class SessionCell: UITableViewCell {
     static let reuseID = "\(SessionCell.self)"
-    
+    lazy var appoinmentDelegate = AppointmentDelegateAdapter(cell: self)
     @IBOutlet private weak var backView: UIView! {
         didSet {
             backView.shapeAllCorners(with: 16)
@@ -41,12 +41,14 @@ class SessionCell: UITableViewCell {
     }
     @IBOutlet private weak var _appoinmentCV: UICollectionView! {
         didSet {
-            appoinmentCV.isScrollEnabled = false
-            appoinmentCV.backgroundColor = .clear
+            _appoinmentCV.isScrollEnabled = false
+            _appoinmentCV.backgroundColor = .clear
             let cellNib = UINib(nibName: "\(SessionAppointmentCell.self)",
                                 bundle: .main)
-            appoinmentCV.register(cellNib,
-                                  forCellWithReuseIdentifier: SessionAppointmentCell.reuseID)
+            _appoinmentCV.register(cellNib,
+                                   forCellWithReuseIdentifier: SessionAppointmentCell.reuseID)
+            _appoinmentCV.semanticContentAttribute = .forceRightToLeft
+            _appoinmentCV.dataSource = appoinmentDelegate
         }
     }
     

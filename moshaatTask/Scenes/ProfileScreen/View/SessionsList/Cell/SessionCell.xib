@@ -48,19 +48,20 @@
                                 </constraints>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPu-FC-FR6" userLabel="AdditionalSessionsLabel">
-                                <rect key="frame" x="20" y="73" width="41.5" height="21"/>
+                                <rect key="frame" x="20" y="73" width="41.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1FB-B0-wmR" userLabel="AppoinmentCV">
-                                <rect key="frame" x="120" y="65" width="270" height="37"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" directionalLockEnabled="YES" scrollEnabled="NO" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1FB-B0-wmR" userLabel="AppoinmentCV">
+                                <rect key="frame" x="132" y="65" width="270" height="40"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NtS-e3-lyh"/>
                                     <constraint firstAttribute="width" constant="270" id="wRJ-dL-CKH"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q1U-jq-okb">
-                                    <size key="itemSize" width="58" height="24"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="8" sectionInsetReference="layoutMargins" id="Hds-Cj-2XR">
+                                    <size key="itemSize" width="57" height="25"/>
+                                    <size key="estimatedItemSize" width="57" height="25"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -77,7 +78,6 @@
                             <constraint firstItem="1FB-B0-wmR" firstAttribute="centerY" secondItem="LPu-FC-FR6" secondAttribute="centerY" id="OW5-dw-Aiw"/>
                             <constraint firstItem="sou-m9-Ovc" firstAttribute="top" secondItem="q1b-7P-2UU" secondAttribute="top" constant="13" id="Spp-cu-e3Z"/>
                             <constraint firstItem="LPu-FC-FR6" firstAttribute="top" secondItem="sou-m9-Ovc" secondAttribute="bottom" constant="25" id="UbL-I9-7aQ"/>
-                            <constraint firstAttribute="trailing" secondItem="1FB-B0-wmR" secondAttribute="trailing" constant="12" id="cHV-fM-get"/>
                             <constraint firstItem="LPu-FC-FR6" firstAttribute="leading" secondItem="q1b-7P-2UU" secondAttribute="leading" constant="20" id="kQf-Kx-UFE"/>
                             <constraint firstItem="sOX-w1-eN0" firstAttribute="centerY" secondItem="sou-m9-Ovc" secondAttribute="centerY" id="knt-Ri-IYJ"/>
                         </constraints>
@@ -92,6 +92,7 @@
                     <constraint firstItem="OqA-xZ-jln" firstAttribute="centerX" secondItem="uaO-lJ-qRD" secondAttribute="centerX" id="RqM-dH-FqK"/>
                     <constraint firstItem="uaO-lJ-qRD" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="XJ6-vs-5ra"/>
                     <constraint firstItem="uaO-lJ-qRD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gJN-cT-n0Q"/>
+                    <constraint firstItem="1FB-B0-wmR" firstAttribute="trailing" secondItem="q1b-7P-2UU" secondAttribute="trailing" id="mVg-nO-GMa"/>
                     <constraint firstItem="q1b-7P-2UU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qyH-gz-6m2"/>
                 </constraints>
             </tableViewCellContentView>

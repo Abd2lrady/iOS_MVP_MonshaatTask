@@ -6,6 +6,7 @@
 
 import Foundation
 
-struct Session {
-    
+struct Session: Codable {
+    let day: Int?
+    let schedules: [Schedule]?
 }

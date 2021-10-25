@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileScreenVC" customModule="moshaatTask" customModuleProvider="target">
             <connections>
                 <outlet property="consultantInfoTV" destination="pLm-zd-smt" id="1p0-M0-bBa"/>
+                <outlet property="headerBGView" destination="MFI-rq-kJy" id="Put-Ls-Qt6"/>
                 <outlet property="headerCardHeight" destination="fg3-9P-65h" id="9x5-MQ-qnA"/>
                 <outlet property="headerCardView" destination="hCx-g7-dE5" id="QbO-Rp-17k"/>
                 <outlet property="segemetedView" destination="dIu-w5-3YP" id="VYo-m2-2hY"/>

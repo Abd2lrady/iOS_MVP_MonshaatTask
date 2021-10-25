@@ -9,7 +9,6 @@ import Foundation
 extension ListScreenCoordinator: CoordinatorProtocol {
     
     func start() {
-        
         let view = ListScreenVC()
         let presenter = ListScreenPresenter(with: view)
         view.presenter = presenter

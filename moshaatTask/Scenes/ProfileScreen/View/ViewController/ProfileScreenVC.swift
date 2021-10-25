@@ -5,36 +5,47 @@
 //  Created by Ahmad Abdulrady
 
 import UIKit
+import Toast
 
 class ProfileScreenVC: UIViewController {
     
+    @IBOutlet private weak var headerBGView: UIImageView!
     @IBOutlet private weak var headerCardView: HeaderCardView!
-    @IBOutlet weak var segemetedView: CustomSegmentedView!{
+    @IBOutlet private weak var segemetedView: CustomSegmentedView! {
         didSet {
             segemetedView.titles = Strings.ProfileScreen.SessionsListHeader.tags
         }
     }
-    @IBOutlet weak var consultantInfoTV: UITableView! {
+    @IBOutlet private weak var consultantInfoTV: UITableView! {
         didSet {
             configConsultantInfoTV()
-            
         }
     }
-    @IBOutlet weak var sessionListHeaderHeight: NSLayoutConstraint!
-    @IBOutlet weak var headerCardHeight: NSLayoutConstraint!
+    @IBOutlet private weak var sessionListHeaderHeight: NSLayoutConstraint!
+    @IBOutlet private weak var headerCardHeight: NSLayoutConstraint!
     
-    var refreshControl: UIRefreshControl = {
-            var refresh = UIRefreshControl()
-            refresh.tintColor = Colors.activityColor.color
-            return refresh
-        }()
+    let refreshControl: UIRefreshControl = {
+        var refresh = UIRefreshControl()
+        refresh.tintColor = Colors.activityColor.color
+        return refresh
+    }()
+    
+    let toastActivityStyle: ToastStyle = {
+        var style = ToastStyle()
+        style.activityBackgroundColor = .clear
+        style.maxHeightPercentage = 0.5
+        style.activityIndicatorColor = Colors.activityColor.color
+        ToastManager.shared.style = style
+        return style
+    }()
 
     var presenter: ProfileScreenPresenterProtocol!
+    var noInternet = NoInternet()
     lazy var sessionListDelegateAdapter = SessionListDelegateAdapter(view: self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        presenter.viewLoaded()
     }
     
     override func viewDidLayoutSubviews() {
@@ -62,6 +73,13 @@ class ProfileScreenVC: UIViewController {
         consultantInfoTV.dataSource = sessionListDelegateAdapter
         consultantInfoTV.delegate = sessionListDelegateAdapter
         consultantInfoTV.backgroundColor = .clear
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+    }
+    
+    @objc
+    func refresh() {
+        refreshControl.beginRefreshing()
+        presenter.refreshProfileData()
     }
     
     var scrollableView: UIScrollView {
@@ -83,5 +101,29 @@ class ProfileScreenVC: UIViewController {
             self.view.layoutIfNeeded()
         }
         
+    }
+    
+    func showNoInternet() {
+        self.view.addSubview(noInternet)
+        headerCardView.isHidden = true
+        headerCardView.isUserInteractionEnabled = false
+        noInternet.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+                                    noInternet.topAnchor.constraint(equalTo: headerBGView.bottomAnchor),
+                                    noInternet.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                                    noInternet.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                                    noInternet.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+                                    ])
+//        noInternet.tryAgainButton.addTarget(self,
+//                                            action: #selector(),
+//                                            for: .touchUpInside)
+
+    }
+    
+    func hideNoInternet() {
+        headerCardView.isHidden = false
+        headerCardView.isUserInteractionEnabled = true
+
+        noInternet.removeFromSuperview()
     }
 }

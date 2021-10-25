@@ -6,10 +6,11 @@
 
 import Foundation
 
- struct ServerReponse: Codable, Hashable {
+struct ServerReponse<ResponseType: Codable>: Codable {
+    
     let status: Int?
     let success: Bool?
-    let data: [Consultant]?
+    let data: [ResponseType]?
     let pagination: Pagination?
  }
 
