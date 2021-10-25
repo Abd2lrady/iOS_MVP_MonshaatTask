@@ -7,6 +7,10 @@
 import UIKit
 
 extension ProfileScreenVC: ViewDelegate {
+    func goToConsultantProfile(consultant: Consultant) {
+        
+    }
+    
   
     func loadMore() {
         

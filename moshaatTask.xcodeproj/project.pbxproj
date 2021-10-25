@@ -27,6 +27,7 @@
 		B43AB0952725A7510073A827 /* InfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB0942725A7510073A827 /* InfoInteractor.swift */; };
 		B43AB0982726AA990073A827 /* AppointmentDelegateAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB0972726AA990073A827 /* AppointmentDelegateAdapter.swift */; };
 		B43AB09A2726ACAF0073A827 /* AppointmentDelegateAdapter+AppooinmentCVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB0992726ACAF0073A827 /* AppointmentDelegateAdapter+AppooinmentCVDataSource.swift */; };
+		B43AB09C2726E8060073A827 /* ListCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AB09B2726E8060073A827 /* ListCoordinatorProtocol.swift */; };
 		B45DEDC1271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45DEDBF271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift */; };
 		B45DEDC2271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45DEDC0271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib */; };
 		B4643543271D553000393F35 /* ProfileScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4643541271D553000393F35 /* ProfileScreenPresenterProtocol.swift */; };
@@ -130,6 +131,7 @@
 		B43AB0942725A7510073A827 /* InfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoInteractor.swift; sourceTree = "<group>"; };
 		B43AB0972726AA990073A827 /* AppointmentDelegateAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDelegateAdapter.swift; sourceTree = "<group>"; };
 		B43AB0992726ACAF0073A827 /* AppointmentDelegateAdapter+AppooinmentCVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentDelegateAdapter+AppooinmentCVDataSource.swift"; sourceTree = "<group>"; };
+		B43AB09B2726E8060073A827 /* ListCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		B45DEDBF271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMoreConsultantsCVFooterCell.swift; sourceTree = "<group>"; };
 		B45DEDC0271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoMoreConsultantsCVFooterCell.xib; sourceTree = "<group>"; };
 		B4643541271D553000393F35 /* ProfileScreenPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreenPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -689,6 +691,7 @@
 				B4A5DA292712B8AA008BF561 /* ListScreenPresenterProtocol.swift */,
 				B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */,
 				B4EB637E2714433A00CB7122 /* ViewDelegate.swift */,
+				B43AB09B2726E8060073A827 /* ListCoordinatorProtocol.swift */,
 			);
 			path = "ListScreen+";
 			sourceTree = "<group>";
@@ -955,6 +958,7 @@
 				B4643556271D55BA00393F35 /* ProfileScreenPresenter+ProfileScreenPresenterProtocol.swift in Sources */,
 				B4848B8727117B6A00C4A643 /* UIViewController+.swift in Sources */,
 				B4EB636C2713217900CB7122 /* Pagination.swift in Sources */,
+				B43AB09C2726E8060073A827 /* ListCoordinatorProtocol.swift in Sources */,
 				B499E611270D935D007E1BC8 /* CoordinatorProtocol.swift in Sources */,
 				B4EB638A2715727B00CB7122 /* NoInternet.swift in Sources */,
 				B4848BB427120E3A00C4A643 /* Assets.swift in Sources */,

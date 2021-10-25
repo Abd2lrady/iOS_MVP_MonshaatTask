@@ -40,7 +40,7 @@ class ListScreenVC: UIViewController {
      
     var presenter: ListScreenPresenterProtocol!
     var consultantCVAdapter: ConsultantCVAdapter!
-    
+    weak var listCoordinatorDelegate: ListCoordinatorProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

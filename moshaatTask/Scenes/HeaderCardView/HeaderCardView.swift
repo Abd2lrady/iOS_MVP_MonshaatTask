@@ -6,6 +6,7 @@
 
 import UIKit
 import Cosmos
+import Kingfisher
 
 class HeaderCardView: UIView {
     
@@ -19,7 +20,7 @@ class HeaderCardView: UIView {
     @IBOutlet private weak var ratingView: CosmosView!
     @IBOutlet private weak var ratingLabel: UILabel! {
         didSet {
-            ratingLabel.font = Fonts._29LTAzer.medium.font(size: 15)
+            ratingLabel.font = Fonts._29LTAzer.medium.font(size: 13)
             ratingLabel.textColor = Colors.profileScreenRateLabel.color
         }
     }
@@ -75,8 +76,11 @@ class HeaderCardView: UIView {
                                     ])
     }
     
-    func setProfileImg(with img: UIImage) {
-        profileImg.image = img
+    func setProfileImg(with path: String) {
+        profileImg.kf.setImage(with: URL(string: path),
+                               placeholder: Assets.icAvatar.image,
+                               options: nil,
+                               completionHandler: nil)
     }
     
     func setName(with label: String) {
@@ -92,7 +96,13 @@ class HeaderCardView: UIView {
         specialityLabel.text = label
     }
     
-    func setInterests(with label: String) {
+    func setInterests(with interests: [String]) {
+        var label = ""
+        let seprator = [", ", ""]
+        for (index, interest) in interests.enumerated() {
+            label += "\(interest)"
+            label += seprator[index + 1 == interests.count ? 1:0]
+        }
         interestLabel.text = label
     }
     

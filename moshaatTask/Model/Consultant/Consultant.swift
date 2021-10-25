@@ -23,6 +23,7 @@ struct Consultant: Codable, Hashable {
     let ssoUser: SsoUser?
     let interests: [String]?
     let file: File?
+    let subject: Subject?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -33,6 +34,7 @@ struct Consultant: Codable, Hashable {
         case ssoUser = "sso_user"
         case interests
         case file
+        case subject
     }
     
     func hash(into hasher: inout Hasher) {

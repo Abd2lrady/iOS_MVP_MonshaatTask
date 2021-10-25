@@ -10,7 +10,7 @@ class CustomSegmentedView: UIControl {
     var selectedSegment = 2
     var buttons = [UIButton]()
     var underline = UIView()
-    var titles: String!
+    var titles: String! 
     
     func configButtons() {
         let titleArr = titles.components(separatedBy: ",")
@@ -45,7 +45,7 @@ class CustomSegmentedView: UIControl {
         }
         
     func configUnderlineView() {
-        let width = self.frame.width / CGFloat(buttons.count)
+        let width = self.bounds.width / CGFloat(buttons.count)
         let size = CGSize(width: width, height: 2)
         let xPos = width * CGFloat(2)
         let origin = CGPoint(x: xPos,
@@ -89,6 +89,7 @@ class CustomSegmentedView: UIControl {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
+        clearView()
         configView()
     }
     
@@ -96,6 +97,13 @@ class CustomSegmentedView: UIControl {
         configButtons()
         stackButtons()
         configUnderlineView()
+    }
+    
+    private func clearView() {
+        buttons.removeAll()
+        subviews.forEach { view in
+            view.removeFromSuperview()
+        }
     }
     
 }

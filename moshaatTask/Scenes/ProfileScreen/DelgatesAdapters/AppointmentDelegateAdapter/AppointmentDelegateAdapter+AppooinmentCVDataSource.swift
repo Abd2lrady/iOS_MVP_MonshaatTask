@@ -9,7 +9,10 @@ import UIKit
 extension AppointmentDelegateAdapter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 3
+        if let timesCount = times?.count {
+            return timesCount > 3 ? 3 : timesCount
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView,

@@ -9,9 +9,9 @@ import UIKit
 class ProfileScreenCoordinator {
     var childCoordinators = [CoordinatorProtocol]()
     var router: RouterProtocol
-    var id: String
-    init(router: RouterProtocol, id: String) {
+    var consultant: Consultant
+    init(router: RouterProtocol, consultant: Consultant) {
         self.router = router
-        self.id = id
+        self.consultant = consultant
     }
 }

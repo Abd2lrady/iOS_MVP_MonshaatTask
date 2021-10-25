@@ -45,6 +45,7 @@ class ProfileScreenVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        showActivityIndicator()
         presenter.viewLoaded()
     }
     
@@ -125,5 +126,14 @@ class ProfileScreenVC: UIViewController {
         headerCardView.isUserInteractionEnabled = true
 
         noInternet.removeFromSuperview()
+    }
+    
+    var headerView: HeaderCardView? {
+        get {
+            return headerCardView
+        }
+        set {
+            headerCardView = newValue
+        }
     }
 }

@@ -33,4 +33,9 @@ extension ConsultantCVAdapter: UICollectionViewDelegate, UICollectionViewDelegat
             return CGSize(width: 220, height: 0)
          }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let consultant = consultants[indexPath.row]
+        view?.goToConsultantProfile(consultant: consultant)
+    }
 }

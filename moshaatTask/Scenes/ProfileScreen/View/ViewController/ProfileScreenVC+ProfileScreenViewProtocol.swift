@@ -5,6 +5,7 @@
 //  Created by Ahmad Abdulrady
 
 import Foundation
+import Toast
 
 extension ProfileScreenVC: ProfileScreenViewProtocol {
     func dataLoaded() {
@@ -13,7 +14,9 @@ extension ProfileScreenVC: ProfileScreenViewProtocol {
     }
     
     func dataRefreshed() {
-        
+        sessionListDelegateAdapter.sessions = presenter.sessions
+        sessionListDelegateAdapter.tabelView.reloadData()
+
     }
     
     func showActivityIndicator() {

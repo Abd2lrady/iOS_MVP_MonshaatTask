@@ -7,6 +7,7 @@
 import Foundation
 
 protocol ProfileScreenViewProtocol: AnyObject {
+    var headerView: HeaderCardView? { get set }
     func dataLoaded()
     func dataRefreshed()
     func showActivityIndicator()
