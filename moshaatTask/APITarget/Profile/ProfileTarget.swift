@@ -6,6 +6,7 @@
 
 import Foundation
 
-enum SessionsTarget {
+enum ProfileTarget {
     case getSessions(id: String, page: Int)
+    case getInfo(id: String)
 }

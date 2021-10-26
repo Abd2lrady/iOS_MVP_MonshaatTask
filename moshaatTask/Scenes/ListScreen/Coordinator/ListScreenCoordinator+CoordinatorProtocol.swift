@@ -22,4 +22,3 @@ extension ListScreenCoordinator: ListCoordinatorProtocol {
         startProfileScreen(consultant: consultant)
     }
 }
-

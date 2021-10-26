@@ -34,3 +34,6 @@ profileScreenAppoinment: #dde3e8
 profileScreenSessionDate: #314d6c
 profileScreenSegmentUnselected: #9498a1
 profileScreenSegmentSelected: #3084b2
+profileScreenAboutHeaders: #314d6c
+profileScreenAboutLabel: #65717a
+

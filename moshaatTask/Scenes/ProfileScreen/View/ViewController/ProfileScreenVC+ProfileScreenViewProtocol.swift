@@ -8,11 +8,13 @@ import Foundation
 import Toast
 
 extension ProfileScreenVC: ProfileScreenViewProtocol {
-    func dataLoaded() {
+    func sessionsDataLoaded() {
         sessionListDelegateAdapter.sessions = presenter.sessions
         sessionListDelegateAdapter.tabelView.reloadData()
     }
-    
+    func infoDataLoaded() {
+        aboutLabel.text = presenter.info?.aboutMe
+    }
     func dataRefreshed() {
         sessionListDelegateAdapter.sessions = presenter.sessions
         sessionListDelegateAdapter.tabelView.reloadData()

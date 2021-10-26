@@ -12,7 +12,9 @@ class ProfileScreenPresenter {
     var page = 1
     var totalPages = 1
     var sessions = [Session]()
+    var info: Info?
     let sessionsInteractor = SessionsInteractor()
+    let infoInteractor = InfoInteractor()
 
     init(view: ProfileScreenViewProtocol, consultant: Consultant) {
         self.view = view
@@ -26,4 +28,5 @@ class ProfileScreenPresenter {
         view?.headerView?.setSpeciality(with: consultant.subject?.title ?? "")
         view?.headerView?.setProfileImg(with: consultant.file?.path ?? "")
     }
+    
 }

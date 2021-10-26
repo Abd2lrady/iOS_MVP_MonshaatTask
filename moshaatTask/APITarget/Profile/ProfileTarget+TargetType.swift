@@ -7,7 +7,7 @@
 import Foundation
 import Moya
 
-extension SessionsTarget: TargetType {
+extension ProfileTarget: TargetType {
     var baseURL: URL {
         return EnviromentVariables.baseURl
     }
@@ -16,14 +16,13 @@ extension SessionsTarget: TargetType {
         switch self {
         case .getSessions(let id, _):
             return "api/schedule/contributor/\(id)"
+        case .getInfo(let id):
+        return "api/profile/contributor/\(id)"
         }
     }
     
     var method: Moya.Method {
-        switch self {
-        case .getSessions:
-            return .get
-        }
+        return .get
     }
     
     var task: Task {
@@ -31,6 +30,8 @@ extension SessionsTarget: TargetType {
         case .getSessions(_, let page):
             return .requestParameters(parameters: ["page": page],
                                       encoding: URLEncoding.default)
+        case .getInfo:
+            return .requestPlain
         }
     }
     

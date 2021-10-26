@@ -16,6 +16,8 @@ class ProfileScreenVC: UIViewController {
             segemetedView.titles = Strings.ProfileScreen.SessionsListHeader.tags
         }
     }
+    @IBOutlet private weak var listView: UIView!
+    @IBOutlet private weak var aboutView: UIView!
     @IBOutlet private weak var consultantInfoTV: UITableView! {
         didSet {
             configConsultantInfoTV()
@@ -39,8 +41,47 @@ class ProfileScreenVC: UIViewController {
         return style
     }()
 
+    @IBOutlet private weak var segmentsContianer: UIView! {
+        didSet {
+            showSessionsList()
+        }
+    }
+    
+    @IBOutlet private weak var interestHeadLabel: UILabel! {
+        didSet {
+            interestHeadLabel.font = Fonts._29LTAzer.medium.font(size: 20)
+            interestHeadLabel.textColor = Colors.profileScreenAboutHeaders.color
+            interestHeadLabel.text = Strings.ProfileScreen.interestHeader
+        }
+    }
+    
+    @IBOutlet private weak var interestsCV: UICollectionView! {
+        didSet {
+            configConsultantInterestsCV()
+        }
+    }
+    
+    @IBOutlet private weak var interestsCVHeight: NSLayoutConstraint!
+    
+    @IBOutlet private weak var aboutHeadLabel: UILabel! {
+        didSet {
+            aboutHeadLabel.font = Fonts._29LTAzer.medium.font(size: 20)
+            aboutHeadLabel.textColor = Colors.profileScreenAboutHeaders.color
+            aboutHeadLabel.text = Strings.ProfileScreen.aboutHeader
+        }
+    }
+    
+    @IBOutlet weak var aboutLabel: UILabel! {
+        didSet {
+            aboutLabel.font = Fonts._29LTAzer.medium.font(size: 15)
+            aboutLabel.textColor = Colors.profileScreenAboutLabel.color
+        }
+
+    }
+    
     var presenter: ProfileScreenPresenterProtocol!
     var noInternet = NoInternet()
+    var interestsCVDelegateAdapter = InterestsDelegateAdapter()
     lazy var sessionListDelegateAdapter = SessionListDelegateAdapter(view: self)
 
     override func viewDidLoad() {
@@ -54,6 +95,7 @@ class ProfileScreenVC: UIViewController {
         view.backgroundColor = Colors.profileScreenBackground.color
         configNavBar()
         headerCardView.shapeAllCorners(with: 12)
+        interestsCVHeight.constant = interestsCV.contentSize.height
     }
     
     func configNavBar() {
@@ -64,10 +106,18 @@ class ProfileScreenVC: UIViewController {
         self.navigationItem.leftBarButtonItem = rightItem
     }
     @IBAction func segmentedAction(_ sender: CustomSegmentedView) {
+        switch sender.selectedSegment {
+        case 2:
+            showSessionsList()
+        case 1:
+            showAbout()
+        default:
+            break
+        }
         print(sender.selectedSegment)
     }
     
-    func configConsultantInfoTV() {
+    private func configConsultantInfoTV() {
         let cellNib = UINib(nibName: "\(SessionCell.self)", bundle: .main)
         consultantInfoTV.register(cellNib, forCellReuseIdentifier: SessionCell.reuseID)
         consultantInfoTV.refreshControl = refreshControl
@@ -75,6 +125,13 @@ class ProfileScreenVC: UIViewController {
         consultantInfoTV.delegate = sessionListDelegateAdapter
         consultantInfoTV.backgroundColor = .clear
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+    }
+    
+    private func configConsultantInterestsCV() {
+        let cellNib = UINib(nibName: "\(SessionAppointmentCell.self)", bundle: .main)
+        interestsCV.register(cellNib, forCellWithReuseIdentifier: SessionAppointmentCell.reuseID)
+        interestsCV.dataSource = interestsCVDelegateAdapter
+        interestsCV.backgroundColor = .clear
     }
     
     @objc
@@ -136,4 +193,18 @@ class ProfileScreenVC: UIViewController {
             headerCardView = newValue
         }
     }
+    
+    private func showSessionsList() {
+        segmentsContianer.bringSubviewToFront(listView)
+        listView.isHidden = false
+        aboutView.isHidden = true
+    }
+    
+    private func showAbout() {
+        segmentsContianer.bringSubviewToFront(aboutView)
+        listView.isHidden = true
+        aboutView.isHidden = false
+
+    }
+
 }

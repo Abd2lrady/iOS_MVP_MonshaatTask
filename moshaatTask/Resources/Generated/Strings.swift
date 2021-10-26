@@ -37,6 +37,10 @@ internal enum Strings {
   }
 
   internal enum ProfileScreen {
+    /// نبذة عامة
+    internal static let aboutHeader = Strings.tr("Localizable", "profileScreen.aboutHeader")
+    /// إهتماماتى
+    internal static let interestHeader = Strings.tr("Localizable", "profileScreen.interestHeader")
     internal enum SendMsgButton {
       /// ارسال رسالة
       internal static let title = Strings.tr("Localizable", "profileScreen.SendMsgButton.title")

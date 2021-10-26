@@ -54,6 +54,12 @@ internal struct Colors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#dde3e8"></span>
   /// Alpha: 100% <br/> (0xdde3e8ff)
   internal static let profileImgBorder = Colors(rgbaValue: 0xdde3e8ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#314d6c"></span>
+  /// Alpha: 100% <br/> (0x314d6cff)
+  internal static let profileScreenAboutHeaders = Colors(rgbaValue: 0x314d6cff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#65717a"></span>
+  /// Alpha: 100% <br/> (0x65717aff)
+  internal static let profileScreenAboutLabel = Colors(rgbaValue: 0x65717aff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#dde3e8"></span>
   /// Alpha: 100% <br/> (0xdde3e8ff)
   internal static let profileScreenAppoinment = Colors(rgbaValue: 0xdde3e8ff)

@@ -10,7 +10,7 @@ struct ServerReponse<ResponseType: Codable>: Codable {
     
     let status: Int?
     let success: Bool?
-    let data: [ResponseType]?
+    let data: ResponseType?
     let pagination: Pagination?
  }
 

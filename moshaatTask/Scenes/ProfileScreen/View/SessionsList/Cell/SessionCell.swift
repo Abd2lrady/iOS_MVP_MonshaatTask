@@ -47,7 +47,6 @@ class SessionCell: UITableViewCell {
                                 bundle: .main)
             _appoinmentCV.register(cellNib,
                                    forCellWithReuseIdentifier: SessionAppointmentCell.reuseID)
-            _appoinmentCV.semanticContentAttribute = .forceRightToLeft
             _appoinmentCV.dataSource = appoinmentDelegate
         }
     }
