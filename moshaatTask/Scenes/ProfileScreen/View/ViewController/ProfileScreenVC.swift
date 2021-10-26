@@ -18,14 +18,25 @@ class ProfileScreenVC: UIViewController {
     }
     @IBOutlet private weak var listView: UIView!
     @IBOutlet private weak var aboutView: UIView!
-    @IBOutlet private weak var consultantInfoTV: UITableView! {
+    @IBOutlet weak var consultantSessionsTV: UITableView! {
         didSet {
-            configConsultantInfoTV()
+            configConsultantSessionsTV()
         }
     }
     @IBOutlet private weak var sessionListHeaderHeight: NSLayoutConstraint!
     @IBOutlet private weak var headerCardHeight: NSLayoutConstraint!
-    
+    @IBAction func segmentedAction(_ sender: CustomSegmentedView) {
+        switch sender.selectedSegment {
+        case 2:
+            showSessionsList()
+        case 1:
+            showAbout()
+        default:
+            break
+        }
+        print(sender.selectedSegment)
+    }
+
     let refreshControl: UIRefreshControl = {
         var refresh = UIRefreshControl()
         refresh.tintColor = Colors.activityColor.color
@@ -55,7 +66,7 @@ class ProfileScreenVC: UIViewController {
         }
     }
     
-    @IBOutlet private weak var interestsCV: UICollectionView! {
+    @IBOutlet  weak var interestsCV: UICollectionView! {
         didSet {
             configConsultantInterestsCV()
         }
@@ -81,7 +92,7 @@ class ProfileScreenVC: UIViewController {
     
     var presenter: ProfileScreenPresenterProtocol!
     var noInternet = NoInternet()
-    var interestsCVDelegateAdapter = InterestsDelegateAdapter()
+    lazy var interestsCVDelegateAdapter = InterestsDelegateAdapter(collectionView: interestsCV)
     lazy var sessionListDelegateAdapter = SessionListDelegateAdapter(view: self)
 
     override func viewDidLoad() {
@@ -105,25 +116,16 @@ class ProfileScreenVC: UIViewController {
         let rightItem = UIBarButtonItem.barButtonWithImage(img: Assets.icSearch.image)
         self.navigationItem.leftBarButtonItem = rightItem
     }
-    @IBAction func segmentedAction(_ sender: CustomSegmentedView) {
-        switch sender.selectedSegment {
-        case 2:
-            showSessionsList()
-        case 1:
-            showAbout()
-        default:
-            break
-        }
-        print(sender.selectedSegment)
-    }
-    
-    private func configConsultantInfoTV() {
+
+    private func configConsultantSessionsTV() {
         let cellNib = UINib(nibName: "\(SessionCell.self)", bundle: .main)
-        consultantInfoTV.register(cellNib, forCellReuseIdentifier: SessionCell.reuseID)
-        consultantInfoTV.refreshControl = refreshControl
-        consultantInfoTV.dataSource = sessionListDelegateAdapter
-        consultantInfoTV.delegate = sessionListDelegateAdapter
-        consultantInfoTV.backgroundColor = .clear
+        let footerNib = UINib(nibName: "\(NoMoreSessionsTVFooterCell.self)", bundle: .main)
+        consultantSessionsTV.register(cellNib, forCellReuseIdentifier: SessionCell.reuseID)
+        consultantSessionsTV.register(footerNib, forHeaderFooterViewReuseIdentifier: NoMoreSessionsTVFooterCell.reuseID)
+        consultantSessionsTV.refreshControl = refreshControl
+        consultantSessionsTV.dataSource = sessionListDelegateAdapter
+        consultantSessionsTV.delegate = sessionListDelegateAdapter
+        consultantSessionsTV.backgroundColor = .clear
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
     }
     
@@ -137,11 +139,14 @@ class ProfileScreenVC: UIViewController {
     @objc
     func refresh() {
         refreshControl.beginRefreshing()
+        sessionListDelegateAdapter.sessions = []
+        interestsCVDelegateAdapter.interests = []
+        sessionListDelegateAdapter.noMoreSession = false
         presenter.refreshProfileData()
     }
     
     var scrollableView: UIScrollView {
-        return consultantInfoTV
+        return consultantSessionsTV
     }
     
     func startScrolling(trans: CGFloat) {
@@ -158,7 +163,6 @@ class ProfileScreenVC: UIViewController {
                        options: .curveLinear) {
             self.view.layoutIfNeeded()
         }
-        
     }
     
     func showNoInternet() {

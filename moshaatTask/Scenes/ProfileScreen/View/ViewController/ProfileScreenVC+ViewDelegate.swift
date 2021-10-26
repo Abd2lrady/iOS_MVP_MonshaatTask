@@ -12,6 +12,7 @@ extension ProfileScreenVC: ViewDelegate {
     }
 
     func loadMore() {
-        
+        self.view.makeToastActivity(.bottom)
+        presenter.loadMoreSessions()
     }
 }

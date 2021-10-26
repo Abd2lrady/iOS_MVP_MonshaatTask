@@ -27,7 +27,7 @@ extension ListScreenPresenter: ListScreenPresenterProtocol {
     func refreshConsultantData() {
         view?.listScreenActions = .refreshConsultants
         for pageIndx in 1 ... currentPage {
-            getConsultantsList(with: pageIndx + 1)
+            getConsultantsList(with: pageIndx)
         }
     }
 }

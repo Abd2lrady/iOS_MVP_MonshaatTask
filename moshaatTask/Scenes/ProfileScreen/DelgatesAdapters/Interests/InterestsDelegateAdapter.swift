@@ -4,8 +4,12 @@
 //
 //  Created by Ahmad Abdulrady
 
-import Foundation
+import UIKit
 
 class InterestsDelegateAdapter: NSObject {
     var interests: [String]?
+    var collectionView: UICollectionView?
+    init(collectionView: UICollectionView) {
+        self.collectionView = collectionView
+    }
 }

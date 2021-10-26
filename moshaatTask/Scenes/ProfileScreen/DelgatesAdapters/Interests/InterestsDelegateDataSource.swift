@@ -9,7 +9,7 @@ import UIKit
 extension InterestsDelegateAdapter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return interests?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -17,7 +17,8 @@ extension InterestsDelegateAdapter: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SessionAppointmentCell.reuseID,
                                                             for: indexPath) as? SessionAppointmentCell
         else { fatalError("can not dequeue interests cell") }
-        cell.setAppoinment(with: "ss")
+        let interest = interests?[indexPath.row]
+        cell.setAppoinment(with: interest ?? "")
         return cell
     }
 }

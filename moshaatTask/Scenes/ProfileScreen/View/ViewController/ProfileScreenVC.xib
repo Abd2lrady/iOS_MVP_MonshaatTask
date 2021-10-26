@@ -13,7 +13,7 @@
                 <outlet property="aboutHeadLabel" destination="mpw-kl-tz0" id="MvC-aP-sTu"/>
                 <outlet property="aboutLabel" destination="TYQ-65-XZs" id="djV-R7-dJq"/>
                 <outlet property="aboutView" destination="EoD-lt-YdW" id="gaW-gm-JiL"/>
-                <outlet property="consultantInfoTV" destination="pLm-zd-smt" id="1p0-M0-bBa"/>
+                <outlet property="consultantSessionsTV" destination="pLm-zd-smt" id="1p0-M0-bBa"/>
                 <outlet property="headerBGView" destination="MFI-rq-kJy" id="Put-Ls-Qt6"/>
                 <outlet property="headerCardHeight" destination="fg3-9P-65h" id="9x5-MQ-qnA"/>
                 <outlet property="headerCardView" destination="hCx-g7-dE5" id="QbO-Rp-17k"/>
@@ -82,7 +82,7 @@
                                         <constraint firstAttribute="height" constant="47" id="qou-6k-fkb"/>
                                     </constraints>
                                 </view>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pLm-zd-smt" userLabel="SessionsTV">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="120" estimatedRowHeight="120" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="pLm-zd-smt" userLabel="SessionsTV">
                                     <rect key="frame" x="0.0" y="51" width="384" height="490"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </tableView>

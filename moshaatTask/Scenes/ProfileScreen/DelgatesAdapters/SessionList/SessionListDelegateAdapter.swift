@@ -8,7 +8,7 @@ import UIKit
 
 class SessionListDelegateAdapter: NSObject {
     var sessions: [Session]? 
-    
+    var noMoreSession = false
     var dateFormater: DateFormatter = {
         let formater = DateFormatter()
         formater.locale = Locale(identifier: "ar")
