@@ -36,6 +36,8 @@ class ProfileScreenVC: UIViewController {
         }
         print(sender.selectedSegment)
     }
+    
+    weak var profileCoordinatorDelegate: ProfileScreenCoordinatorProtocol?
 
     let refreshControl: UIRefreshControl = {
         var refresh = UIRefreshControl()
@@ -125,6 +127,9 @@ class ProfileScreenVC: UIViewController {
         consultantSessionsTV.refreshControl = refreshControl
         consultantSessionsTV.dataSource = sessionListDelegateAdapter
         consultantSessionsTV.delegate = sessionListDelegateAdapter
+        sessionListDelegateAdapter.bookSession = { [weak self] session in
+            self?.profileCoordinatorDelegate?.bookButtonTapped(with: session)
+        }
         consultantSessionsTV.backgroundColor = .clear
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
     }
@@ -208,7 +213,5 @@ class ProfileScreenVC: UIViewController {
         segmentsContianer.bringSubviewToFront(aboutView)
         listView.isHidden = true
         aboutView.isHidden = false
-
     }
-
 }

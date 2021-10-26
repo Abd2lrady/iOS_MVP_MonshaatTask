@@ -38,7 +38,7 @@ class ProfileScreenPresenter {
     }
     
     func getInfo(id: String) {
-        infoInteractor.getInfo(id:id) {[weak self] response, error in
+        infoInteractor.getInfo(id: id) {[weak self] response, error in
             guard NetworkMonitor.shared.isConnected else {
                 self?.view?.showNoInternet()
                 return }
@@ -58,5 +58,4 @@ class ProfileScreenPresenter {
         view?.headerView?.setSpeciality(with: consultant.subject?.title ?? "")
         view?.headerView?.setProfileImg(with: consultant.file?.path ?? "")
     }
-    
 }

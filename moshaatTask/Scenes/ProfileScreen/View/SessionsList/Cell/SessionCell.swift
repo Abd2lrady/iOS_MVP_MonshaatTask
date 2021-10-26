@@ -8,6 +8,7 @@ import UIKit
 
 class SessionCell: UITableViewCell {
     static let reuseID = "\(SessionCell.self)"
+    var bookAction: (() -> Void)?
     lazy var appoinmentDelegate = AppointmentDelegateAdapter(cell: self)
     @IBOutlet private weak var backView: UIView! {
         didSet {
@@ -77,5 +78,9 @@ class SessionCell: UITableViewCell {
         } set {
             _appoinmentCV = newValue
         }
+    }
+    @IBAction func bookButtonTapped(_ sender: UIButton) {
+        guard let bookAction = bookAction else { return }
+        bookAction()
     }
 }

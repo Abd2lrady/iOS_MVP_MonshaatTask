@@ -29,6 +29,10 @@ extension SessionListDelegateAdapter: UITableViewDataSource {
         }
         cell.appoinmentDelegate.times = sessions?[indexPath.row].schedules
         cell.setDate(with: day)
+        cell.bookAction = { [weak self] in
+            self?.bookSession?(self?.sessions?[indexPath.row])
+//            print(self?.sessions?[indexPath.row])
+        }
         return cell
     }
     

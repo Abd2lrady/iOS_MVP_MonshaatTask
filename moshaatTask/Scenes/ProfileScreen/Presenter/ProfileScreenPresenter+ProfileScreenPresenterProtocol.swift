@@ -21,7 +21,6 @@ extension ProfileScreenPresenter: ProfileScreenPresenterProtocol {
             getInfo(id: consultant.id ?? "")
             view?.dataRefreshed()
         }
-
     }
     
     func loadMoreSessions() {
@@ -32,7 +31,6 @@ extension ProfileScreenPresenter: ProfileScreenPresenterProtocol {
         } else {
             view?.noMoreSession()
         }
-
     }
     
 }

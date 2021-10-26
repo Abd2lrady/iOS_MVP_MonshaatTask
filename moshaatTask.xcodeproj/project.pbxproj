@@ -13,6 +13,11 @@
 		B4108EDA2727FB5500F3FD4E /* DynamicHeightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4108ED92727FB5500F3FD4E /* DynamicHeightCollectionView.swift */; };
 		B4108EDE2728149700F3FD4E /* NoMoreSessionsTVFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4108EDC2728149700F3FD4E /* NoMoreSessionsTVFooterCell.swift */; };
 		B4108EDF2728149700F3FD4E /* NoMoreSessionsTVFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4108EDD2728149700F3FD4E /* NoMoreSessionsTVFooterCell.xib */; };
+		B4108EE82728279600F3FD4E /* BookingSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4108EE62728279600F3FD4E /* BookingSheetVC.swift */; };
+		B4108EE92728279600F3FD4E /* BookingSheetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4108EE72728279600F3FD4E /* BookingSheetVC.xib */; };
+		B4108EF027285FD600F3FD4E /* ProfileScreenCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4108EEF27285FD600F3FD4E /* ProfileScreenCoordinatorProtocol.swift */; };
+		B4108EF22728633600F3FD4E /* BookingSheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4108EF12728633600F3FD4E /* BookingSheetCoordinator.swift */; };
+		B4108EF42728636A00F3FD4E /* BookingSheetCoordinator+CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4108EF32728636A00F3FD4E /* BookingSheetCoordinator+CoordinatorProtocol.swift */; };
 		B4347F652710DBF90089EBA9 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F642710DBF90089EBA9 /* ReactiveMoya */; };
 		B4347F672710DBF90089EBA9 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F662710DBF90089EBA9 /* CombineMoya */; };
 		B4347F692710DBF90089EBA9 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B4347F682710DBF90089EBA9 /* RxMoya */; };
@@ -129,6 +134,11 @@
 		B4108ED92727FB5500F3FD4E /* DynamicHeightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionView.swift; sourceTree = "<group>"; };
 		B4108EDC2728149700F3FD4E /* NoMoreSessionsTVFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMoreSessionsTVFooterCell.swift; sourceTree = "<group>"; };
 		B4108EDD2728149700F3FD4E /* NoMoreSessionsTVFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoMoreSessionsTVFooterCell.xib; sourceTree = "<group>"; };
+		B4108EE62728279600F3FD4E /* BookingSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSheetVC.swift; sourceTree = "<group>"; };
+		B4108EE72728279600F3FD4E /* BookingSheetVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingSheetVC.xib; sourceTree = "<group>"; };
+		B4108EEF27285FD600F3FD4E /* ProfileScreenCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		B4108EF12728633600F3FD4E /* BookingSheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSheetCoordinator.swift; sourceTree = "<group>"; };
+		B4108EF32728636A00F3FD4E /* BookingSheetCoordinator+CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookingSheetCoordinator+CoordinatorProtocol.swift"; sourceTree = "<group>"; };
 		B43AB07B27256B390073A827 /* SessionListDelegateAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListDelegateAdapter.swift; sourceTree = "<group>"; };
 		B43AB07D27256B7B0073A827 /* SessionListDelegateAdapter+UITVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionListDelegateAdapter+UITVDataSource.swift"; sourceTree = "<group>"; };
 		B43AB07F27256B940073A827 /* SessionListDelegateAdapter+UITVDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionListDelegateAdapter+UITVDelegate.swift"; sourceTree = "<group>"; };
@@ -287,6 +297,41 @@
 			path = Footer;
 			sourceTree = "<group>";
 		};
+		B4108EE12728260400F3FD4E /* BookingSheet */ = {
+			isa = PBXGroup;
+			children = (
+				B4108EE32728269C00F3FD4E /* View */,
+				B4108EE22728266F00F3FD4E /* Coordinator */,
+			);
+			path = BookingSheet;
+			sourceTree = "<group>";
+		};
+		B4108EE22728266F00F3FD4E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B4108EF12728633600F3FD4E /* BookingSheetCoordinator.swift */,
+				B4108EF32728636A00F3FD4E /* BookingSheetCoordinator+CoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B4108EE32728269C00F3FD4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4108EE4272826B600F3FD4E /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4108EE4272826B600F3FD4E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B4108EE62728279600F3FD4E /* BookingSheetVC.swift */,
+				B4108EE72728279600F3FD4E /* BookingSheetVC.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		B4347F602710DAA00089EBA9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +421,7 @@
 			children = (
 				B4643541271D553000393F35 /* ProfileScreenPresenterProtocol.swift */,
 				B4643542271D553000393F35 /* ProfileScreenViewProtocol.swift */,
+				B4108EEF27285FD600F3FD4E /* ProfileScreenCoordinatorProtocol.swift */,
 			);
 			path = "ProfileScreen+";
 			sourceTree = "<group>";
@@ -655,6 +701,7 @@
 				B4848BC027121DC700C4A643 /* HeaderLabel */,
 				B499E61C270DAB7D007E1BC8 /* ListScreen */,
 				B4643548271D55BA00393F35 /* ProfileScreen */,
+				B4108EE12728260400F3FD4E /* BookingSheet */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -916,6 +963,7 @@
 				B4643559271D55BA00393F35 /* ProfileScreenVC.xib in Resources */,
 				B4643568271D926B00393F35 /* SessionCell.xib in Resources */,
 				B4848BBF27121A8200C4A643 /* Localizable.strings in Resources */,
+				B4108EE92728279600F3FD4E /* BookingSheetVC.xib in Resources */,
 				B4643563271D7F9200393F35 /* CustomButtonView.xib in Resources */,
 				B4C8D587271EB9630017E5AB /* SessionAppointmentCell.xib in Resources */,
 				B464355C271D599900393F35 /* HeaderCardView.xib in Resources */,
@@ -979,6 +1027,7 @@
 				B4108EDA2727FB5500F3FD4E /* DynamicHeightCollectionView.swift in Sources */,
 				B43AB08227256CDA0073A827 /* Session.swift in Sources */,
 				B4C8D58A272336EE0017E5AB /* CustomSegmentedView.swift in Sources */,
+				B4108EE82728279600F3FD4E /* BookingSheetVC.swift in Sources */,
 				B499E623270DAFB5007E1BC8 /* ListScreenCoordinator+CoordinatorProtocol.swift in Sources */,
 				B43AB08E272590BE0073A827 /* ProfileTarget.swift in Sources */,
 				B43AB08827258F090073A827 /* Office.swift in Sources */,
@@ -1004,6 +1053,8 @@
 				B4848B8727117B6A00C4A643 /* UIViewController+.swift in Sources */,
 				B4EB636C2713217900CB7122 /* Pagination.swift in Sources */,
 				B43AB09C2726E8060073A827 /* ListCoordinatorProtocol.swift in Sources */,
+				B4108EF42728636A00F3FD4E /* BookingSheetCoordinator+CoordinatorProtocol.swift in Sources */,
+				B4108EF22728633600F3FD4E /* BookingSheetCoordinator.swift in Sources */,
 				B499E611270D935D007E1BC8 /* CoordinatorProtocol.swift in Sources */,
 				B4EB638A2715727B00CB7122 /* NoInternet.swift in Sources */,
 				B4848BB427120E3A00C4A643 /* Assets.swift in Sources */,
@@ -1040,6 +1091,7 @@
 				B43AB0952725A7510073A827 /* InfoInteractor.swift in Sources */,
 				B4A5DA2A2712B8AA008BF561 /* ListScreenPresenterProtocol.swift in Sources */,
 				B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */,
+				B4108EF027285FD600F3FD4E /* ProfileScreenCoordinatorProtocol.swift in Sources */,
 				B4D3FCE62715D37800CF48F4 /* Reachability.swift in Sources */,
 				B464356F271D9BB700393F35 /* SessionsListHeader.swift in Sources */,
 				B4EB63542712CE7400CB7122 /* NetworkManger+Service.swift in Sources */,

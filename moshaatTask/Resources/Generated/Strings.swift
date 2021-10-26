@@ -13,6 +13,27 @@ internal enum Strings {
   /// لا توجد نتائج اضافية
   internal static let noOtherResulrs = Strings.tr("Localizable", "noOtherResulrs")
 
+  internal enum BookingScreen {
+    /// أختر شركة
+    internal static let chooseCompany = Strings.tr("Localizable", "bookingScreen.ChooseCompany")
+    /// أختر الوقت
+    internal static let chooseTime = Strings.tr("Localizable", "bookingScreen.chooseTime")
+    /// تأكيد الحجز
+    internal static let confirmBooking = Strings.tr("Localizable", "bookingScreen.confirmBooking")
+    /// طريقة التواصل
+    internal static let contactMethod = Strings.tr("Localizable", "bookingScreen.contactMethod")
+    /// أدخل أسم الغرض
+    internal static let enterEntityHeadLabel = Strings.tr("Localizable", "bookingScreen.enterEntityHeadLabel")
+    /// 
+    internal static let enterEntityPlaceHolder = Strings.tr("Localizable", "bookingScreen.enterEntityPlaceHolder")
+    /// (بتوقيت المملكة العربية السعودية)
+    internal static let ksaTimeZone = Strings.tr("Localizable", "bookingScreen.KSATimeZone")
+    /// فى مكان
+    internal static let locationMethod = Strings.tr("Localizable", "bookingScreen.locationMethod")
+    /// أونلاين
+    internal static let onlineMethod = Strings.tr("Localizable", "bookingScreen.onlineMethod")
+  }
+
   internal enum Consultant {
     /// متاح جداوله
     internal static let isAvailable = Strings.tr("Localizable", "consultant.isAvailable")

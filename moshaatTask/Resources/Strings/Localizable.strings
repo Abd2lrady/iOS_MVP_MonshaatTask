@@ -18,3 +18,13 @@
 
 "profileScreen.aboutHeader"= "نبذة عامة";
 "profileScreen.interestHeader"= "إهتماماتى";
+
+"bookingScreen.enterEntityHeadLabel" = "أدخل أسم الغرض";
+"bookingScreen.enterEntityPlaceHolder" = "";
+"bookingScreen.chooseTime" = "أختر الوقت";
+"bookingScreen.KSATimeZone" = "(بتوقيت المملكة العربية السعودية)";
+"bookingScreen.ChooseCompany" = "أختر شركة";
+"bookingScreen.contactMethod" = "طريقة التواصل";
+"bookingScreen.onlineMethod" = "أونلاين";
+"bookingScreen.locationMethod" = "فى مكان";
+"bookingScreen.confirmBooking" = "تأكيد الحجز";

@@ -7,7 +7,8 @@
 import UIKit
 
 class SessionListDelegateAdapter: NSObject {
-    var sessions: [Session]? 
+    var sessions: [Session]?
+    var bookSession: ((Session?) -> Void)?
     var noMoreSession = false
     var dateFormater: DateFormatter = {
         let formater = DateFormatter()
@@ -26,5 +27,5 @@ class SessionListDelegateAdapter: NSObject {
     init(view: ViewDelegate) {
         self.view = view
     }
-    
+
 }
