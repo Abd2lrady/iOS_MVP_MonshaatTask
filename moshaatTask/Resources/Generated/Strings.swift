@@ -12,6 +12,8 @@ import Foundation
 internal enum Strings {
   /// لا توجد نتائج اضافية
   internal static let noOtherResulrs = Strings.tr("Localizable", "noOtherResulrs")
+  /// لاتوجد جلسات
+  internal static let noSessions = Strings.tr("Localizable", "noSessions")
 
   internal enum BookingScreen {
     /// أختر شركة

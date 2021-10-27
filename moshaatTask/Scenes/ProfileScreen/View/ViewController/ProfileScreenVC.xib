@@ -21,9 +21,12 @@
                 <outlet property="interestsCV" destination="9x7-bZ-LU2" id="iFC-j4-0a0"/>
                 <outlet property="interestsCVHeight" destination="1P5-vR-WVc" id="1Su-el-qKT"/>
                 <outlet property="listView" destination="z1R-a4-aNj" id="ixn-nt-Yjs"/>
+                <outlet property="noSessionsLabel" destination="urz-24-DOp" id="Vkq-fW-m4x"/>
+                <outlet property="noSessionsView" destination="1fD-aq-0FS" id="yKF-rB-gfo"/>
                 <outlet property="segemetedView" destination="dIu-w5-3YP" id="VYo-m2-2hY"/>
                 <outlet property="segmentsContianer" destination="ihw-y5-on5" id="zvh-BZ-Raf"/>
                 <outlet property="sessionListHeaderHeight" destination="qou-6k-fkb" id="fQB-Bl-XIc"/>
+                <outlet property="sessionsListHeader" destination="3f6-5z-egE" id="H9d-Vf-gWD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -86,13 +89,41 @@
                                     <rect key="frame" x="0.0" y="51" width="384" height="490"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </tableView>
+                                <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fD-aq-0FS" userLabel="NoSessionsView">
+                                    <rect key="frame" x="0.0" y="47" width="384" height="494"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_noSessions" translatesAutoresizingMaskIntoConstraints="NO" id="mMt-mK-7N4">
+                                            <rect key="frame" x="152" y="60" width="80" height="101"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="101" id="L6f-Kg-ed8"/>
+                                                <constraint firstAttribute="width" constant="80" id="Pei-DJ-Jxl"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urz-24-DOp">
+                                            <rect key="frame" x="171" y="169" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="urz-24-DOp" firstAttribute="centerX" secondItem="1fD-aq-0FS" secondAttribute="centerX" id="9j4-gL-gv7"/>
+                                        <constraint firstItem="mMt-mK-7N4" firstAttribute="centerX" secondItem="1fD-aq-0FS" secondAttribute="centerX" id="kt1-yz-Otb"/>
+                                        <constraint firstItem="mMt-mK-7N4" firstAttribute="top" secondItem="1fD-aq-0FS" secondAttribute="top" constant="60" id="rzH-ha-oIG"/>
+                                        <constraint firstItem="urz-24-DOp" firstAttribute="top" secondItem="mMt-mK-7N4" secondAttribute="bottom" constant="8" id="viT-zM-t70"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="1fD-aq-0FS" secondAttribute="trailing" id="0ps-ZV-EMB"/>
                                 <constraint firstAttribute="trailing" secondItem="3f6-5z-egE" secondAttribute="trailing" id="6Fu-d6-n1y"/>
                                 <constraint firstItem="pLm-zd-smt" firstAttribute="top" secondItem="3f6-5z-egE" secondAttribute="bottom" constant="4" id="Cp6-3h-T80"/>
+                                <constraint firstItem="1fD-aq-0FS" firstAttribute="leading" secondItem="z1R-a4-aNj" secondAttribute="leading" id="Fgb-k9-Czp"/>
+                                <constraint firstItem="1fD-aq-0FS" firstAttribute="top" secondItem="3f6-5z-egE" secondAttribute="bottom" id="MMz-TJ-xOb"/>
                                 <constraint firstItem="3f6-5z-egE" firstAttribute="top" secondItem="z1R-a4-aNj" secondAttribute="top" id="hU0-WC-CeF"/>
                                 <constraint firstAttribute="bottom" secondItem="pLm-zd-smt" secondAttribute="bottom" id="p61-zj-r7h"/>
                                 <constraint firstAttribute="trailing" secondItem="pLm-zd-smt" secondAttribute="trailing" id="qYI-oa-59h"/>
+                                <constraint firstAttribute="bottom" secondItem="1fD-aq-0FS" secondAttribute="bottom" id="uD2-ZI-7bJ"/>
                                 <constraint firstItem="3f6-5z-egE" firstAttribute="leading" secondItem="z1R-a4-aNj" secondAttribute="leading" id="wLz-G3-ALm"/>
                                 <constraint firstItem="pLm-zd-smt" firstAttribute="leading" secondItem="z1R-a4-aNj" secondAttribute="leading" id="yZc-FJ-H0D"/>
                             </constraints>
@@ -186,6 +217,7 @@
     </objects>
     <resources>
         <image name="Mask" width="375" height="225"/>
+        <image name="ic_noSessions" width="80" height="101"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

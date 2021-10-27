@@ -18,6 +18,11 @@ extension ProfileScreenCoordinator: CoordinatorProtocol {
 }
 
 extension ProfileScreenCoordinator: ProfileScreenCoordinatorProtocol {
+    func backButtonTapped() {
+        parentCoordinator?.removeChild(coordinator: self)
+        router.pop(animated: true)
+    }
+    
     func bookButtonTapped(with session: Session?) {
         print("coordinator notifies")
         let bookingCoordinator = BookingSheetCoordinator(router: router)

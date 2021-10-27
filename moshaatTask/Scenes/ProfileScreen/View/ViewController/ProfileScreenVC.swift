@@ -17,6 +17,7 @@ class ProfileScreenVC: UIViewController {
         }
     }
     @IBOutlet private weak var listView: UIView!
+    @IBOutlet weak var sessionsListHeader: SessionsListHeader!
     @IBOutlet private weak var aboutView: UIView!
     @IBOutlet weak var consultantSessionsTV: UITableView! {
         didSet {
@@ -89,11 +90,24 @@ class ProfileScreenVC: UIViewController {
             aboutLabel.font = Fonts._29LTAzer.medium.font(size: 15)
             aboutLabel.textColor = Colors.profileScreenAboutLabel.color
         }
+    }
+    @IBOutlet weak var noSessionsView: UIView!
+    @IBOutlet weak var noSessionsLabel: UILabel! {
+        didSet {
+            noSessionsLabel.text = Strings.noSessions
+            noSessionsLabel.font = Fonts._29LTAzer.bold.font(size: 18)
+            noSessionsLabel.textColor = Colors.profileScreenNoSessions.color
+        }
 
     }
     
     var presenter: ProfileScreenPresenterProtocol!
     var noInternet = NoInternet()
+    var noSessions = false {
+        didSet {
+            showSessionsList()
+        }
+    }
     lazy var interestsCVDelegateAdapter = InterestsDelegateAdapter(collectionView: interestsCV)
     lazy var sessionListDelegateAdapter = SessionListDelegateAdapter(view: self)
 
@@ -113,8 +127,12 @@ class ProfileScreenVC: UIViewController {
     
     func configNavBar() {
         self.hideNavigationBar()
-        let backItem = UIBarButtonItem.barButtonWithImage(img: Assets.icBackArrow.image)
+        let back = UIButton()
+        back.setImage(Assets.icBackArrow.image, for: .normal)
+        back.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
+        let backItem = UIBarButtonItem(customView: back)
         self.navigationItem.rightBarButtonItem = backItem
+
         let rightItem = UIBarButtonItem.barButtonWithImage(img: Assets.icSearch.image)
         self.navigationItem.leftBarButtonItem = rightItem
     }
@@ -123,7 +141,7 @@ class ProfileScreenVC: UIViewController {
         let cellNib = UINib(nibName: "\(SessionCell.self)", bundle: .main)
         let footerNib = UINib(nibName: "\(NoMoreSessionsTVFooterCell.self)", bundle: .main)
         consultantSessionsTV.register(cellNib, forCellReuseIdentifier: SessionCell.reuseID)
-        consultantSessionsTV.register(footerNib, forHeaderFooterViewReuseIdentifier: NoMoreSessionsTVFooterCell.reuseID)
+        consultantSessionsTV.register(footerNib, forCellReuseIdentifier: NoMoreSessionsTVFooterCell.reuseID)
         consultantSessionsTV.refreshControl = refreshControl
         consultantSessionsTV.dataSource = sessionListDelegateAdapter
         consultantSessionsTV.delegate = sessionListDelegateAdapter
@@ -190,7 +208,6 @@ class ProfileScreenVC: UIViewController {
     func hideNoInternet() {
         headerCardView.isHidden = false
         headerCardView.isUserInteractionEnabled = true
-
         noInternet.removeFromSuperview()
     }
     
@@ -205,6 +222,14 @@ class ProfileScreenVC: UIViewController {
     
     private func showSessionsList() {
         segmentsContianer.bringSubviewToFront(listView)
+        sessionsListHeader?.sessionsLabel(hide: noSessions)
+        if noSessions {
+            listView.bringSubviewToFront(noSessionsView)
+            noSessionsView.isHidden = false
+            consultantSessionsTV.isHidden = true
+        } else {
+            listView.bringSubviewToFront(consultantSessionsTV)
+        }
         listView.isHidden = false
         aboutView.isHidden = true
     }
@@ -213,5 +238,10 @@ class ProfileScreenVC: UIViewController {
         segmentsContianer.bringSubviewToFront(aboutView)
         listView.isHidden = true
         aboutView.isHidden = false
+    }
+    
+    @objc
+    private func backButtonAction() {
+        profileCoordinatorDelegate?.backButtonTapped()
     }
 }

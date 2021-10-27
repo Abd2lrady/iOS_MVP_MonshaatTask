@@ -12,7 +12,7 @@ extension AppCoordinator: CoordinatorProtocol {
         
         let navigator = UINavigationController()
         let router = Router(navigator: navigator)
-        let listScreenCoordinator = ListScreenCoordinator(router: router)
+        let listScreenCoordinator = ListScreenCoordinator(router: router, parentCoordinator: self)
         self.childCoordinators.append(listScreenCoordinator)
         listScreenCoordinator.start()
 //        let profileScreenCoordinator = ProfileScreenCoordinator(router: router,

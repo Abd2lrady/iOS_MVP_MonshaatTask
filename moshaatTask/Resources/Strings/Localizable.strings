@@ -8,7 +8,7 @@
 "noInternet.tryAgainButton" = "محاولة أخرى";
 "noInternet.noInternetLabel" = "لا يوجد اتصال بالانترنت";
 "noInternet.checkConnectionLabel" = "تحقق من اتصالك و حاول مرة اخرى";
-
+"noSessions" = "لاتوجد جلسات";
 "profileScreen.SendMsgButton.title" = "ارسال رسالة";
 "profileScreen.sessionsList.sessions" = "الجلسات";
 "profileScreen.sessionsList.update" = "تحدث البيانات بداية كل شهر ميلادى";

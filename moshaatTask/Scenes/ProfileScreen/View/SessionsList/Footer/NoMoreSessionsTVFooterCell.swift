@@ -6,10 +6,11 @@
 
 import UIKit
 
-class NoMoreSessionsTVFooterCell: UITableViewHeaderFooterView {
+class NoMoreSessionsTVFooterCell: UITableViewCell {
     @IBOutlet private weak var noMoreSessionsLabel: UILabel! {
         didSet {
-            noMoreSessionsLabel.text = Strings.noOtherResulrs
+//            Strings.noOtherResulrs
+            noMoreSessionsLabel.text = ""
             noMoreSessionsLabel.font = Fonts._29LTAzer.medium.font(size: 20)
             noMoreSessionsLabel.textColor = .black
             noMoreSessionsLabel.textAlignment = .center
@@ -20,5 +21,9 @@ class NoMoreSessionsTVFooterCell: UITableViewHeaderFooterView {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setFooterLabel(with label: String) {
+        noMoreSessionsLabel.text = label
     }
 }

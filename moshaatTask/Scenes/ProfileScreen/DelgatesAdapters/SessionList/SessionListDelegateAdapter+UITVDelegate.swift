@@ -23,16 +23,17 @@ extension SessionListDelegateAdapter: UITableViewDelegate {
         }
     }
 
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: NoMoreSessionsTVFooterCell.reuseID)
-        return footer
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView,
+                   viewForFooterInSection section: Int) -> UIView? {
+        guard let footer = tableView.dequeueReusableCell(withIdentifier: NoMoreSessionsTVFooterCell.reuseID)
+                as? NoMoreSessionsTVFooterCell
+        else { fatalError("cant dequeue footer") }
+        var label = ""
         if noMoreSession {
-            return 50
+            label = Strings.noOtherResulrs
         }
-        return 0
+        footer.setFooterLabel(with: label)
+        return footer.contentView
     }
 
 }

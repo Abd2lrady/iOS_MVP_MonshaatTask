@@ -13,6 +13,7 @@ extension ProfileScreenPresenter: ProfileScreenPresenterProtocol {
         //        let test = "93f4d920-0720-4a84-8f84-fed97dfa49f2"
         getSessions(id: consultant.id ?? "", page: 1)
         getInfo(id: consultant.id ?? "")
+    
     }
     
     func refreshProfileData() {

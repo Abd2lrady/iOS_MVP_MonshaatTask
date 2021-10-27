@@ -79,4 +79,12 @@ class SessionsListHeader: UIView {
         
     }
     
+    func sessionsLabel(hide: Bool) {
+        if hide {
+            sessionsLabel.isHidden = true
+        } else {
+            sessionsLabel.isHidden = false
+        }
+    }
+    
 }

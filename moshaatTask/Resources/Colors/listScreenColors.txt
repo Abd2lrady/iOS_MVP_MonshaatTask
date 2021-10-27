@@ -36,5 +36,6 @@ profileScreenSegmentUnselected: #9498a1
 profileScreenSegmentSelected: #3084b2
 profileScreenAboutHeaders: #314d6c
 profileScreenAboutLabel: #65717a
+profileScreenNoSessions: #444243
 bookingSheetKSATimeZone: #9498a1
 

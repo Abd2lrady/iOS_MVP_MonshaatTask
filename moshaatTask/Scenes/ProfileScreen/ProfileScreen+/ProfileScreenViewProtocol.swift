@@ -8,6 +8,7 @@ import Foundation
 
 protocol ProfileScreenViewProtocol: AnyObject {
     var headerView: HeaderCardView? { get set }
+    var noSessions: Bool { get set }
     func infoDataLoaded()
     func sessionsDataLoaded()
     func moreSessionsLoaded()

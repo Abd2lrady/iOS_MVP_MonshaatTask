@@ -8,4 +8,5 @@ import Foundation
 
 protocol ProfileScreenCoordinatorProtocol: AnyObject {
     func bookButtonTapped(with session: Session?)
+    func backButtonTapped()
 }

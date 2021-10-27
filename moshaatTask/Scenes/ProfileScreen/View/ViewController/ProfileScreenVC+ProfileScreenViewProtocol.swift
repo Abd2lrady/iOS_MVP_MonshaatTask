@@ -10,6 +10,7 @@ import Toast
 extension ProfileScreenVC: ProfileScreenViewProtocol {
     
     func sessionsDataLoaded() {
+        noSessions = presenter.sessions.isEmpty
         sessionListDelegateAdapter.sessions = presenter.sessions
         sessionListDelegateAdapter.tabelView.reloadData()
     }
