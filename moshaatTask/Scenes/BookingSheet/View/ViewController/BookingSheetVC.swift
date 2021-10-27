@@ -80,7 +80,7 @@ class BookingSheetVC: UIViewController {
  
     @IBOutlet private weak var blurView: UIView! {
         didSet {
-            blurView.alpha = 0.5
+            blurView.alpha = 0
         }
     }
     @IBOutlet private weak var containerView: UIView! {
@@ -89,14 +89,42 @@ class BookingSheetVC: UIViewController {
                                                corners: [.layerMaxXMinYCorner, .layerMinXMinYCorner])
         }
     }
+    @IBOutlet weak var containerBottomConstrain: NSLayoutConstraint!
+    
     override func viewDidLayoutSubviews() {
         confirmBookingButton.shapeAllCorners(with: confirmBookingButton.bounds.height / 2)
         appoinmentCV.invalidateIntrinsicContentSize()
         appointmentCVHeight.constant = appoinmentCV.contentSize.height
-    }
+        self.containerBottomConstrain.constant = containerView.frame.height
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateContainer()
+    }
+    
+    private func animateContainer() {
+        UIView.animate(withDuration: 0.5) {
+            self.blurView.alpha = 0.6
+            self.containerBottomConstrain.constant = 0
+            self.view.layoutSubviews()
+        }
+    }
+    
+    @IBAction func blurViewTapped(_ sender: UITapGestureRecognizer) {
+        // hide then dismiss
+        UIView.animate(withDuration: 0.5) {
+            self.blurView.alpha = 0
+            self.containerBottomConstrain.constant = self.containerView.bounds.height
+            self.view.layoutSubviews()
+        } completion: {_ in
+            self.dismiss(animated: false)
+        }
+    }
+    
 }

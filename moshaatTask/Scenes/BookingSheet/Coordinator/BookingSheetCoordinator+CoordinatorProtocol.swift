@@ -9,6 +9,7 @@ extension BookingSheetCoordinator: CoordinatorProtocol {
     
     func start() {
         let view = BookingSheetVC()
+        view.modalPresentationStyle = .overCurrentContext
         router.present(view: view, animated: false, completion: nil)
     }
  

@@ -20,6 +20,7 @@
                 <outlet property="companyChoose" destination="8zm-uY-6eY" id="duL-bC-u11"/>
                 <outlet property="confirmBookingButton" destination="Ha7-bF-Spr" id="gaV-rv-t0e"/>
                 <outlet property="contactLabel" destination="YwI-th-Hra" id="116-bz-OhZ"/>
+                <outlet property="containerBottomConstrain" destination="DL8-c2-PJB" id="ph4-6h-U75"/>
                 <outlet property="containerView" destination="SMo-Um-eje" id="tMh-oI-eOn"/>
                 <outlet property="dateLabel" destination="MqB-uC-1D4" id="Z51-dm-bxf"/>
                 <outlet property="enterEntityTextField" destination="Mux-Cx-3uy" id="ZfL-ej-rMf"/>
@@ -34,8 +35,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Bc-Pt-1RP" userLabel="BlurView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="SWe-Ma-zL9" appends="YES" id="KmB-l7-6j4"/>
+                    </connections>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMo-Um-eje" userLabel="ContainerView">
-                    <rect key="frame" x="0.0" y="213" width="414" height="649"/>
+                    <rect key="frame" x="0.0" y="169" width="414" height="693"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-uC-1D4" userLabel="DateLabel">
                             <rect key="frame" x="357.5" y="40" width="41.5" height="20.5"/>
@@ -171,24 +180,25 @@
                         <constraint firstAttribute="trailing" secondItem="YwI-th-Hra" secondAttribute="trailing" constant="15" id="zDx-JU-CBX"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Bc-Pt-1RP" userLabel="BlurView">
-                    <rect key="frame" x="0.0" y="44" width="414" height="169"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="4Bc-Pt-1RP" secondAttribute="top" id="3NG-vw-AbY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SMo-Um-eje" secondAttribute="bottom" id="DL8-c2-PJB"/>
-                <constraint firstItem="SMo-Um-eje" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="169" id="ULm-hg-bxA"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Bc-Pt-1RP" secondAttribute="trailing" id="Y3d-54-YRW"/>
+                <constraint firstItem="4Bc-Pt-1RP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3NG-vw-AbY"/>
+                <constraint firstItem="SMo-Um-eje" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="DL8-c2-PJB"/>
+                <constraint firstItem="4Bc-Pt-1RP" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Y3d-54-YRW"/>
+                <constraint firstItem="SMo-Um-eje" firstAttribute="height" secondItem="4Bc-Pt-1RP" secondAttribute="height" multiplier="0.803944" id="Z30-TN-n7E"/>
                 <constraint firstItem="SMo-Um-eje" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="h7s-sx-PPh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SMo-Um-eje" secondAttribute="trailing" id="mW8-Lq-Fhf"/>
-                <constraint firstItem="SMo-Um-eje" firstAttribute="top" secondItem="4Bc-Pt-1RP" secondAttribute="bottom" id="tWm-JA-cF7"/>
+                <constraint firstItem="SMo-Um-eje" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mW8-Lq-Fhf"/>
+                <constraint firstItem="4Bc-Pt-1RP" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="tWm-JA-cF7"/>
                 <constraint firstItem="4Bc-Pt-1RP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zdC-Q9-nEy"/>
             </constraints>
-            <point key="canvasLocation" x="56.521739130434788" y="49.553571428571423"/>
+            <point key="canvasLocation" x="-99" y="72"/>
         </view>
+        <tapGestureRecognizer id="SWe-Ma-zL9">
+            <connections>
+                <action selector="blurViewTapped:" destination="-1" id="0Qb-jI-4Jz"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
