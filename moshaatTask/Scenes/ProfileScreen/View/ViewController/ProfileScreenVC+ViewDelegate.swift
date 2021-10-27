@@ -12,6 +12,7 @@ extension ProfileScreenVC: ViewDelegate {
     }
 
     func loadMore() {
+        noInternet.retryAction = presenter.loadMoreSessions
         self.view.makeToastActivity(.bottom)
         presenter.loadMoreSessions()
     }

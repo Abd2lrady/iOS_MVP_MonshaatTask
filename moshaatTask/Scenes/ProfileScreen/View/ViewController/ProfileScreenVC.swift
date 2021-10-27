@@ -114,6 +114,7 @@ class ProfileScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showActivityIndicator()
+        noInternet.retryAction = presenter.viewLoaded
         presenter.viewLoaded()
     }
     
@@ -161,6 +162,7 @@ class ProfileScreenVC: UIViewController {
     
     @objc
     func refresh() {
+        noInternet.retryAction = presenter.refreshProfileData
         refreshControl.beginRefreshing()
         sessionListDelegateAdapter.sessions = []
         interestsCVDelegateAdapter.interests = []

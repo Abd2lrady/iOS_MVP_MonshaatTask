@@ -71,7 +71,7 @@ class NoInternet: UIView {
                                           for: .normal)
         tryAgainButton.shapeAllCorners(with: tryAgainButton.bounds.height / 2)
     }
-    
+    var retryAction: (() -> Void) = {}
     var tryAgainButton: UIButton {
         get {
             return _tryAgainButton
@@ -80,4 +80,7 @@ class NoInternet: UIView {
         }
     }
     
+    @IBAction func retryButtonTapped(_ sender: UIButton) {
+        retryAction()
+    }
 }

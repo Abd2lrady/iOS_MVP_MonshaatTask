@@ -34,6 +34,9 @@
                         <constraint firstAttribute="height" constant="48" id="Voq-OD-dln"/>
                     </constraints>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="retryButtonTapped:" destination="-1" eventType="touchUpInside" id="hN1-bl-8me"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKV-OS-O5D">
                     <rect key="frame" x="212" y="294" width="42" height="20.5"/>

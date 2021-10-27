@@ -45,6 +45,7 @@ class ListScreenVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configConsultantCV()
+        noInternet.retryAction = presenter.viewLoaded
         presenter.viewLoaded()
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
 
@@ -101,6 +102,7 @@ class ListScreenVC: UIViewController {
     @objc
     func refresh() {
         consultantCVAdapter.consultants = []
+        noInternet.retryAction = presenter.refreshConsultantData
         presenter.refreshConsultantData()
         consultantCVAdapter.refreshConsultantsCV()
     }
