@@ -36,4 +36,8 @@ extension Router: RouterProtocol {
         navigator.popToRootViewController(animated: animated)
     }
     
+    func dismiss(animated: Bool) {
+        navigator.dismiss(animated: animated, completion: nil)
+    }
+    
 }

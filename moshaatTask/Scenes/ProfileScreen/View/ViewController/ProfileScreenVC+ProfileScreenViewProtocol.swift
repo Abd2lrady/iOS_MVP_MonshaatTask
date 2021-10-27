@@ -17,7 +17,7 @@ extension ProfileScreenVC: ProfileScreenViewProtocol {
     func infoDataLoaded() {
         aboutLabel.text = presenter.info?.aboutMe
 
-        if presenter.info?.aboutMe?.isEmpty != nil {
+        if presenter.info?.aboutMe == nil {
             aboutLabel.text = "لاتوجد معلومات عن المرشد"
         }
         interestsCVDelegateAdapter.interests = presenter.info?.interests

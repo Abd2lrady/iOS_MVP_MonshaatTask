@@ -89,8 +89,9 @@ class BookingSheetVC: UIViewController {
                                                corners: [.layerMaxXMinYCorner, .layerMinXMinYCorner])
         }
     }
-    @IBOutlet weak var containerBottomConstrain: NSLayoutConstraint!
+    @IBOutlet private weak var containerBottomConstrain: NSLayoutConstraint!
     
+    weak var bookingSheetCoordinatorDelegate: BookingSheetCoordinatorDelegateProtocol?
     override func viewDidLayoutSubviews() {
         confirmBookingButton.shapeAllCorners(with: confirmBookingButton.bounds.height / 2)
         appoinmentCV.invalidateIntrinsicContentSize()
@@ -122,8 +123,8 @@ class BookingSheetVC: UIViewController {
             self.blurView.alpha = 0
             self.containerBottomConstrain.constant = self.containerView.bounds.height
             self.view.layoutSubviews()
-        } completion: {_ in
-            self.dismiss(animated: false)
+        } completion: {[weak self]_ in
+            self?.bookingSheetCoordinatorDelegate?.dismissTap()            
         }
     }
     

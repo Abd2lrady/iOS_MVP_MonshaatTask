@@ -12,4 +12,5 @@ protocol RouterProtocol {
     func pop(animated: Bool)
     func popTo(view: UIViewController, animated: Bool)
     func popToRoot(animated: Bool)
+    func dismiss(animated: Bool)
 }
