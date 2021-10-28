@@ -8,8 +8,8 @@ import UIKit
 
 class SessionCell: UITableViewCell {
     static let reuseID = "\(SessionCell.self)"
-    var bookAction: (() -> Void)?
-    lazy var appoinmentDelegate = AppointmentDelegateAdapter(cell: self)
+    var bookAction: ((Int) -> Void)?
+    lazy var appoinmentDelegate = AppointmentDelegateAdapter(appoinmentView: self)
     @IBOutlet private weak var backView: UIView! {
         didSet {
             backView.shapeAllCorners(with: 16)
@@ -81,6 +81,10 @@ class SessionCell: UITableViewCell {
     }
     @IBAction func bookButtonTapped(_ sender: UIButton) {
         guard let bookAction = bookAction else { return }
-        bookAction()
+        bookAction(appoinmentDelegate.selected)
     }
+}
+
+extension SessionCell: AppointmentProtocol {
+    
 }

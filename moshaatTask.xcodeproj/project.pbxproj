@@ -96,6 +96,13 @@
 		B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */; };
 		B4A5DA332712C232008BF561 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = B4A5DA322712C232008BF561 /* Cosmos */; };
 		B4AA4813272997E60029CC87 /* BookingSheetCoordinatorDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA4812272997E60029CC87 /* BookingSheetCoordinatorDelegateProtocol.swift */; };
+		B4AA4816272A94B60029CC87 /* AppoinmentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA4815272A94B60029CC87 /* AppoinmentProtocol.swift */; };
+		B4AA4818272A98C70029CC87 /* BookingSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA4817272A98C70029CC87 /* BookingSheetPresenter.swift */; };
+		B4AA481B272A9A490029CC87 /* BookingSheetPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA481A272A9A490029CC87 /* BookingSheetPresenterProtocol.swift */; };
+		B4AA481D272A9AFC0029CC87 /* BookingSheetViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA481C272A9AFC0029CC87 /* BookingSheetViewProtocol.swift */; };
+		B4AA481F272A9B200029CC87 /* BookingSheetVC+BookingSheetViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA481E272A9B200029CC87 /* BookingSheetVC+BookingSheetViewProtocol.swift */; };
+		B4AA4821272AED860029CC87 /* FormattedSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA4820272AED860029CC87 /* FormattedSession.swift */; };
+		B4AA4823272AFC940029CC87 /* AppointmentDelegateAdapter- UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA4822272AFC940029CC87 /* AppointmentDelegateAdapter- UICollectionViewDelegate.swift */; };
 		B4C8D586271EB9630017E5AB /* SessionAppointmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8D584271EB9630017E5AB /* SessionAppointmentCell.swift */; };
 		B4C8D587271EB9630017E5AB /* SessionAppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C8D585271EB9630017E5AB /* SessionAppointmentCell.xib */; };
 		B4C8D58A272336EE0017E5AB /* CustomSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8D589272336EE0017E5AB /* CustomSegmentedView.swift */; };
@@ -215,6 +222,13 @@
 		B4A5DA2B2712B8F9008BF561 /* ConsultantsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantsInteractor.swift; sourceTree = "<group>"; };
 		B4A5DA2D2712BA43008BF561 /* ConsultantCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantCellProtocol.swift; sourceTree = "<group>"; };
 		B4AA4812272997E60029CC87 /* BookingSheetCoordinatorDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSheetCoordinatorDelegateProtocol.swift; sourceTree = "<group>"; };
+		B4AA4815272A94B60029CC87 /* AppoinmentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoinmentProtocol.swift; sourceTree = "<group>"; };
+		B4AA4817272A98C70029CC87 /* BookingSheetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSheetPresenter.swift; sourceTree = "<group>"; };
+		B4AA481A272A9A490029CC87 /* BookingSheetPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSheetPresenterProtocol.swift; sourceTree = "<group>"; };
+		B4AA481C272A9AFC0029CC87 /* BookingSheetViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSheetViewProtocol.swift; sourceTree = "<group>"; };
+		B4AA481E272A9B200029CC87 /* BookingSheetVC+BookingSheetViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookingSheetVC+BookingSheetViewProtocol.swift"; sourceTree = "<group>"; };
+		B4AA4820272AED860029CC87 /* FormattedSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedSession.swift; sourceTree = "<group>"; };
+		B4AA4822272AFC940029CC87 /* AppointmentDelegateAdapter- UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentDelegateAdapter- UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		B4C8D584271EB9630017E5AB /* SessionAppointmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionAppointmentCell.swift; sourceTree = "<group>"; };
 		B4C8D585271EB9630017E5AB /* SessionAppointmentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionAppointmentCell.xib; sourceTree = "<group>"; };
 		B4C8D589272336EE0017E5AB /* CustomSegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedView.swift; sourceTree = "<group>"; };
@@ -303,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				B4108EE22728266F00F3FD4E /* Coordinator */,
+				B4AA4819272A9A2F0029CC87 /* BookingSheet+ */,
 				B43F123427293F3100636B94 /* Presenter */,
 				B4108EE32728269C00F3FD4E /* View */,
 			);
@@ -331,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				B4108EE62728279600F3FD4E /* BookingSheetVC.swift */,
+				B4AA481E272A9B200029CC87 /* BookingSheetVC+BookingSheetViewProtocol.swift */,
 				B4108EE72728279600F3FD4E /* BookingSheetVC.xib */,
 			);
 			path = ViewController;
@@ -416,6 +432,8 @@
 			children = (
 				B43AB0972726AA990073A827 /* AppointmentDelegateAdapter.swift */,
 				B43AB0992726ACAF0073A827 /* AppointmentDelegateAdapter+AppooinmentCVDataSource.swift */,
+				B4AA4815272A94B60029CC87 /* AppoinmentProtocol.swift */,
+				B4AA4822272AFC940029CC87 /* AppointmentDelegateAdapter- UICollectionViewDelegate.swift */,
 			);
 			path = Appointment;
 			sourceTree = "<group>";
@@ -423,6 +441,7 @@
 		B43F123427293F3100636B94 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				B4AA4817272A98C70029CC87 /* BookingSheetPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -770,6 +789,7 @@
 				B43AB08527258E580073A827 /* Schedule.swift */,
 				B43AB08727258F090073A827 /* Office.swift */,
 				B43AB08927258F4C0073A827 /* Center.swift */,
+				B4AA4820272AED860029CC87 /* FormattedSession.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -792,6 +812,15 @@
 				B43AB09B2726E8060073A827 /* ListCoordinatorProtocol.swift */,
 			);
 			path = "ListScreen+";
+			sourceTree = "<group>";
+		};
+		B4AA4819272A9A2F0029CC87 /* BookingSheet+ */ = {
+			isa = PBXGroup;
+			children = (
+				B4AA481A272A9A490029CC87 /* BookingSheetPresenterProtocol.swift */,
+				B4AA481C272A9AFC0029CC87 /* BookingSheetViewProtocol.swift */,
+			);
+			path = "BookingSheet+";
 			sourceTree = "<group>";
 		};
 		B4C8D583271EB81E0017E5AB /* AppoinmentCell */ = {
@@ -1049,6 +1078,7 @@
 				B4A5DA2C2712B8F9008BF561 /* ConsultantsInteractor.swift in Sources */,
 				B499E5EB270D8DD3007E1BC8 /* AppDelegate.swift in Sources */,
 				B4EB637B2713F7BC00CB7122 /* ConsultantsTarget.swift in Sources */,
+				B4AA481B272A9A490029CC87 /* BookingSheetPresenterProtocol.swift in Sources */,
 				B4EB636927131E0000CB7122 /* Consultant.swift in Sources */,
 				B4108ED12727E8FB00F3FD4E /* Info.swift in Sources */,
 				B4848B932711C92500C4A643 /* ConsultantCell.swift in Sources */,
@@ -1091,9 +1121,12 @@
 				B4EB63632713104B00CB7122 /* ConsultantCVAdapter+UICollectionViewDelegate.swift in Sources */,
 				B4108ED72727F7EA00F3FD4E /* InterestsDelegateDataSource.swift in Sources */,
 				B4EB63532712CE7400CB7122 /* APIResponse.swift in Sources */,
+				B4AA4816272A94B60029CC87 /* AppoinmentProtocol.swift in Sources */,
 				B43AB07E27256B7B0073A827 /* SessionListDelegateAdapter+UITVDataSource.swift in Sources */,
+				B4AA4821272AED860029CC87 /* FormattedSession.swift in Sources */,
 				B4EB637F2714433A00CB7122 /* ViewDelegate.swift in Sources */,
 				B4A5DA282712B879008BF561 /* ListScreenViewProtocol.swift in Sources */,
+				B4AA481F272A9B200029CC87 /* BookingSheetVC+BookingSheetViewProtocol.swift in Sources */,
 				B4643567271D926B00393F35 /* SessionCell.swift in Sources */,
 				B4108EDE2728149700F3FD4E /* NoMoreSessionsTVFooterCell.swift in Sources */,
 				B4EB637D2713F7DC00CB7122 /* ConsultantTraget+TargetType.swift in Sources */,
@@ -1102,6 +1135,7 @@
 				B43AB09A2726ACAF0073A827 /* AppointmentDelegateAdapter+AppooinmentCVDataSource.swift in Sources */,
 				B43AB0952725A7510073A827 /* InfoInteractor.swift in Sources */,
 				B4A5DA2A2712B8AA008BF561 /* ListScreenPresenterProtocol.swift in Sources */,
+				B4AA4823272AFC940029CC87 /* AppointmentDelegateAdapter- UICollectionViewDelegate.swift in Sources */,
 				B4A5DA2E2712BA43008BF561 /* ConsultantCellProtocol.swift in Sources */,
 				B4108EF027285FD600F3FD4E /* ProfileScreenCoordinatorProtocol.swift in Sources */,
 				B4D3FCE62715D37800CF48F4 /* Reachability.swift in Sources */,
@@ -1122,10 +1156,12 @@
 				B4EB635C271302C800CB7122 /* ConsultantCVAdapter+UICollectionViewDataSource.swift in Sources */,
 				B499E61B270DA951007E1BC8 /* UIView+.swift in Sources */,
 				B45DEDC1271BE47500ABD448 /* NoMoreConsultantsCVFooterCell.swift in Sources */,
+				B4AA4818272A98C70029CC87 /* BookingSheetPresenter.swift in Sources */,
 				B4EB63512712CE7400CB7122 /* NetworkDefaults.swift in Sources */,
 				B4643543271D553000393F35 /* ProfileScreenPresenterProtocol.swift in Sources */,
 				B4848BB527120E3A00C4A643 /* Fonts.swift in Sources */,
 				B499E5ED270D8DD3007E1BC8 /* SceneDelegate.swift in Sources */,
+				B4AA481D272A9AFC0029CC87 /* BookingSheetViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

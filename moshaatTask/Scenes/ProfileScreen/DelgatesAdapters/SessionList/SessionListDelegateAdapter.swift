@@ -7,15 +7,10 @@
 import UIKit
 
 class SessionListDelegateAdapter: NSObject {
-    var sessions: [Session]?
-    var bookSession: ((Session?) -> Void)?
+    var sessions: [FormattedSession]?
+    var bookSession: ((Int, FormattedSession?) -> Void)?
     var noMoreSession = false
-    var dateFormater: DateFormatter = {
-        let formater = DateFormatter()
-        formater.locale = Locale(identifier: "ar")
-        formater.dateFormat = "EEEE ،d MMM"
-        return formater
-    }()
+    
     weak var view: ViewDelegate?
 
     lazy var tabelView: UITableView = {

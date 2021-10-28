@@ -9,8 +9,11 @@ import UIKit
 extension AppointmentDelegateAdapter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        if let timesCount = times?.count {
-            return timesCount > 3 ? 3 : timesCount
+        guard appoinmentView as? SessionCell != nil else {
+            return schedules?.count ?? 0
+        }
+        if let schedulesCount = schedules?.count {
+            return schedulesCount > 3 ? 3 : schedulesCount
         }
         return 0
     }
@@ -20,14 +23,9 @@ extension AppointmentDelegateAdapter: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(SessionAppointmentCell.self)",
                                                             for: indexPath)
                 as? SessionAppointmentCell else { fatalError("can`t find dequeue appoinment cell") }
-        let time = formateTime(timeStamp: times?[indexPath.row].startTime) ?? ""
-        cell.setAppoinment(with: time)
+        let time = schedules?[indexPath.row].startHour
+            cell.setAppoinment(with: time ?? "")
         return cell
     }
     
-    private func formateTime(timeStamp: Int?) -> String? {
-        guard let timeStamp = timeStamp else { return nil }
-        let time = Date(timeIntervalSince1970: TimeInterval(timeStamp))
-        return timeFormater.string(from: time)
-    }
 }

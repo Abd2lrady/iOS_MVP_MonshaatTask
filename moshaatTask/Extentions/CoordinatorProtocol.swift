@@ -15,10 +15,9 @@ protocol CoordinatorProtocol: AnyObject {
 
 extension CoordinatorProtocol {
     func removeChild(coordinator: CoordinatorProtocol) {
-        for (index, child) in childCoordinators.enumerated() {
-            if coordinator === child {
+        for (index, child) in childCoordinators.enumerated() where coordinator === child {
                 childCoordinators.remove(at: index)
-            }
+            
         }
     }
 

@@ -23,10 +23,11 @@ extension ProfileScreenCoordinator: ProfileScreenCoordinatorProtocol {
         router.pop(animated: true)
     }
     
-    func bookButtonTapped(with session: Session?) {
+    func bookButtonTapped(with session: FormattedSession?, selectedAppointment: Int) {
         print("coordinator notifies")
         let bookingCoordinator = BookingSheetCoordinator(router: router,
-                                                         parentCoordinator: self)
+                                                         parentCoordinator: self,
+                                                         session: session, selectedAppointment: selectedAppointment)
         childCoordinators.append(bookingCoordinator)
         bookingCoordinator.start()
     }

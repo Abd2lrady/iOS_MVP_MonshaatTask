@@ -15,10 +15,11 @@ extension SessionListDelegateAdapter: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SessionCell.reuseID,
                                                        for: indexPath) as? SessionCell
         else { fatalError("can`t deque Session cell") }
-        let day = formateDate(timeStamp: sessions?[indexPath.row].day) ?? ""
-        if let sessionCount = sessions?[indexPath.row].schedules?.count {
-            if sessionCount > 3 {
-                let additional = sessionCount - 3
+        let day = sessions?[indexPath.row].day
+        let schedules = sessions?[indexPath.row].schedules
+        if let hoursCount = sessions?[indexPath.row].schedules?.count {
+            if hoursCount > 3 {
+                let additional = hoursCount - 3
                 let formater = NumberFormatter()
                 formater.locale = Locale(identifier: "ar")
                 let number = formater.string(from: NSNumber(integerLiteral: additional))
@@ -27,23 +28,12 @@ extension SessionListDelegateAdapter: UITableViewDataSource {
             }
             
         }
-        cell.appoinmentDelegate.times = sessions?[indexPath.row].schedules
-        cell.setDate(with: day)
-        cell.bookAction = { [weak self] in
-            self?.bookSession?(self?.sessions?[indexPath.row])
-//            print(self?.sessions?[indexPath.row])
+        cell.setDate(with: day ?? "")
+        cell.appoinmentDelegate.schedules = schedules
+        cell.bookAction = { [weak self] selected in
+            self?.bookSession?(selected, self?.sessions?[indexPath.row])
         }
         return cell
     }
-    
-//    private func configCell(cell:, session: Session) {
-//
-//    }
-    
-    private func formateDate(timeStamp: Int?) -> String? {
-        guard let timeStamp = timeStamp else { return nil }
-        let date = Date(timeIntervalSince1970: TimeInterval(timeStamp))
-        return dateFormater.string(from: date)
-    }
-    
+        
 }

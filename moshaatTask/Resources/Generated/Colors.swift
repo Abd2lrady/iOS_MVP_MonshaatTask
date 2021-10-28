@@ -36,6 +36,12 @@ internal struct Colors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#5cb466"></span>
   /// Alpha: 100% <br/> (0x5cb466ff)
   internal static let availabilityOnlineLabel = Colors(rgbaValue: 0x5cb466ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
+  /// Alpha: 100% <br/> (0xffffffff)
+  internal static let bookingSheetContantSelectedButtons = Colors(rgbaValue: 0xffffffff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#8799a3"></span>
+  /// Alpha: 100% <br/> (0x8799a3ff)
+  internal static let bookingSheetContantUnselectedButtons = Colors(rgbaValue: 0x8799a3ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#9498a1"></span>
   /// Alpha: 100% <br/> (0x9498a1ff)
   internal static let bookingSheetKSATimeZone = Colors(rgbaValue: 0x9498a1ff)

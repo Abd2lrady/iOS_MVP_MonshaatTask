@@ -7,7 +7,6 @@
 import Foundation
 
 extension ProfileScreenPresenter: ProfileScreenPresenterProtocol {
-
     func viewLoaded() {
         configHeaderView()
         //        let test = "93f4d920-0720-4a84-8f84-fed97dfa49f2"

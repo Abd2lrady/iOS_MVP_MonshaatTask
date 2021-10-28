@@ -10,8 +10,8 @@ import Toast
 extension ProfileScreenVC: ProfileScreenViewProtocol {
     
     func sessionsDataLoaded() {
-        noSessions = presenter.sessions.isEmpty
-        sessionListDelegateAdapter.sessions = presenter.sessions
+        noSessions = presenter.formattedSessions.isEmpty
+        sessionListDelegateAdapter.sessions = presenter.formattedSessions
         sessionListDelegateAdapter.tabelView.reloadData()
     }
     func infoDataLoaded() {
@@ -24,14 +24,14 @@ extension ProfileScreenVC: ProfileScreenViewProtocol {
         interestsCVDelegateAdapter.collectionView?.reloadData()
     }
     func dataRefreshed() {
-        sessionListDelegateAdapter.sessions?.append(contentsOf: presenter.sessions)
+        sessionListDelegateAdapter.sessions?.append(contentsOf: presenter.formattedSessions)
         interestsCVDelegateAdapter.interests?.append(contentsOf: presenter.info?.interests ?? [""])
         sessionListDelegateAdapter.tabelView.reloadData()
         interestsCV.reloadData()
     }
     
     func moreSessionsLoaded() {
-        sessionListDelegateAdapter.sessions?.append(contentsOf: presenter.sessions)
+        sessionListDelegateAdapter.sessions?.append(contentsOf: presenter.formattedSessions)
         sessionListDelegateAdapter.tabelView.reloadData()
     }
     

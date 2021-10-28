@@ -7,5 +7,7 @@
 import Foundation
 
 struct Center: Codable {
+    let latitude: Double?
+    let longitude: Double?
     let address: String?
 }

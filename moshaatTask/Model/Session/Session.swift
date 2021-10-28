@@ -7,6 +7,6 @@
 import Foundation
 
 struct Session: Codable {
-    let day: Int?
+    var day: Int?
     let schedules: [Schedule]?
 }

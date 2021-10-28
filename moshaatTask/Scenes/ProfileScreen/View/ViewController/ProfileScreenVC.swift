@@ -17,9 +17,9 @@ class ProfileScreenVC: UIViewController {
         }
     }
     @IBOutlet private weak var listView: UIView!
-    @IBOutlet weak var sessionsListHeader: SessionsListHeader!
+    @IBOutlet private weak var _sessionsListHeader: SessionsListHeader!
     @IBOutlet private weak var aboutView: UIView!
-    @IBOutlet weak var consultantSessionsTV: UITableView! {
+    @IBOutlet private weak var _consultantSessionsTV: UITableView! {
         didSet {
             configConsultantSessionsTV()
         }
@@ -69,7 +69,7 @@ class ProfileScreenVC: UIViewController {
         }
     }
     
-    @IBOutlet  weak var interestsCV: UICollectionView! {
+    @IBOutlet private weak var _interestsCV: UICollectionView! {
         didSet {
             configConsultantInterestsCV()
         }
@@ -85,18 +85,18 @@ class ProfileScreenVC: UIViewController {
         }
     }
     
-    @IBOutlet weak var aboutLabel: UILabel! {
+    @IBOutlet private weak var _aboutLabel: UILabel! {
         didSet {
-            aboutLabel.font = Fonts._29LTAzer.medium.font(size: 15)
-            aboutLabel.textColor = Colors.profileScreenAboutLabel.color
+            _aboutLabel.font = Fonts._29LTAzer.medium.font(size: 15)
+            _aboutLabel.textColor = Colors.profileScreenAboutLabel.color
         }
     }
-    @IBOutlet weak var noSessionsView: UIView!
-    @IBOutlet weak var noSessionsLabel: UILabel! {
+    @IBOutlet private weak var _noSessionsView: UIView!
+    @IBOutlet private weak var _noSessionsLabel: UILabel! {
         didSet {
-            noSessionsLabel.text = Strings.noSessions
-            noSessionsLabel.font = Fonts._29LTAzer.bold.font(size: 18)
-            noSessionsLabel.textColor = Colors.profileScreenNoSessions.color
+            _noSessionsLabel.text = Strings.noSessions
+            _noSessionsLabel.font = Fonts._29LTAzer.bold.font(size: 18)
+            _noSessionsLabel.textColor = Colors.profileScreenNoSessions.color
         }
 
     }
@@ -108,7 +108,7 @@ class ProfileScreenVC: UIViewController {
             showSessionsList()
         }
     }
-    lazy var interestsCVDelegateAdapter = InterestsDelegateAdapter(collectionView: interestsCV)
+    lazy var interestsCVDelegateAdapter = InterestsDelegateAdapter(collectionView: _interestsCV)
     lazy var sessionListDelegateAdapter = SessionListDelegateAdapter(view: self)
 
     override func viewDidLoad() {
@@ -123,7 +123,7 @@ class ProfileScreenVC: UIViewController {
         view.backgroundColor = Colors.profileScreenBackground.color
         configNavBar()
         headerCardView.shapeAllCorners(with: 12)
-        interestsCVHeight.constant = interestsCV.contentSize.height
+        interestsCVHeight.constant = _interestsCV.contentSize.height
     }
     
     func configNavBar() {
@@ -141,23 +141,23 @@ class ProfileScreenVC: UIViewController {
     private func configConsultantSessionsTV() {
         let cellNib = UINib(nibName: "\(SessionCell.self)", bundle: .main)
         let footerNib = UINib(nibName: "\(NoMoreSessionsTVFooterCell.self)", bundle: .main)
-        consultantSessionsTV.register(cellNib, forCellReuseIdentifier: SessionCell.reuseID)
-        consultantSessionsTV.register(footerNib, forCellReuseIdentifier: NoMoreSessionsTVFooterCell.reuseID)
-        consultantSessionsTV.refreshControl = refreshControl
-        consultantSessionsTV.dataSource = sessionListDelegateAdapter
-        consultantSessionsTV.delegate = sessionListDelegateAdapter
-        sessionListDelegateAdapter.bookSession = { [weak self] session in
-            self?.profileCoordinatorDelegate?.bookButtonTapped(with: session)
+        _consultantSessionsTV.register(cellNib, forCellReuseIdentifier: SessionCell.reuseID)
+        _consultantSessionsTV.register(footerNib, forCellReuseIdentifier: NoMoreSessionsTVFooterCell.reuseID)
+        _consultantSessionsTV.refreshControl = refreshControl
+        _consultantSessionsTV.dataSource = sessionListDelegateAdapter
+        _consultantSessionsTV.delegate = sessionListDelegateAdapter
+        sessionListDelegateAdapter.bookSession = { [weak self] selected, session in
+            self?.profileCoordinatorDelegate?.bookButtonTapped(with: session, selectedAppointment: selected)
         }
-        consultantSessionsTV.backgroundColor = .clear
+        _consultantSessionsTV.backgroundColor = .clear
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
     }
     
     private func configConsultantInterestsCV() {
         let cellNib = UINib(nibName: "\(SessionAppointmentCell.self)", bundle: .main)
-        interestsCV.register(cellNib, forCellWithReuseIdentifier: SessionAppointmentCell.reuseID)
-        interestsCV.dataSource = interestsCVDelegateAdapter
-        interestsCV.backgroundColor = .clear
+        _interestsCV.register(cellNib, forCellWithReuseIdentifier: SessionAppointmentCell.reuseID)
+        _interestsCV.dataSource = interestsCVDelegateAdapter
+        _interestsCV.backgroundColor = .clear
     }
     
     @objc
@@ -171,7 +171,7 @@ class ProfileScreenVC: UIViewController {
     }
     
     var scrollableView: UIScrollView {
-        return consultantSessionsTV
+        return _consultantSessionsTV
     }
     
     func startScrolling(trans: CGFloat) {
@@ -224,13 +224,13 @@ class ProfileScreenVC: UIViewController {
     
     private func showSessionsList() {
         segmentsContianer.bringSubviewToFront(listView)
-        sessionsListHeader?.sessionsLabel(hide: noSessions)
+        _sessionsListHeader?.sessionsLabel(hide: noSessions)
         if noSessions {
-            listView.bringSubviewToFront(noSessionsView)
-            noSessionsView.isHidden = false
-            consultantSessionsTV.isHidden = true
+            listView.bringSubviewToFront(_noSessionsView)
+            _noSessionsView.isHidden = false
+            _consultantSessionsTV.isHidden = true
         } else {
-            listView.bringSubviewToFront(consultantSessionsTV)
+            listView.bringSubviewToFront(_consultantSessionsTV)
         }
         listView.isHidden = false
         aboutView.isHidden = true
@@ -246,4 +246,56 @@ class ProfileScreenVC: UIViewController {
     private func backButtonAction() {
         profileCoordinatorDelegate?.backButtonTapped()
     }
+    
+}
+
+extension ProfileScreenVC {
+    var sessionsListHeader: SessionsListHeader {
+        get {
+            return _sessionsListHeader
+        } set {
+            _sessionsListHeader = newValue
+        }
+    }
+    
+    var consultantSessionsTV: UITableView {
+        get {
+            return _consultantSessionsTV
+        } set {
+            _consultantSessionsTV = newValue
+        }
+    }
+    
+    var interestsCV: UICollectionView {
+        get {
+            return _interestsCV
+        } set {
+            _interestsCV = newValue
+        }
+    }
+    
+    var aboutLabel: UILabel {
+        get {
+            return _aboutLabel
+        } set {
+            _aboutLabel = newValue
+        }
+    }
+    
+    var noSessionsView: UIView {
+        get {
+            return _noSessionsView
+        } set {
+            _noSessionsView = newValue
+        }
+    }
+    
+    var noSessionsLabel: UILabel {
+        get {
+            return _noSessionsLabel
+        } set {
+            _noSessionsLabel = newValue
+        }
+    }
+
 }

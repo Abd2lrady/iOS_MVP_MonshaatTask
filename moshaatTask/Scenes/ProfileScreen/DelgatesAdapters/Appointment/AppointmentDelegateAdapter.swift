@@ -7,15 +7,11 @@
 import UIKit
 
 class AppointmentDelegateAdapter: NSObject {
-    var times: [Schedule]?
-    weak var cell: UITableViewCell?
-    var timeFormater: DateFormatter = {
-        let formater = DateFormatter()
-        formater.dateFormat = "h:mm a"
-        return formater
-    }()
+    var schedules: [FormattedSchedule]?
+    var selected = 0
+    weak var appoinmentView: AppointmentProtocol?
     
-    init(cell: UITableViewCell) {
-        self.cell = cell
+    init(appoinmentView: AppointmentProtocol) {
+        self.appoinmentView = appoinmentView
     }
 }
