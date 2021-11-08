@@ -18,7 +18,7 @@ extension ProfileScreenVC: ProfileScreenViewProtocol {
         aboutLabel.text = presenter.info?.aboutMe
 
         if presenter.info?.aboutMe == nil {
-            aboutLabel.text = "لاتوجد معلومات عن المرشد"
+            aboutLabel.text = Strings.ProfileScreen.noConsultantInfo
         }
         interestsCVDelegateAdapter.interests = presenter.info?.interests
         interestsCVDelegateAdapter.collectionView?.reloadData()

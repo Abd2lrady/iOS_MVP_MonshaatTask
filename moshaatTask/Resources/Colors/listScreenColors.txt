@@ -40,5 +40,5 @@ profileScreenNoSessions: #444243
 bookingSheetKSATimeZone: #9498a1
 bookingSheetContantUnselectedButtons: #8799a3
 bookingSheetContantSelectedButtons: #ffffff
-
+bookingSheetButtonShadowColor: #314d6c
 

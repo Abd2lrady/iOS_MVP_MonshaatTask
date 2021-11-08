@@ -31,7 +31,12 @@ class BookingSheetVC: UIViewController {
             view.titleLabel.font = Fonts._29LTAzer.medium.font(size: 14)
             view.titleLabel.textColor = Colors.bookingSheetContantUnselectedButtons.color
             view.backgroundColor = Colors.bookingSheetContantSelectedButtons.color
-            onlineButton.shapeAllCorners(with: onlineButton.bounds.height / 2)
+            view.shapeAllCorners(with: view.bounds.height / 2)
+            onlineButton.layer.shadowRadius = 8
+            onlineButton.layer.shadowOpacity = 0.5
+            onlineButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+            onlineButton.layer.shadowColor = Colors.bookingSheetButtonShadowColor.color.cgColor
+
         }
     }
     @IBOutlet private weak var locationButton: UIButton! {
@@ -44,7 +49,12 @@ class BookingSheetVC: UIViewController {
             view.titleLabel.font = Fonts._29LTAzer.medium.font(size: 14)
             view.titleLabel.textColor = Colors.bookingSheetContantUnselectedButtons.color
             view.backgroundColor = Colors.bookingSheetContantSelectedButtons.color
-            locationButton.shapeAllCorners(with: locationButton.bounds.height / 2)
+            view.shapeAllCorners(with: view.bounds.height / 2)
+            locationButton.layer.shadowRadius = 8
+            locationButton.layer.shadowOpacity = 0.5
+            locationButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+            locationButton.layer.shadowColor = Colors.bookingSheetButtonShadowColor.color.cgColor
+            
         }
     }
     @IBOutlet private weak var contactLabel: UILabel! {
@@ -55,18 +65,55 @@ class BookingSheetVC: UIViewController {
         }
     }
     
-    @IBOutlet private weak var companyCV: UICollectionView! {
+    @IBOutlet private weak var firmCV: UICollectionView! {
         didSet {
-            companyCV.backgroundColor = .clear
+            firmCVConfig()
         }
     }
-    @IBOutlet private weak var companyChoose: UILabel! {
+    @IBOutlet weak var firmCVHeight: NSLayoutConstraint!
+    @IBOutlet private weak var firmChoose: UILabel! {
         didSet {
-            companyChoose.textColor = Colors.profileScreenNameLabel.color
-            companyChoose.font = Fonts._29LTAzer.medium.font(size: 16)
-            companyChoose.text = Strings.BookingScreen.chooseCompany
+            firmChoose.textColor = Colors.profileScreenNameLabel.color
+            firmChoose.font = Fonts._29LTAzer.medium.font(size: 16)
+            firmChoose.text = Strings.BookingScreen.chooseFirm
         }
     }
+    @IBOutlet private weak var companyButton: UIButton! {
+        didSet {
+            let view = CustomButtonView(frame: companyButton.bounds)
+            companyButton.addSubview(view)
+            view.isUserInteractionEnabled = false
+            view.img = Assets.icCompany.image
+            view.titleLabel.text = Strings.BookingScreen.company
+            view.titleLabel.font = Fonts._29LTAzer.medium.font(size: 14)
+            view.titleLabel.textColor = Colors.bookingSheetContantUnselectedButtons.color
+            view.backgroundColor = Colors.bookingSheetContantSelectedButtons.color
+            view.shapeAllCorners(with: view.bounds.height / 2)
+            companyButton.layer.shadowRadius = 8
+            companyButton.layer.shadowOpacity = 0.5
+            companyButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+            companyButton.layer.shadowColor = Colors.bookingSheetButtonShadowColor.color.cgColor
+        }
+    }
+    
+    @IBOutlet private weak var projectButton: UIButton! {
+        didSet {
+            let view = CustomButtonView(frame: projectButton.bounds)
+            projectButton.addSubview(view)
+            view.isUserInteractionEnabled = false
+            view.img = Assets.icProject.image
+            view.titleLabel.text = Strings.BookingScreen.project
+            view.titleLabel.font = Fonts._29LTAzer.medium.font(size: 14)
+            view.titleLabel.textColor = Colors.bookingSheetContantUnselectedButtons.color
+            view.backgroundColor = Colors.bookingSheetContantSelectedButtons.color
+            view.shapeAllCorners(with: view.bounds.height / 2)
+            projectButton.layer.shadowRadius = 8
+            projectButton.layer.shadowOpacity = 0.5
+            projectButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+            projectButton.layer.shadowColor = Colors.bookingSheetButtonShadowColor.color.cgColor
+        }
+    }
+    
     @IBOutlet private weak var _appointmentCV: UICollectionView! {
         didSet {
             conigAppointmentCV()
@@ -107,7 +154,8 @@ class BookingSheetVC: UIViewController {
             blurView.alpha = 0
         }
     }
-    @IBOutlet private weak var containerView: UIView! {
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
             containerView.shapeSpecificCorners(with: 25,
                                                corners: [.layerMaxXMinYCorner, .layerMinXMinYCorner])
@@ -115,7 +163,8 @@ class BookingSheetVC: UIViewController {
     }
     @IBOutlet private weak var containerBottomConstrain: NSLayoutConstraint!
     
-    var presenter: BookingSheetPresenterProtocol?
+    @IBOutlet private weak var contentViewBottomConstrain: NSLayoutConstraint!
+    var presenter: BookingSheetPresenterProtocol!
     var formatter: DateFormatter = {
         let formater = DateFormatter()
         formater.locale = Locale(identifier: "ar")
@@ -123,30 +172,41 @@ class BookingSheetVC: UIViewController {
         return formater
     }()
     lazy var appoinmentCVDelegate = AppointmentDelegateAdapter(appoinmentView: self)
-    
+    lazy var firmCVDelegate = FirmCVDelegateAdapter(collectionView: firmCV)
+    let noInternet = NoInternet()
     weak var bookingSheetCoordinatorDelegate: BookingSheetCoordinatorDelegateProtocol?
     override func viewDidLayoutSubviews() {
         confirmBookingButton.shapeAllCorners(with: confirmBookingButton.bounds.height / 2)
         _appointmentCV.invalidateIntrinsicContentSize()
         appointmentCVHeight.constant = _appointmentCV.contentSize.height
-        self.containerBottomConstrain.constant = containerView.frame.height
+        firmCV.invalidateIntrinsicContentSize()
+        firmCVHeight.constant = firmCV.contentSize.height
+        self.contentViewBottomConstrain.constant = containerView.frame.height
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        presenter?.viewLoaded()
+        presenter.viewLoaded()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animateContainer()
     }
+    @IBAction func companyButtonTapped(_ sender: UIButton) {
+        noInternet.retryAction = presenter.companyButtonTapped
+        presenter?.companyButtonTapped()
+    }
+    
+    @IBAction func projectButtonTapped(_ sender: UIButton) {
+        noInternet.retryAction = presenter.projectButtonTapped
+        presenter?.projectButtonTapped()
+    }
     
     private func animateContainer() {
         UIView.animate(withDuration: 0.5) {
             self.blurView.alpha = 0.6
-            self.containerBottomConstrain.constant = 0
+            self.contentViewBottomConstrain.constant = 0
             self.view.layoutSubviews()
         }
     }
@@ -195,6 +255,33 @@ extension BookingSheetVC {
         }
     }
     
+    func showNoInternet() {
+        self.containerView.addSubview(noInternet)
+        noInternet.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            noInternet.topAnchor.constraint(equalTo: containerView.topAnchor),
+            noInternet.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            noInternet.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            noInternet.bottomAnchor.constraint(equalTo: blurView.bottomAnchor)
+        ])
+    }
+    
+    func hideNoInternet() {
+        noInternet.removeFromSuperview()
+    }
+    
+    func firmCVConfig() {
+        firmCV.backgroundColor = .clear
+        let cellNib = UINib(nibName: "\(FirmCell.self)",
+                            bundle: .main)
+        firmCV.register(cellNib,
+                        forCellWithReuseIdentifier: FirmCell.reuseID)
+        firmCV.semanticContentAttribute = .forceRightToLeft
+        firmCV.dataSource = firmCVDelegate
+        firmCV.delegate = firmCVDelegate
+        }
+
 }
 
 extension BookingSheetVC: AppointmentProtocol {

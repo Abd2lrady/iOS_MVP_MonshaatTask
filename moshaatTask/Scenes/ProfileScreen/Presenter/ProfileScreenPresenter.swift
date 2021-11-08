@@ -38,8 +38,7 @@ class ProfileScreenPresenter {
     let geoCoder = CLGeocoder()
         
     var info: Info?
-    let sessionsInteractor = SessionsInteractor()
-    let infoInteractor = InfoInteractor()
+    let profileScreenInteractor = ProfileScreenInteractor()
 
     init(view: ProfileScreenViewProtocol, consultant: Consultant) {
         self.view = view
@@ -47,7 +46,7 @@ class ProfileScreenPresenter {
     }
     
     func getSessions(id: String, page: Int) {
-        sessionsInteractor.getSessions(id: id, page: page) { [weak self] response, error in
+        profileScreenInteractor.getSessions(id: id, page: page) { [weak self] response, error in
             guard NetworkMonitor.shared.isConnected else {
                 self?.view?.showNoInternet()
                 return }
@@ -63,7 +62,7 @@ class ProfileScreenPresenter {
     }
     
     func getInfo(id: String) {
-        infoInteractor.getInfo(id: id) {[weak self] response, error in
+        profileScreenInteractor.getInfo(id: id) {[weak self] response, error in
             guard NetworkMonitor.shared.isConnected else {
                 self?.view?.showNoInternet()
                 return }

@@ -12,4 +12,6 @@ protocol BookingSheetViewProtocol: AnyObject {
     func updateAppointmentCV()
     func setDate(day: String?)
     func setAddress(address: String)
+    func hideNoInternet()
+    func showNoInternet()
 }

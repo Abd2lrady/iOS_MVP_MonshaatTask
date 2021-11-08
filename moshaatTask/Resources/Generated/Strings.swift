@@ -16,10 +16,12 @@ internal enum Strings {
   internal static let noSessions = Strings.tr("Localizable", "noSessions")
 
   internal enum BookingScreen {
-    /// أختر شركة
-    internal static let chooseCompany = Strings.tr("Localizable", "bookingScreen.ChooseCompany")
+    /// أختر مؤسسة
+    internal static let chooseFirm = Strings.tr("Localizable", "bookingScreen.chooseFirm")
     /// أختر الوقت
     internal static let chooseTime = Strings.tr("Localizable", "bookingScreen.chooseTime")
+    /// شركة
+    internal static let company = Strings.tr("Localizable", "bookingScreen.company")
     /// تأكيد الحجز
     internal static let confirmBooking = Strings.tr("Localizable", "bookingScreen.confirmBooking")
     /// طريقة التواصل
@@ -34,6 +36,8 @@ internal enum Strings {
     internal static let locationMethod = Strings.tr("Localizable", "bookingScreen.locationMethod")
     /// أونلاين
     internal static let onlineMethod = Strings.tr("Localizable", "bookingScreen.onlineMethod")
+    /// مشروع
+    internal static let project = Strings.tr("Localizable", "bookingScreen.project")
   }
 
   internal enum Consultant {
@@ -64,6 +68,8 @@ internal enum Strings {
     internal static let aboutHeader = Strings.tr("Localizable", "profileScreen.aboutHeader")
     /// إهتماماتى
     internal static let interestHeader = Strings.tr("Localizable", "profileScreen.interestHeader")
+    /// لا توجد معلومات عن المرشد
+    internal static let noConsultantInfo = Strings.tr("Localizable", "profileScreen.noConsultantInfo")
     internal enum SendMsgButton {
       /// ارسال رسالة
       internal static let title = Strings.tr("Localizable", "profileScreen.SendMsgButton.title")

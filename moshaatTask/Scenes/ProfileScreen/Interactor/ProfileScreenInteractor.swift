@@ -6,7 +6,7 @@
 
 import Foundation
 
-class SessionsInteractor {
+class ProfileScreenInteractor {
     private let networkManager = NetworkManager()
     
     func getSessions(id: String,
@@ -24,7 +24,25 @@ class SessionsInteractor {
                 }
                 
             case .failure(let error):
-            completionHandler(nil, error)
+                completionHandler(nil, error)
+            }
+        }
+    }
+    
+    func getInfo(id: String,
+                 completionHander: @escaping (ServerReponse<Info>?, Error?) -> Void) {
+        networkManager.request(target: ProfileTarget.getInfo(id: id)) { result, _ in
+            switch result {
+            case.failure(let error):
+                completionHander(nil, error)
+            case .success(let responseData):
+                do {
+                    let serverResponse = try JSONDecoder().decode(ServerReponse<Info>.self,
+                                                                  from: responseData)
+                    completionHander(serverResponse, nil)
+                } catch {
+                    completionHander(nil, error)
+                }
             }
         }
     }

@@ -16,14 +16,18 @@
 "profileScreen.sessionsList.book" = "أحجز";
 "profileScreen.sessionsListHeader.tags"= "التقييم,معلومات عامة,جدول الجلسات";
 
-"profileScreen.aboutHeader"= "نبذة عامة";
-"profileScreen.interestHeader"= "إهتماماتى";
-
+"profileScreen.aboutHeader" = "نبذة عامة";
+"profileScreen.interestHeader" = "إهتماماتى";
+"profileScreen.noConsultantInfo" = "لا توجد معلومات عن المرشد";
 "bookingScreen.enterEntityHeadLabel" = "أدخل أسم الغرض";
 "bookingScreen.enterEntityPlaceHolder" = "";
 "bookingScreen.chooseTime" = "أختر الوقت";
 "bookingScreen.KSATimeZone" = "(بتوقيت المملكة العربية السعودية)";
-"bookingScreen.ChooseCompany" = "أختر شركة";
+
+"bookingScreen.chooseFirm" = "أختر مؤسسة";
+"bookingScreen.project" = "مشروع";
+"bookingScreen.company" = "شركة";
+
 "bookingScreen.contactMethod" = "طريقة التواصل";
 "bookingScreen.onlineMethod" = "أونلاين";
 "bookingScreen.locationMethod" = "فى مكان";
