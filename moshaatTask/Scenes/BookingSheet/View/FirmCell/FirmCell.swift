@@ -9,7 +9,7 @@ import UIKit
 class FirmCell: UICollectionViewCell {
     static let reuseID = "FirmCell"
     
-    @IBOutlet weak var containerView: UIView! {
+    @IBOutlet private weak var containerView: UIView! {
         didSet {
             containerView.shapeAllCorners(with: containerView.frame.height / 2)
             contentView.layer.shadowRadius = 2

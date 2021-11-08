@@ -70,7 +70,7 @@ class BookingSheetVC: UIViewController {
             firmCVConfig()
         }
     }
-    @IBOutlet weak var firmCVHeight: NSLayoutConstraint!
+    @IBOutlet private weak var firmCVHeight: NSLayoutConstraint!
     
     @IBOutlet private weak var firmChoose: UILabel! {
         didSet {
@@ -156,10 +156,10 @@ class BookingSheetVC: UIViewController {
         }
     }
     @IBOutlet private weak var containerView: UIView!
-    @IBOutlet weak var scrollView: UIScrollView! {
+    @IBOutlet private weak var scrollView: UIScrollView! {
         didSet {
-            containerView.shapeSpecificCorners(with: 25,
-                                               corners: [.layerMaxXMinYCorner, .layerMinXMinYCorner])
+            scrollView.shapeSpecificCorners(with: 25,
+                                            corners: [.layerMaxXMinYCorner, .layerMinXMinYCorner])
         }
     }
     
@@ -208,7 +208,7 @@ class BookingSheetVC: UIViewController {
     }
     
     private func animateContainer() {
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.5) {
             self.blurView.alpha = 0.6
             self.contentViewBottomConstrain.constant = 0
             self.view.layoutSubviews()
@@ -217,7 +217,7 @@ class BookingSheetVC: UIViewController {
     
     @IBAction func blurViewTapped(_ sender: UITapGestureRecognizer) {
         // hide then dismiss
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.5) {
             self.contentViewBottomConstrain.constant = self.containerView.frame.height
             self.blurView.alpha = 0
             self.view.layoutSubviews()
