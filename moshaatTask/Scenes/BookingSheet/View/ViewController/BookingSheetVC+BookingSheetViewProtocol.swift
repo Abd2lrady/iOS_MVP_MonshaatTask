@@ -7,7 +7,11 @@
 import Foundation
 
 extension BookingSheetVC: BookingSheetViewProtocol {
-
+    func firmsLoaded() {
+        firmCVDelegate.firms = presenter.firms ?? [Firm]()
+        firmCVDelegate.collectionView.reloadData()        
+    }
+    
     func setDate(day: String?) {
         dateLabel.text = day
     }

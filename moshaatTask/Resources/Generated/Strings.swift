@@ -14,6 +14,8 @@ internal enum Strings {
   internal static let noOtherResulrs = Strings.tr("Localizable", "noOtherResulrs")
   /// لاتوجد جلسات
   internal static let noSessions = Strings.tr("Localizable", "noSessions")
+  /// eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2ItZGVtby1hcGkubW9uc2hhYXQuc2FcL2FwaVwvYXV0aGVudGljYXRpb25cL3NtZVwvbG9naW4iLCJpYXQiOjE2MzYyNzgyODUsImV4cCI6MTc5NDA3ODI4NSwibmJmIjoxNjM2Mjc4Mjg1LCJqdGkiOiJoMHFtYUFvOFNLWWRna1dGIiwic3ViIjoiZWQ1Y2UxMzQtYWEyYy00YjkxLThlYjAtMDgzZDJlNTIyMTBlIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.J3FdXoLLQHPETzqm1wIHGT1w0D0rDLV3Oew4WsVz3cI
+  internal static let token = Strings.tr("Localizable", "token")
 
   internal enum BookingScreen {
     /// أختر مؤسسة

@@ -30,7 +30,17 @@ extension BookingTarget: TargetType {
     }
     
     var headers: [String: String]? {
-        return nil
+       return nil
+    }
+    
+}
+
+extension BookingTarget: AccessTokenAuthorizable {
+    var authorizationType: AuthorizationType? {
+        switch self {
+        default:
+            return .bearer
+        }
     }
     
 }

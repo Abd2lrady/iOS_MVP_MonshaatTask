@@ -14,4 +14,5 @@ protocol BookingSheetViewProtocol: AnyObject {
     func setAddress(address: String)
     func hideNoInternet()
     func showNoInternet()
+    func firmsLoaded()
 }

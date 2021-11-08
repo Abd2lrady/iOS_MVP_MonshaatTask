@@ -933,7 +933,7 @@
 		B4EB63452712CE7400CB7122 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				B4EB63792713F6CF00CB7122 /* APITarget */,
+				B4EB63792713F6CF00CB7122 /* APITargets */,
 				B4848B8C2711865500C4A643 /* NetworkMonitor */,
 				B4EB63462712CE7400CB7122 /* Core */,
 				B4EB634B2712CE7400CB7122 /* BaseModel */,
@@ -1001,14 +1001,14 @@
 			path = Consultant;
 			sourceTree = "<group>";
 		};
-		B4EB63792713F6CF00CB7122 /* APITarget */ = {
+		B4EB63792713F6CF00CB7122 /* APITargets */ = {
 			isa = PBXGroup;
 			children = (
 				B47B5D6B2738141B00B5E142 /* Booking */,
 				B43AB08B272590560073A827 /* Profile */,
 				B43AB08C2725906B0073A827 /* Consultants */,
 			);
-			path = APITarget;
+			path = APITargets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

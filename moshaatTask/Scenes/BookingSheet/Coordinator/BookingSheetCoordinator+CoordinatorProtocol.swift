@@ -15,7 +15,9 @@ extension BookingSheetCoordinator: CoordinatorProtocol {
         view.modalPresentationStyle = .overCurrentContext
         view.bookingSheetCoordinatorDelegate = self
         view.presenter = presenter
-        router.push(view: view, animated: false)
+        router.present(view: view, animated: false, completion: nil)
+
+//        router.push(view: view, animated: false)
     }
  
 }

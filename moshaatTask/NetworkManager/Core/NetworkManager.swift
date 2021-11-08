@@ -13,16 +13,16 @@ class NetworkManager {
         NetworkManager(config: .defaults)}()
     
     var networkConfig: NetworkDefaults!
-    
     let provider: MoyaProvider<MultiTarget>
-    
+    let auth = AccessTokenPlugin { _ in
+        return Strings.token
+    }
     init(config: NetworkDefaults = NetworkDefaults.defaults) {
         self.networkConfig = config
-        
-        let headerPlugin = StaticHeaderPlugin(
-            headers: [:])
+    
         let loggerConfig = NetworkLoggerPlugin.Configuration(logOptions: .verbose)
-        provider = MoyaProvider<MultiTarget>(plugins: [headerPlugin, NetworkLoggerPlugin(configuration: loggerConfig)])
+        provider = MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin(configuration: loggerConfig),
+                                                       auth])
     }
     
 }

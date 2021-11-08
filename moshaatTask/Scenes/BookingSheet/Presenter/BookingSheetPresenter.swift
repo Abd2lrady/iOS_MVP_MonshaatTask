@@ -8,8 +8,7 @@ import UIKit
 
 class BookingSheetPresenter {
     var session: FormattedSession?
-    var companies: [Company]?
-    var projects: [Project]?
+    var firms: [Firm]?
     weak var view: BookingSheetViewProtocol?
     let bookingInteractor = BookingSheetInteractor()
     var selectedAppointment: Int
@@ -27,7 +26,8 @@ extension BookingSheetPresenter: BookingSheetPresenterProtocol {
                 self?.view?.showNoInternet()
                 return }
 
-            self?.companies = serverReponse?.data
+            self?.firms = serverReponse?.data
+            self?.view?.firmsLoaded()
         }
     }
     
@@ -37,7 +37,8 @@ extension BookingSheetPresenter: BookingSheetPresenterProtocol {
                 self?.view?.showNoInternet()
                 return }
 
-            self?.projects = serverReponse?.data
+            self?.firms = serverReponse?.data
+            self?.view?.firmsLoaded()
         }
     }
     

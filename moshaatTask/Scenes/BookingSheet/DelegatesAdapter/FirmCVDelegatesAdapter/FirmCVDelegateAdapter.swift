@@ -7,12 +7,7 @@
 import UIKit
 
 class FirmCVDelegateAdapter: NSObject {
-    var firms = [Project(name: "saddsa"),
-                 Project(name: "saddsa"),
-                 Project(name: "nnd"),
-                 Project(name: "sadafdsfdsdsdasdsaadsdsa"),
-                 Project(name: "saddsadsa")
-    ]
+    var firms = [Firm]()
     
     let collectionView: UICollectionView
     

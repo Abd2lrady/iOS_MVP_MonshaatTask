@@ -131,7 +131,7 @@
                                                 <constraint firstAttribute="height" constant="32" id="Ymc-zR-epF"/>
                                             </constraints>
                                             <connections>
-                                                <action selector="companyButtonTapped:" destination="-1" eventType="touchUpInside" id="fXf-YT-Ist"/>
+                                                <action selector="projectButtonTapped:" destination="-1" eventType="touchUpInside" id="fXf-YT-Ist"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeC-hy-9mX" userLabel="CompanyButton">
@@ -141,7 +141,7 @@
                                                 <constraint firstAttribute="width" constant="100" id="FDd-Jv-0tz"/>
                                             </constraints>
                                             <connections>
-                                                <action selector="projectButtonTapped:" destination="-1" eventType="touchUpInside" id="5Ji-xd-DOA"/>
+                                                <action selector="companyButtonTapped:" destination="-1" eventType="touchUpInside" id="wqL-uQ-22U"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -240,7 +240,7 @@
                 <constraint firstItem="4Bc-Pt-1RP" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="tWm-JA-cF7"/>
                 <constraint firstItem="4Bc-Pt-1RP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zdC-Q9-nEy"/>
             </constraints>
-            <point key="canvasLocation" x="-99" y="72"/>
+            <point key="canvasLocation" x="-100.00000000000001" y="71.651785714285708"/>
         </view>
         <tapGestureRecognizer id="SWe-Ma-zL9">
             <connections>

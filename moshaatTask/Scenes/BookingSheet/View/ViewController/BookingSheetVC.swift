@@ -71,6 +71,7 @@ class BookingSheetVC: UIViewController {
         }
     }
     @IBOutlet weak var firmCVHeight: NSLayoutConstraint!
+    
     @IBOutlet private weak var firmChoose: UILabel! {
         didSet {
             firmChoose.textColor = Colors.profileScreenNameLabel.color
@@ -161,7 +162,6 @@ class BookingSheetVC: UIViewController {
                                                corners: [.layerMaxXMinYCorner, .layerMinXMinYCorner])
         }
     }
-    @IBOutlet private weak var containerBottomConstrain: NSLayoutConstraint!
     
     @IBOutlet private weak var contentViewBottomConstrain: NSLayoutConstraint!
     var presenter: BookingSheetPresenterProtocol!
@@ -175,15 +175,19 @@ class BookingSheetVC: UIViewController {
     lazy var firmCVDelegate = FirmCVDelegateAdapter(collectionView: firmCV)
     let noInternet = NoInternet()
     weak var bookingSheetCoordinatorDelegate: BookingSheetCoordinatorDelegateProtocol?
+    
     override func viewDidLayoutSubviews() {
         confirmBookingButton.shapeAllCorners(with: confirmBookingButton.bounds.height / 2)
+
+        scrollView.invalidateIntrinsicContentSize()
         _appointmentCV.invalidateIntrinsicContentSize()
         appointmentCVHeight.constant = _appointmentCV.contentSize.height
         firmCV.invalidateIntrinsicContentSize()
         firmCVHeight.constant = firmCV.contentSize.height
         self.contentViewBottomConstrain.constant = containerView.frame.height
+        scrollView.translatesAutoresizingMaskIntoConstraints = true
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewLoaded()
@@ -193,18 +197,18 @@ class BookingSheetVC: UIViewController {
         super.viewDidAppear(animated)
         animateContainer()
     }
+    @IBAction func projectButtonTapped(_ sender: UIButton) {
+        noInternet.retryAction = presenter.companyButtonTapped
+        presenter?.projectButtonTapped()
+    }
+    
     @IBAction func companyButtonTapped(_ sender: UIButton) {
         noInternet.retryAction = presenter.companyButtonTapped
         presenter?.companyButtonTapped()
     }
     
-    @IBAction func projectButtonTapped(_ sender: UIButton) {
-        noInternet.retryAction = presenter.projectButtonTapped
-        presenter?.projectButtonTapped()
-    }
-    
     private func animateContainer() {
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.3) {
             self.blurView.alpha = 0.6
             self.contentViewBottomConstrain.constant = 0
             self.view.layoutSubviews()
@@ -213,9 +217,9 @@ class BookingSheetVC: UIViewController {
     
     @IBAction func blurViewTapped(_ sender: UITapGestureRecognizer) {
         // hide then dismiss
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.3) {
+            self.contentViewBottomConstrain.constant = self.containerView.frame.height
             self.blurView.alpha = 0
-            self.containerBottomConstrain.constant = self.containerView.bounds.height
             self.view.layoutSubviews()
         } completion: {[weak self]_ in
             self?.bookingSheetCoordinatorDelegate?.dismissTap()
