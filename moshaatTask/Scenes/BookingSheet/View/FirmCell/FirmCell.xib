@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xx0-pD-R65" userLabel="ContentView">
                         <rect key="frame" x="0.0" y="0.0" width="126" height="32"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v74-ZA-kdS" userLabel="FirmName">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v74-ZA-kdS" userLabel="FirmName">
                                 <rect key="frame" x="42" y="5.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -44,8 +44,8 @@
             </constraints>
             <size key="customSize" width="126" height="29"/>
             <connections>
-                <outlet property="containerView" destination="xx0-pD-R65" id="lUZ-iV-PjK"/>
-                <outlet property="firmNameLabel" destination="v74-ZA-kdS" id="GE7-uq-yUm"/>
+                <outlet property="_containerView" destination="xx0-pD-R65" id="lUZ-iV-PjK"/>
+                <outlet property="_firmNameLabel" destination="v74-ZA-kdS" id="GE7-uq-yUm"/>
             </connections>
             <point key="canvasLocation" x="-13.043478260869566" y="44.53125"/>
         </collectionViewCell>

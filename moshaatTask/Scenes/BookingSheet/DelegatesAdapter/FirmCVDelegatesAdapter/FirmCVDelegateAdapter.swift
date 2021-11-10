@@ -7,7 +7,7 @@
 import UIKit
 
 class FirmCVDelegateAdapter: NSObject {
-    var firms = [Firm]()
+    var firms: [Firm]?
     
     let collectionView: UICollectionView
     

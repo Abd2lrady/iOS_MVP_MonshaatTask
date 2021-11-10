@@ -63,7 +63,7 @@
 		B47B5D6F2738149600B5E142 /* BookingTarget+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47B5D6E2738149600B5E142 /* BookingTarget+TargetType.swift */; };
 		B47B5D732739112300B5E142 /* FirmCVDelegateAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47B5D722739112300B5E142 /* FirmCVDelegateAdapter.swift */; };
 		B47B5D762739129500B5E142 /* Firms.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47B5D752739129500B5E142 /* Firms.swift */; };
-		B47B5D782739130B00B5E142 /* FirmCVDelegateAdapter+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47B5D772739130B00B5E142 /* FirmCVDelegateAdapter+DataSource.swift */; };
+		B47B5D782739130B00B5E142 /* FirmCVDelegateAdapter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47B5D772739130B00B5E142 /* FirmCVDelegateAdapter+.swift */; };
 		B47B5D7C27391C5C00B5E142 /* FirmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47B5D7A27391C5C00B5E142 /* FirmCell.swift */; };
 		B47B5D7D27391C5C00B5E142 /* FirmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47B5D7B27391C5C00B5E142 /* FirmCell.xib */; };
 		B4848B8727117B6A00C4A643 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4848B8627117B6A00C4A643 /* UIViewController+.swift */; };
@@ -195,7 +195,7 @@
 		B47B5D6E2738149600B5E142 /* BookingTarget+TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookingTarget+TargetType.swift"; sourceTree = "<group>"; };
 		B47B5D722739112300B5E142 /* FirmCVDelegateAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirmCVDelegateAdapter.swift; sourceTree = "<group>"; };
 		B47B5D752739129500B5E142 /* Firms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firms.swift; sourceTree = "<group>"; };
-		B47B5D772739130B00B5E142 /* FirmCVDelegateAdapter+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirmCVDelegateAdapter+DataSource.swift"; sourceTree = "<group>"; };
+		B47B5D772739130B00B5E142 /* FirmCVDelegateAdapter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirmCVDelegateAdapter+.swift"; sourceTree = "<group>"; };
 		B47B5D7A27391C5C00B5E142 /* FirmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirmCell.swift; sourceTree = "<group>"; };
 		B47B5D7B27391C5C00B5E142 /* FirmCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirmCell.xib; sourceTree = "<group>"; };
 		B4848B8627117B6A00C4A643 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -622,7 +622,7 @@
 			isa = PBXGroup;
 			children = (
 				B47B5D722739112300B5E142 /* FirmCVDelegateAdapter.swift */,
-				B47B5D772739130B00B5E142 /* FirmCVDelegateAdapter+DataSource.swift */,
+				B47B5D772739130B00B5E142 /* FirmCVDelegateAdapter+.swift */,
 			);
 			path = FirmCVDelegatesAdapter;
 			sourceTree = "<group>";
@@ -1247,7 +1247,7 @@
 				B4EB63602713055B00CB7122 /* ListScreenPresenter+ListScreenPresenterProtocol.swift in Sources */,
 				B499E617270D9E62007E1BC8 /* AppCoordinator.swift in Sources */,
 				B499E619270D9F48007E1BC8 /* AppCoordinator+CoordinatorProtocol.swift in Sources */,
-				B47B5D782739130B00B5E142 /* FirmCVDelegateAdapter+DataSource.swift in Sources */,
+				B47B5D782739130B00B5E142 /* FirmCVDelegateAdapter+.swift in Sources */,
 				B4EB6366271317C500CB7122 /* ConsultantsCVSections.swift in Sources */,
 				B43AB093272594010073A827 /* ProfileScreenInteractor.swift in Sources */,
 				B43AB07C27256B390073A827 /* SessionListDelegateAdapter.swift in Sources */,

@@ -88,7 +88,8 @@ class BookingSheetVC: UIViewController {
             view.titleLabel.text = Strings.BookingScreen.company
             view.titleLabel.font = Fonts._29LTAzer.medium.font(size: 14)
             view.titleLabel.textColor = Colors.bookingSheetContantUnselectedButtons.color
-            view.backgroundColor = Colors.bookingSheetContantSelectedButtons.color
+            view.backgroundColor = .white
+            view.tag = 66
             view.shapeAllCorners(with: view.bounds.height / 2)
             companyButton.layer.shadowRadius = 8
             companyButton.layer.shadowOpacity = 0.5
@@ -106,7 +107,8 @@ class BookingSheetVC: UIViewController {
             view.titleLabel.text = Strings.BookingScreen.project
             view.titleLabel.font = Fonts._29LTAzer.medium.font(size: 14)
             view.titleLabel.textColor = Colors.bookingSheetContantUnselectedButtons.color
-            view.backgroundColor = Colors.bookingSheetContantSelectedButtons.color
+            view.backgroundColor = .white
+            view.tag = 55
             view.shapeAllCorners(with: view.bounds.height / 2)
             projectButton.layer.shadowRadius = 8
             projectButton.layer.shadowOpacity = 0.5
@@ -198,12 +200,20 @@ class BookingSheetVC: UIViewController {
         animateContainer()
     }
     @IBAction func projectButtonTapped(_ sender: UIButton) {
-        noInternet.retryAction = presenter.companyButtonTapped
+        noInternet.retryAction = presenter.projectButtonTapped
+        let companyView = companyButton.viewWithTag(66)
+        let projectView = projectButton.viewWithTag(55)
+        companyView?.backgroundColor = .white
+        projectView?.backgroundColor = Colors.profileScreenListRequestSession.color
         presenter?.projectButtonTapped()
     }
     
     @IBAction func companyButtonTapped(_ sender: UIButton) {
         noInternet.retryAction = presenter.companyButtonTapped
+        let companyView = companyButton.viewWithTag(66)
+        let projectView = projectButton.viewWithTag(55)
+        companyView?.backgroundColor = Colors.profileScreenListRequestSession.color
+        projectView?.backgroundColor = .white
         presenter?.companyButtonTapped()
     }
     
