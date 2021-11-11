@@ -11,7 +11,6 @@ class FirmCell: UICollectionViewCell {
     
     @IBOutlet private weak var _containerView: UIView! {
         didSet {
-            _containerView.shapeAllCorners(with: _containerView.frame.height / 2)
             contentView.layer.shadowRadius = 2
             contentView.layer.shadowOpacity = 0.4
             contentView.layer.shadowOffset = CGSize(width: 0, height: 2)
@@ -25,6 +24,7 @@ class FirmCell: UICollectionViewCell {
         }
     }
     
+    @IBOutlet weak var maxWidth: NSLayoutConstraint!
     override var isSelected: Bool {
         didSet {
             _containerView.backgroundColor =
@@ -34,9 +34,17 @@ class FirmCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([contentView.topAnchor.constraint(equalTo: topAnchor),
+                                     contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                                     contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
+                                     contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
+    override func layoutIfNeeded() {
+        _containerView.shapeAllCorners(with: _containerView.frame.height / 2)
 
+    }
 }
 
 extension FirmCell {

@@ -25,6 +25,7 @@
                 <outlet property="entityLabel" destination="ech-xR-Dca" id="LLE-gV-pgr"/>
                 <outlet property="firmCV" destination="BxV-LG-AAb" id="s6D-vd-2cq"/>
                 <outlet property="firmCVHeight" destination="Sh5-4n-D0s" id="mDp-ZE-v0i"/>
+                <outlet property="firmCVLayout" destination="eeA-bo-zQc" id="oIp-D9-eGC"/>
                 <outlet property="firmChoose" destination="8zm-uY-6eY" id="duL-bC-u11"/>
                 <outlet property="locationButton" destination="Fss-oS-FZa" id="ICH-pd-1T2"/>
                 <outlet property="onlineButton" destination="00a-sY-JsW" id="UZb-dA-H6k"/>
@@ -211,8 +212,8 @@
                                 <constraint firstAttribute="trailing" secondItem="MqB-uC-1D4" secondAttribute="trailing" constant="15" id="hca-O2-UE7"/>
                                 <constraint firstItem="8zm-uY-6eY" firstAttribute="top" secondItem="3My-zu-Igg" secondAttribute="bottom" constant="18" id="jC7-AX-TR5"/>
                                 <constraint firstItem="Mux-Cx-3uy" firstAttribute="top" secondItem="ech-xR-Dca" secondAttribute="bottom" constant="8" id="slj-ue-JJo"/>
+                                <constraint firstAttribute="trailing" secondItem="Mux-Cx-3uy" secondAttribute="trailing" constant="38.5" id="uKW-LZ-DyT"/>
                                 <constraint firstAttribute="trailing" secondItem="ech-xR-Dca" secondAttribute="trailing" constant="15" id="w7g-if-zfb"/>
-                                <constraint firstItem="Mux-Cx-3uy" firstAttribute="centerX" secondItem="SMo-Um-eje" secondAttribute="centerX" id="y4Q-35-TME"/>
                                 <constraint firstItem="w86-3W-2v2" firstAttribute="top" secondItem="0a4-Ki-ZHw" secondAttribute="bottom" constant="19" id="yvm-dU-5Nd"/>
                                 <constraint firstAttribute="trailing" secondItem="YwI-th-Hra" secondAttribute="trailing" constant="15" id="zDx-JU-CBX"/>
                             </constraints>

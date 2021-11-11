@@ -190,6 +190,11 @@ class BookingSheetVC: UIViewController {
         scrollView.translatesAutoresizingMaskIntoConstraints = true
     }
         
+    @IBOutlet weak var firmCVLayout: UICollectionViewFlowLayout! {
+        didSet {
+            firmCVLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewLoaded()
@@ -201,18 +206,25 @@ class BookingSheetVC: UIViewController {
     }
     @IBAction func projectButtonTapped(_ sender: UIButton) {
         noInternet.retryAction = presenter.projectButtonTapped
+//        companyButton.backgroundColor = .white
+//        projectButton.backgroundColor = Colors.profileScreenListRequestSession.color
         let companyView = companyButton.viewWithTag(66)
         let projectView = projectButton.viewWithTag(55)
+        
         companyView?.backgroundColor = .white
         projectView?.backgroundColor = Colors.profileScreenListRequestSession.color
+        projectView?.clipsToBounds = true
         presenter?.projectButtonTapped()
     }
     
     @IBAction func companyButtonTapped(_ sender: UIButton) {
         noInternet.retryAction = presenter.companyButtonTapped
+//        companyButton.backgroundColor = .white
+//        projectButton.backgroundColor = Colors.profileScreenListRequestSession.color
         let companyView = companyButton.viewWithTag(66)
         let projectView = projectButton.viewWithTag(55)
         companyView?.backgroundColor = Colors.profileScreenListRequestSession.color
+        companyView?.clipsToBounds = true
         projectView?.backgroundColor = .white
         presenter?.companyButtonTapped()
     }

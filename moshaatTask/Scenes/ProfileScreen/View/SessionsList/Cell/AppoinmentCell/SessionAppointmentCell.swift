@@ -11,13 +11,14 @@ class SessionAppointmentCell: UICollectionViewCell {
     
     @IBOutlet private weak var _containerView: UIView! {
         didSet {
-            containerView.shapeAllCorners(with: containerView.bounds.height / 2)
-            containerView.setBorders(with: 1, color: Colors.profileScreenBookButton.color)
             containerView.backgroundColor = .white
         }
     }
     @IBOutlet private weak var appoinmentLabel: UILabel! {
         didSet {
+            appoinmentLabel.shapeAllCorners(with: appoinmentLabel.bounds.height / 2)
+            appoinmentLabel.setBorders(with: 1, color: Colors.profileScreenBookButton.color)
+
             appoinmentLabel.font = Fonts._29LTAzer.regular.font(size: 11)
             appoinmentLabel.textColor = .black
         }
@@ -27,6 +28,7 @@ class SessionAppointmentCell: UICollectionViewCell {
         didSet {
             containerView.backgroundColor =
                 isSelected ? Colors.profileScreenListRequestSession.color : .white
+            containerView.clipsToBounds = true
         }
     }
 

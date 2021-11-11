@@ -21,7 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="126" height="32"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v74-ZA-kdS" userLabel="FirmName">
-                                <rect key="frame" x="42" y="5.5" width="42" height="21"/>
+                                <rect key="frame" x="0.0" y="0.0" width="126" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="126" id="taY-HX-LO7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,8 +32,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="v74-ZA-kdS" secondAttribute="trailing" id="9a4-lV-hpR"/>
+                            <constraint firstItem="v74-ZA-kdS" firstAttribute="leading" secondItem="xx0-pD-R65" secondAttribute="leading" id="BnT-xl-Ovy"/>
                             <constraint firstItem="v74-ZA-kdS" firstAttribute="centerX" secondItem="xx0-pD-R65" secondAttribute="centerX" id="Df2-Qx-oDA"/>
                             <constraint firstItem="v74-ZA-kdS" firstAttribute="centerY" secondItem="xx0-pD-R65" secondAttribute="centerY" id="FZn-jE-cal"/>
+                            <constraint firstAttribute="bottom" secondItem="v74-ZA-kdS" secondAttribute="bottom" id="UnH-m3-6E8"/>
+                            <constraint firstItem="v74-ZA-kdS" firstAttribute="top" secondItem="xx0-pD-R65" secondAttribute="top" id="cTD-eV-sfV"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -46,6 +53,7 @@
             <connections>
                 <outlet property="_containerView" destination="xx0-pD-R65" id="lUZ-iV-PjK"/>
                 <outlet property="_firmNameLabel" destination="v74-ZA-kdS" id="GE7-uq-yUm"/>
+                <outlet property="maxWidth" destination="taY-HX-LO7" id="jUv-ND-aaZ"/>
             </connections>
             <point key="canvasLocation" x="-13.043478260869566" y="44.53125"/>
         </collectionViewCell>
